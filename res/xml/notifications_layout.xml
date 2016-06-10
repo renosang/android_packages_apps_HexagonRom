@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hexagonrom="http://schemas.android.com/apk/res/com.droidvnteam">
+
+    <PreferenceCategory
+        android:key="quicksettings_tiles_category"
+        android:title="@string/quicksettings_tiles_category">
+
+        <ListPreference
+            android:key="sysui_qs_num_rows"
+            android:title="@string/qs_num_rows_title"
+            android:entries="@array/qs_num_rows_entries"
+            android:entryValues="@array/qs_num_rows_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="sysui_qs_num_columns"
+            android:title="@string/qs_num_columns_title"
+            android:entries="@array/qs_num_columns_entries"
+            android:entryValues="@array/qs_num_columns_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_style"
+            android:title="@string/qs_tile_animation_style_title"
+            android:entries="@array/qs_tile_animation_style_entries"
+            android:entryValues="@array/qs_tile_animation_style_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_duration"
+            android:title="@string/qs_tile_animation_duration_title"
+            android:entries="@array/qs_tile_animation_duration_entries"
+            android:entryValues="@array/qs_tile_animation_duration_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_interpolator"
+            android:title="@string/qs_tile_animation_interpolator_title"
+            android:entries="@array/qs_tile_animation_interpolator_entries"
+            android:entryValues="@array/qs_tile_animation_interpolator_values"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <SwitchPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/qs_brightness_slider_title"
+        android:persistent="false"
+        android:defaultValue="true" />
+
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+        android:key="brightness_icon"
+        android:title="@string/brightness_icon_title"
+        android:summary="@string/brightness_icon_summary"
+        android:dependency="qs_show_brightness_slider"
+        android:defaultValue="true"/>
+
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+        android:key="disable_immersive_message"
+        android:title="@string/disable_immersive_message_title"
+        android:summary="@string/disable_immersive_message_summary" />
+
+    <SwitchPreference
+        android:key="block_on_secure_keyguard"
+        android:title="@string/block_on_secure_keyguard_title"
+        android:summary="@string/block_on_secure_keyguard_summary"
+        android:persistent="false"
+        android:defaultValue="true"/>
+
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+        android:key="force_expanded_notifications"
+        android:title="@string/force_expanded_notifications_title"
+        android:summary="@string/force_expanded_notifications_summary" />
+
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+        android:key="enable_task_manager"
+        android:title="@string/enable_task_manager_title"
+        android:summary="@string/enable_task_manager_summary" />
+
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+        android:key="status_bar_custom_header"
+        android:title="@string/status_bar_custom_header_title"
+        android:summary="@string/status_bar_custom_header_summary"
+        android:defaultValue="false"/>
+
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
+         android:key="status_bar_custom_header_shadow"
+         android:title="@string/status_bar_custom_header_shadow_title"
+         android:summary="@string/status_bar_custom_header_shadow_summary"
+         android:defaultValue="0"
+         android:max="100"
+         hexagonrom:min="0"
+         hexagonrom:unitsLeft=""
+         hexagonrom:unitsRight="@string/unit_percent"
+         android:persistent="false"
+         android:dependency="status_bar_custom_header" />
+
+    <com.droidvnteam.hexagonrom.preferences.CMSystemSettingSwitchPreference
+        android:key="status_bar_show_weather"
+        android:title="@string/notif_drawer_weather_title"
+        android:summary="@string/notif_drawer_weather_summary"
+        android:defaultValue="true"/>
+
+    <ListPreference
+        android:key="status_bar_header_font_style"
+        android:entries="@array/status_bar_weather_font_style_entries"
+        android:entryValues="@array/status_bar_weather_font_style_values"
+        android:title="@string/status_bar_header_font_style_title" />
+
+</PreferenceScreen>
