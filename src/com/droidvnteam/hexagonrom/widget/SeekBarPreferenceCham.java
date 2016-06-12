@@ -21,7 +21,7 @@ public class SeekBarPreferenceCham extends Preference implements OnSeekBarChange
     private final String TAG = getClass().getName();
 
     private static final String ANDROIDNS = "http://schemas.android.com/apk/res/android";
-    private static final String AICPEXTRAS = "http://schemas.android.com/apk/res/com.droidvnteam.hexagonrom";
+    private static final String hexagonrom = "http://schemas.android.com/apk/res/com.droidvnteam.hexagonrom";
     private static final int DEFAULT_VALUE = 50;
 
     private int mMaxValue      = 100;
@@ -55,12 +55,12 @@ public class SeekBarPreferenceCham extends Preference implements OnSeekBarChange
 
     private void setValuesFromXml(AttributeSet attrs) {
         mMaxValue = attrs.getAttributeIntValue(ANDROIDNS, "max", 100);
-        mMinValue = attrs.getAttributeIntValue(AICPEXTRAS, "minimum", 0);
-        mDefaultValue = attrs.getAttributeIntValue(AICPEXTRAS, "defaultVal", -1);
-        mUnitsLeft = getAttributeStringValue(attrs, AICPEXTRAS, "unitsLeft", "");
-        mUnitsRight = getAttributeStringValue(attrs, AICPEXTRAS, "unitsRight", "");
+        mMinValue = attrs.getAttributeIntValue(hexagonrom, "minimum", 0);
+        mDefaultValue = attrs.getAttributeIntValue(hexagonrom, "defaultVal", -1);
+        mUnitsLeft = getAttributeStringValue(attrs, hexagonrom, "unitsLeft", "");
+        mUnitsRight = getAttributeStringValue(attrs, hexagonrom, "unitsRight", "");
         try {
-            String newInterval = attrs.getAttributeValue(AICPEXTRAS, "interval");
+            String newInterval = attrs.getAttributeValue(hexagonrom, "interval");
             if(newInterval != null)
                 mInterval = Integer.parseInt(newInterval);
         }

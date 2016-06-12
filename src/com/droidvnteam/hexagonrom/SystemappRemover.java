@@ -93,7 +93,7 @@ public class SystemappRemover extends AppCompatActivity {
         safetyList.add("Superuser");
         safetyList.add("TelephonyProvider");
         // priv-app
-        safetyList.add("AicpExtras");
+        safetyList.add("hexagonrom");
         safetyList.add("ContactsProvider");
         safetyList.add("DefaultContainerService");
         safetyList.add("Dialer");

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- AICP logo -->
+    <!-- Hexagon logo -->
     <PreferenceScreen
         android:key="aicp_logo"
         android:layout="@layout/about_logo" />

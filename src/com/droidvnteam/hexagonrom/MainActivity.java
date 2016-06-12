@@ -87,22 +87,6 @@ public class MainActivity extends AppCompatActivity
         tx.replace(R.id.content_main, new AboutFragment());
         tx.commit();
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                Intent emailIntent =
-                        new Intent(Intent.ACTION_SEND);
-                String[] recipients = new String[]{"davor@losinj.com", "",};
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, recipients);
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "AICP talk");
-                emailIntent.setType("text/plain");
-                startActivity(Intent.createChooser(emailIntent, getString(R.string.send_mail_intent)));
-                finish();
-            }
-        });*/
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -141,27 +125,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    /* @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    } */
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -189,17 +152,14 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_lockscreen:
                 fragmentClass = LockscreenFragment.class;
                 break;
-            case R.id.nav_multishit:
+            case R.id.nav_advanced:
                 fragmentClass = MultiShitFragment.class;
                 break;
             case R.id.nav_transparency_porn:
                 fragmentClass = TransparencyPornFragment.class;
                 break;
-            case R.id.nav_various:
+            case R.id.nav_more:
                 fragmentClass = VariousShitFragment.class;
-                break;
-            case R.id.nav_log_it:
-                fragmentClass = LogThatShitFragment.class;
                 break;
             case R.id.nav_about:
                 fragmentClass = AboutFragment.class;

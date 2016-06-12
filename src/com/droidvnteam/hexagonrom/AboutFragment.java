@@ -1,125 +1,170 @@
 package com.droidvnteam.hexagonrom;
 
-import android.app.Activity;
-import android.content.ContentResolver;
+import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.SystemClock;
-import android.os.SystemProperties;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-
-import java.util.ArrayList;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import com.droidvnteam.R;
-import com.droidvnteam.hexagonrom.utils.Utils;
-
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link AboutFragment.OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ * Use the {@link AboutFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
 public class AboutFragment extends Fragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    private OnFragmentInteractionListener mListener;
+
+    public AboutFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment AboutFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static AboutFragment newInstance() {
+        AboutFragment fragment = new AboutFragment();
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        getActivity().getFragmentManager().beginTransaction()
-                .replace(R.id.content_main, new SettingsPreferenceFragment())
-                .commit();
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
     }
 
-    public static class SettingsPreferenceFragment extends PreferenceFragment {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.fragment_about, container, false);
 
-        public SettingsPreferenceFragment() {
-        }
-
-        private static final String TAG = "AboutFragment";
-
-        private static final String PREF_HIDDEN_YOGA = "hidden_anim";
-        private static final String PREF_AICPLOGO_IMG = "aicp_logo";
-        private String PREF_GCOMMUNITY = "gplus";
-        private String PREF_AICP_DOWNLOADS = "aicp_downloads";
-        private String PREF_AICP_GERRIT = "aicp_gerrit";
-        private String PREF_AICP_CHANGELOG = "aicp_changelog";
-
-        private PreferenceScreen mAicpLogo;
-        private long[] mHits = new long[3];
-        private Preference mGcommunity;
-        private Preference mAicpDownloads;
-        private Preference mAicpGerrit;
-        private Preference mAicpChangeLog;
-        private Preference mStatsAicp;
-
-        private static final String PREF_STATS_AICP = "aicp_stats";
-
-        public static final String STATS_PACKAGE_NAME = "com.droidvnteam";
-        public static Intent INTENT_STATS = new Intent(Intent.ACTION_MAIN)
-                .setClassName(STATS_PACKAGE_NAME, STATS_PACKAGE_NAME + ".romstats.AnonymousStats");
-
-        // Package name of the yoga
-        public static final String YOGA_PACKAGE_NAME = "com.droidvnteam";
-        // Intent for launching the yoga actvity
-        public static Intent INTENT_YOGA = new Intent(Intent.ACTION_MAIN)
-                .setClassName(YOGA_PACKAGE_NAME, YOGA_PACKAGE_NAME + ".aicpextras.HiddenAnimActivity");
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-
-            // Load the preferences from an XML resource
-            addPreferencesFromResource(R.xml.about_layout);
-
-            PreferenceScreen prefSet = getPreferenceScreen();
-            Activity activity = getActivity();
-
-            final ContentResolver resolver = getActivity().getContentResolver();
-
-            mAicpLogo = (PreferenceScreen) findPreference(PREF_AICPLOGO_IMG);
-
-            mGcommunity = prefSet.findPreference(PREF_GCOMMUNITY);
-            mAicpDownloads = prefSet.findPreference(PREF_AICP_DOWNLOADS);
-            mAicpGerrit = prefSet.findPreference(PREF_AICP_GERRIT);
-            mAicpChangeLog = prefSet.findPreference(PREF_AICP_CHANGELOG);
-            mStatsAicp = prefSet.findPreference(PREF_STATS_AICP);
-
-        }
-
-        @Override
-        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            if (preference == mGcommunity) {
-                String url = "https://plus.google.com/communities/101008638920580274588";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-            } else if (preference == mAicpDownloads) {
-                String mDevice = Utils.getDevice(getContext());
-                String url = "http://dwnld.aicp-rom.com/?device=" + mDevice;
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-            } else if (preference == mAicpGerrit) {
-                String url = "http://gerrit.aicp-rom.com/#/q/status:open";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-            } else if (preference == mAicpChangeLog) {
-                Intent intent = new Intent(getActivity(), ChangeLogActivity.class);
-                getActivity().startActivity(intent);
-            } else if (preference == mStatsAicp) {
-                startActivity(INTENT_STATS);
-            } else if (preference == mAicpLogo) {
-                java.lang.System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
-                mHits[mHits.length-1] = SystemClock.uptimeMillis();
-                if  (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
-                    startActivity(INTENT_YOGA);
-                }
-            } else {
-                return super.onPreferenceTreeClick(preferenceScreen, preference);
+        root.findViewById(R.id.imgWeb).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uriUrl = Uri.parse("http://www.droidvn.com");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
             }
+        });
+        root.findViewById(R.id.imgFb).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uriUrl = Uri.parse("https://www.facebook.com/groups/AndroidNiemDamMe/");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
+            }
+        });
+        root.findViewById(R.id.imgGplus).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uriUrl = Uri.parse("https://www.facebook.com/groups/AndroidNiemDamMe/");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
+            }
+        });
+        root.findViewById(R.id.imgEmail).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, "droidvn.com@gmail.com");
+                emailIntent.putExtra(Intent.EXTRA_CC, "");
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "");
 
-            return false;
+                try {
+                    startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+
+                }
+                catch (android.content.ActivityNotFoundException ex) {
+
+                }
+            }
+        });
+        root.findViewById(R.id.imgShare).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent share = new Intent(android.content.Intent.ACTION_SEND);
+                share.setType("text/plain");
+                share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                share.putExtra(Intent.EXTRA_SUBJECT, "Title Of The Post");
+                share.putExtra(Intent.EXTRA_TEXT, "http://www.droidvn.com");
+                startActivity(Intent.createChooser(share, "Share"));
+            }
+        });
+
+        root.findViewById(R.id.imgChangelog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ChangelogDialog newFragment = new ChangelogDialog();
+                FragmentTransaction ft = (getActivity()).getFragmentManager().beginTransaction();
+                newFragment.show(ft, "Change log");
+            }
+        });
+        return root;
+    }
+
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
         }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p/>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
     }
 }
