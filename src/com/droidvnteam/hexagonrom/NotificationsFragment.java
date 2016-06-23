@@ -51,8 +51,6 @@ public class NotificationsFragment extends Fragment {
         private SwitchPreference mBrightnessSlider;
         private SwitchPreference mBlockOnSecureKeyguard;
         private ListPreference mStatusBarHeaderFontStyle;
-        private ListPreference mNumColumns;
-        private ListPreference mNumRows;
         private ListPreference mTileAnimationStyle;
         private ListPreference mTileAnimationDuration;
         private ListPreference mTileAnimationInterpolator;
@@ -105,24 +103,6 @@ public class NotificationsFragment extends Fragment {
             mHeaderShadow.setValue((int)((headerShadow / 255) * 100));
             mHeaderShadow.setOnPreferenceChangeListener(this);
 
-            // Number of QS Columns 3,4,5
-            mNumColumns = (ListPreference) findPreference("sysui_qs_num_columns");
-            int numColumns = Settings.System.getIntForUser(resolver,
-                    Settings.System.QS_NUM_TILE_COLUMNS, getDefaultNumColumns(),
-                    UserHandle.USER_CURRENT);
-            mNumColumns.setValue(String.valueOf(numColumns));
-            updateNumColumnsSummary(numColumns);
-            mNumColumns.setOnPreferenceChangeListener(this);
-
-            // Number of QS Rows 3,4
-            mNumRows = (ListPreference) findPreference("sysui_qs_num_rows");
-            int numRows = Settings.System.getIntForUser(resolver,
-                    Settings.System.QS_NUM_TILE_ROWS, getDefaultNumRows(),
-                    UserHandle.USER_CURRENT);
-            mNumRows.setValue(String.valueOf(numRows));
-            updateNumRowsSummary(numRows);
-            mNumRows.setOnPreferenceChangeListener(this);
-
             mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
             int tileAnimationStyle = Settings.System.getIntForUser(resolver,
                     Settings.System.ANIM_TILE_STYLE, 0,
@@ -174,18 +154,6 @@ public class NotificationsFragment extends Fragment {
                         Settings.System.STATUS_BAR_HEADER_FONT_STYLE, val, UserHandle.USER_CURRENT);
                 mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntries()[index]);
                 return true;
-            } else if (preference == mNumColumns) {
-                int numColumns = Integer.valueOf((String) newValue);
-                Settings.System.putIntForUser(resolver, Settings.System.QS_NUM_TILE_COLUMNS,
-                        numColumns, UserHandle.USER_CURRENT);
-                updateNumColumnsSummary(numColumns);
-                return true;
-            } else if (preference == mNumRows) {
-                int numRows = Integer.valueOf((String) newValue);
-                Settings.System.putIntForUser(resolver, Settings.System.QS_NUM_TILE_ROWS,
-                        numRows, UserHandle.USER_CURRENT);
-                updateNumRowsSummary(numRows);
-                return true;
             } else if (preference == mHeaderShadow) {
                Integer headerShadow = (Integer) newValue;
                int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
@@ -220,18 +188,6 @@ public class NotificationsFragment extends Fragment {
                     ? getResources().getString(R.string.qs_brightness_slider_enabled)
                     : getResources().getString(R.string.qs_brightness_slider_disabled);
             mBrightnessSlider.setSummary(summary);
-        }
-
-        private void updateNumColumnsSummary(int numColumns) {
-            String prefix = (String) mNumColumns.getEntries()[mNumColumns.findIndexOfValue(String
-                    .valueOf(numColumns))];
-            mNumColumns.setSummary(getResources().getString(R.string.qs_num_columns_showing, prefix));
-        }
-
-        private void updateNumRowsSummary(int numRows) {
-            String prefix = (String) mNumRows.getEntries()[mNumRows.findIndexOfValue(String
-                    .valueOf(numRows))];
-            mNumRows.setSummary(getResources().getString(R.string.qs_num_rows_showing, prefix));
         }
 
         private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
