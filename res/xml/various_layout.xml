@@ -40,10 +40,6 @@
         android:key="system_app_remover"
         android:title="@string/system_app_remover" />
 
-    <Preference
-        android:key="systemui_tuner"
-        android:title="@string/systemui_tuner_title"
-        android:summary="@string/systemui_tuner_summary" />
 
     <Preference
         android:key="adaway_start"
