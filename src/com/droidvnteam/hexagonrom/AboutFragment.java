@@ -93,7 +93,7 @@ public class AboutFragment extends Fragment {
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
                 emailIntent.setData(Uri.parse("mailto:"));
                 emailIntent.setType("text/plain");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, "droidvn.com@gmail.com");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, "Droidvnteam@gmail.com");
                 emailIntent.putExtra(Intent.EXTRA_CC, "");
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "");
