@@ -1,264 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.1.3.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2016-06-25T15:12:14.774730573"/>
+</head>
+<body lang="en-US" dir="ltr">
 <p align="center">Change log</p>
-# Hexagon Rom - Marshmallow
-
-  Source Code: https://github.com/HexagonRom
-  For extended changelog, track github activities
-
-# Changelog
-
-# Hexagon Rom - v1.0 - Android 6.0.1 r46 - 2016-06-25
-- First release base on android 6.0.1 r46
-- Core version cyanogenmod 13.0 MOB30J
-- Android N style Status Bar / Notification / Quicksetting panel
-- Add animations to quick settings tiles 
-- Add interpolators to qs tiles animation
-- Add new bunch of alpha and smart layer headers 
-- Add per app controls for LP keyguard notifications 
-- Remove LightStatusbar dark icon mode & make statusbar gradient
-- Configurable LockClock & Date Text Sizes 
-- Improve some headers 
-- BatteryService: Fully charged notification toggle
-- Visualizer: Let visualizer fill the entire available screen 
-- Only show keyguard panel if on lockscreen + no activity on top
-- Update sb headset vector
-- Update keyguard weather layout 
-- SystemUI: fix NPE when configuring blur layer 
-- SystemUI: fix multi touch gestures and extra jank
-- SysUI: Simplify Code for Battery Icon Tint
-- SysUI:Fix a Recents Styles Default
-- SysUI: Fix SystemUI Crash on Notification Guts Media
-- Don't lookup application keyguard notification visibility unnecessarily
-- SystemUI: Add support for persistent usb drive notification.
-- SysUI: Fix Secure Lockscreen Pulldown Switch 
-- SystemUI: fix NFC tile sometimes hiding 
-- Fix possibility of slim recents icon fc
-- Fix a glitch causing shadow not to be reset when header disabled 
-- DocumentsUI : Hide advanced menu option when in forced mode
-- SystemUI: fix one more misbehaving shadow
-- Settings: Update performance settings icon
-- Settings:Disable Weather Provider By Default 
-- Settings : Fix dashboard colors default and reset values 
-- Themes : Update statusbar notify icon
-- SmartBar: Add app picker as an action
-- Give Pulse & Fling a Little CPU boost
-- Pulse:imrpove Reset Logic 
-- Update Translations
-- All updates from CM
-- Bugfixes and improvements
-- For more info Track Github Activities
-- SysUI:Custom Recents Style -Taskviewheader colors
-- Carrier Label Fonts Style
-- Custom Headers : Add new material design colorful headers
-- SystemUI : Re-order left statusbar icon layouts and paddings
-- Option to Hide carrier label based on notitication icons 
-- FWB: Carrier label font style
-- Battery bar enhancements
-- ActivityManager: fix perf boost NPE
-- Qs: Add Audio Fx Visualizer Tile
-- batteryservice: Add support for segmented power LEDs
-- QSPanel: Fix Reported SystemUI FC on Themes Tile
-- SystemUI: avoid lock screen shortcut picker crash 
-- SysUI: Show keyguard when LLS dies and had focus
-- pms: Skip reinstall of prebundles correctly per user.
-- systemui: Fix the TrustDrawable animation state
-- SystemUI: bail out of recents-to-home animation when losing focus
-- Lockscreen : Bunch-o-fixes 
-- Themes: Expose manifest styles for framework activities
-- Add new options for call waiting response in InCallUI
-- SysUI: Make sure LLS focus is false when unlocking
-- perf: Send the process name and pid for launch boosts
-- am: Remove extraneous boostage
-- batteryservice: Use Alpha channel for segmented LED power level 
-- ThemeTile: tighten up how we execute a theme change
-- CmRes: Attach themed cmsdk resources to assets
-- SystemUI: attach a queue to media player notifications
-- SystemUI: fix play queue crash
-- am: Don't protect apps that atttempt to grant uri perms
-- SystemUI: fix potential NPE with Queue
-- only use proximity checks on wakeup keys
-- SysUI: Use VectorDrawable's for rendering battery 
-- Fix SystemUI FC on Media Notification Queue 
-- bootanimation: fix check for system bootanimation
-- MediaScanner: Add support for default ringtones per sim
-- Fix incorrect behavior for statusbar and quicksettings panel
-- ActivityManager: fix perf boost NPE
-- QS: fix performance profile tile observer
-- SystemUI : Fix multi-user for keyguard
-- SystemUI: Set circle battery path as untranslatable
-- Update volume slider only if ringer mode changed
-- SystemUITests: fix compile error
-- Lockscreen : Disable left edge after showing keyguard
-- Keyguard: Allow swiping up when trust managed
-- SpamFilter : Hide option if notification cannot be filtered
-- FWB: Move Pulse Configs to Secure
-- LS:Fix Weather Panel Not hiding With Max Notif 
-- Acquire wakelock until dream service acknowledges dream state change
-- Lockscreen : Only animate targets if launched via swipe 
-- Ensure camera is launched if doing screen off gesture
-- Keyguard : Ensure we expand onIconClicked
-- WindowManagerService : Ensure we update both size/position 
-- Fix Battery Icon Tint on Keyguard
-- SysUI:Update a Custom Logo 
-- SysUI:Update some quick tile icons
-- Qs: Add Audio Fx Visualizer Tile
-- Speed up notification panel pulldown animation when called externally
-- Lls: Use LlsController for checking LLS focus
-- LLS: Don't change bar state when changing LLS focus
-- LLS: Ensure LLS loses focus when showing bouncer
-- ShutdownThread: Decrypt before stopping storage manager
-- VisualizerTile: Use proper Techniques to unlink with Pulse
-- Release alarm wakelock for blocked uid.
-- SyncManager: Adjust sync remaining time calculation.
-- Themes: Fix theming of cmsdk assets
-- Fix isComponentProtected calls in package manager tests
-- MSIM: Fix to resolve SIM PIN unlock in APM.
-- SystemUI: Check current data subscription when updating signal cluster
-- SysUI: Adjust battery dimensions for better look
-- am: Handle unchecked activity starts for protected components.
-- SysUI: Check swiping progress before collapsing KBA
-- SystemUI : Fix left swipe when dismissing bouncer
-- usb: ensure accessory detached sent on re-attach
-- SysUI:Cleaup Observers and fix certain mem leaks
-- SystemUI: fix NFC tile sometimes hiding 
-- SystemUI : Ensure bouncer is not shown for SHADE
-- Port "Settings: add a way to not localize zone selections" to cm-13 
-- Telephony: fix crash if SubInfo isn't ready 
-- Settings:Close "Protected apps" activity during power cycle
-- Settings: Move vibrator value restore to onActivityStop
-- Settings: Use correct icon for sim card
-- Settings:Disable battery pulsing if segmented battery LED is enabled
-- Settings:Update MultiTasking Category Icon 
-- Settings:Protected apps: fix rotation states 
-- Settings:LockPatternView: persist state across rotates 
-- Settings:LLS: Load title and summary from ext. package if avail.  
-- Settings: Make sure to rebuild on app entries loaded. 
-- Settings: fix backlight illumination wrong summary
-- Settings: More Dashboard Customizations
-- Fix Reboot on Call Waiting Scenario
-- Update Translations
-- All updates from CM
-- For more info Track Github Activities
-- Update Bootanimations
-- Update boot logo same as bootanimation
-- Custom Settings Dashboard Colors
-- Pulse Visualizer Sanity Level
-- Pulse Bar Customizations
-- Configurable Pulse Bar Spacing
-- ThemeChooser: update UI 
-- Fix Selinux permessive mode reset after every reboot 
-- Dyanamically Configurable Pulse Bar Dimensions
-- Floating Window 
-- Add Back Pie
-- Add Pulse Tile
-- Statusbar weather: fix temp style after refresh 
-- FWB :SmartBar Button Tint
-- Update some settings configurations icons
-- Disable expanded status bar weather by default
-- Add Option to Enable/Disable ScreenShot & ScreenRecord Shorcut
-- Configurable Keyguard Quick Shortcut Colors
-- LLS: Show notification panel if LLS crashes 
-- LLS: Fix screen off event firing when not interactive
-- Improve TM animation & use stock detail background
-- Use CircularReveal animation to show/hide task manager panel 
-- Add the ability to hide superuser status bar icon
-- Switch back to cm root as default
-- Keyguard Charging Current Switch
-- Keyguard: show charging current in mAh on lockscreen 
-- Themes: Update icon mapping on boot
-- Update themes icon drawables
-- fwb: Add ability to permanently hide apps from recents 
-- ThemesTile: Don't process clicks on current theme item 
-- ThemeTile: Custom QS detail header title support for theming apps
-- About Hexagon : Add g+ account to profile cards instead of twitter
-- Update Some Settings Activities
-- Settings: Ensure user has to wait 30 before retrying pattern
-- SystemUI: add HeadsUp snooze disabled state
-- bootanimation: Switch to readahead
-- SystemUI: HeadsUp toast message
-- SysUI: Improve Show3g Logic 
-- add ability to disable bar color in battery saver mode
-- Global actions: fix airplane mode switch for MSIM
-- SystemUI: Fix nav bar transparency when enabling software keys 
-- SysUI: Fix reporting of swipe progess in notification panel
-- Lockscreen : Ensure we hide bottom area in bouncer 
-- livedisplay: Moving LiveDisplay to CMSDK- Update Bootanimations
-- Update boot logo same as bootanimation
-- Custom Settings Dashboard Colors
-- Pulse Visualizer Sanity Level
-- Pulse Bar Customizations
-- Configurable Pulse Bar Spacing
-- ThemeChooser: update UI 
-- Fix Selinux permessive mode reset after every reboot 
-- Dyanamically Configurable Pulse Bar Dimensions
-- Floating Window 
-- Add Back Pie
-- Add Pulse Tile
-- Statusbar weather: fix temp style after refresh 
-- FWB :SmartBar Button Tint
-- Update some settings configurations icons
-- Disable expanded status bar weather by default
-- Add Option to Enable/Disable ScreenShot & ScreenRecord Shorcut
-- Configurable Keyguard Quick Shortcut Colors
-- LLS: Show notification panel if LLS crashes 
-- LLS: Fix screen off event firing when not interactive
-- Improve TM animation & use stock detail background
-- Use CircularReveal animation to show/hide task manager panel 
-- Add the ability to hide superuser status bar icon
-- Switch back to cm root as default
-- Keyguard Charging Current Switch
-- Keyguard: show charging current in mAh on lockscreen 
-- Themes: Update icon mapping on boot
-- Update themes icon drawables
-- fwb: Add ability to permanently hide apps from recents 
-- ThemesTile: Don't process clicks on current theme item 
-- ThemeTile: Custom QS detail header title support for theming apps
-- About Hexagon : Add g+ account to profile cards instead of twitter
-- Update Some Settings Activities
-- Settings: Ensure user has to wait 30 before retrying pattern
-- SystemUI: add HeadsUp snooze disabled state
-- bootanimation: Switch to readahead
-- SystemUI: HeadsUp toast message
-- SysUI: Improve Show3g Logic 
-- add ability to disable bar color in battery saver mode
-- Global actions: fix airplane mode switch for MSIM
-- SystemUI: Fix nav bar transparency when enabling software keys 
-- SysUI: Fix reporting of swipe progess in notification panel
-- Lockscreen : Ensure we hide bottom area in bouncer 
-- livedisplay: Moving LiveDisplay to CMSDK
-- Lockscreen : Update shortcuts in onAttachWindow
-- GlobalActions: Always use setZenMode
-- Lockscreen : Fix dead-zone in bottom area
-- Remove Hide Settings Icon from header 
-- SystemUI: fix double tab launching custom lockscreen icon 
-- Point Amibent display tile longpress action to it's own settings
-- Remove Invert Colors and Cast Tiles as Default 
-- Update A Custom SB logo
-- Check for deprecated third party keyguard perm
-- packagemanager: Fix bootloop if packages.xml is deleted 
-- Fix Heads Up and TaskManager buttons in StatusBarHeaderView 
-- QSTiles: set disconnect callback in bluetooth details list adapter 
-- SystemUI: Fix Statusbar Clock font size/color on location changes
-- Support for new properties to identify country based ecc #s added by RIL 
-- Remove the brightness mirror
-- Give LockClock the location permission by default
-- translation imports
-- For more info Track Github Activities
-- Lockscreen : Update shortcuts in onAttachWindow
-- GlobalActions: Always use setZenMode
-- Lockscreen : Fix dead-zone in bottom area
-- Remove Hide Settings Icon from header 
-- SystemUI: fix double tab launching custom lockscreen icon 
-- Point Amibent display tile longpress action to it's own settings
-- Remove Invert Colors and Cast Tiles as Default 
-- Update A Custom SB logo
-- Check for deprecated third party keyguard perm
-- packagemanager: Fix bootloop if packages.xml is deleted 
-- Fix Heads Up and TaskManager buttons in StatusBarHeaderView 
-- QSTiles: set disconnect callback in bluetooth details list adapter 
-- SystemUI: Fix Statusbar Clock font size/color on location changes
-- Support for new properties to identify country based ecc #s added by RIL 
-- Remove the brightness mirror
-- Give LockClock the location permission by default
-- translation imports
-- For more info Track Github Activities
-- Important !!! We added some bugs to fix later :)
+<p># Hexagon Rom - Marshmallow 
+</p>
+<p>Source Code: https://github.com/HexagonRom 
+</p>
+<p>For extended changelog, track github activities 
+</p>
+<p># Changelog 
+</p>
+<p># Hexagon Rom - v1.0 - Android 6.0.1 r46 - 2016-06-25 
+</p>
+<p>- First release base on android 6.0.1 r46</p>
+<p>- Core version cyanogenmod 13.0 MOB30J</p>
+<p>- Android N style Status Bar / Notification / Quicksetting panel</p>
+<p>- Add animations to quick settings tiles</p>
+<p>- Add interpolators to qs tiles animation</p>
+<p>- Add new bunch of alpha and smart layer headers</p>
+<p>- Add per app controls for LP keyguard notifications</p>
+<p>- Remove LightStatusbar dark icon mode &amp; make statusbar
+gradient</p>
+<p>- Configurable LockClock &amp; Date Text Sizes</p>
+<p>- Improve some headers</p>
+<p>- BatteryService: Fully charged notification toggle</p>
+<p>- Visualizer: Let visualizer fill the entire available screen</p>
+<p>- Only show keyguard panel if on lockscreen + no activity on top</p>
+<p>- Update sb headset vector</p>
+<p>- Update keyguard weather layout</p>
+<p>- SystemUI: fix NPE when configuring blur layer</p>
+<p>- SystemUI: fix multi touch gestures and extra jank</p>
+<p>- SysUI: Simplify Code for Battery Icon Tint</p>
+<p>- SysUI:Fix a Recents Styles Default</p>
+<p>- SysUI: Fix SystemUI Crash on Notification Guts Media</p>
+<p>- Don't lookup application keyguard notification visibility
+unnecessarily</p>
+<p>- SystemUI: Add support for persistent usb drive notification.</p>
+<p>- SysUI: Fix Secure Lockscreen Pulldown Switch</p>
+<p>- SystemUI: fix NFC tile sometimes hiding</p>
+<p>- Fix possibility of slim recents icon fc</p>
+<p>- Fix a glitch causing shadow not to be reset when header disabled</p>
+<p>- DocumentsUI : Hide advanced menu option when in forced mode</p>
+<p>- SystemUI: fix one more misbehaving shadow</p>
+<p>- Settings: Update performance settings icon</p>
+<p>- Settings:Disable Weather Provider By Default</p>
+<p>- Settings : Fix dashboard colors default and reset values</p>
+<p>- Themes : Update statusbar notify icon</p>
+<p>- SmartBar: Add app picker as an action</p>
+<p>- Give Pulse &amp; Fling a Little CPU boost</p>
+<p>- Pulse:imrpove Reset Logic</p>
+<p>- Update Translations</p>
+<p>- All updates from CM</p>
+<p>- Bugfixes and improvements</p>
+<p>- For more info Track Github Activities</p>
+<p>- SysUI:Custom Recents Style</p>
+<p>-Taskviewheader colors 
+</p>
+<p>- Carrier Label Fonts Style</p>
+<p>- Custom Headers : Add new material design colorful headers</p>
+<p>- SystemUI : Re-order left statusbar icon layouts and paddings</p>
+<p>- Option to Hide carrier label based on notitication icons</p>
+<p>- FWB: Carrier label font style - Battery bar enhancements</p>
+<p>- ActivityManager: fix perf boost NPE</p>
+<p>- Qs: Add Audio Fx Visualizer Tile</p>
+<p>- batteryservice: Add support for segmented power LEDs</p>
+<p>- QSPanel: Fix Reported SystemUI FC on Themes Tile</p>
+<p>- SystemUI: avoid lock screen shortcut picker crash</p>
+<p>- SysUI: Show keyguard when LLS dies and had focus</p>
+<p>- pms: Skip reinstall of prebundles correctly per user.</p>
+<p>- systemui: Fix the TrustDrawable animation state</p>
+<p>- SystemUI: bail out of recents-to-home animation when losing
+focus</p>
+<p>- Lockscreen : Bunch-o-fixes</p>
+<p>- Themes: Expose manifest styles for framework activities</p>
+<p>- Add new options for call waiting response in InCallUI</p>
+<p>- SysUI: Make sure LLS focus is false when unlocking</p>
+<p>- perf: Send the process name and pid for launch boosts</p>
+<p>- am: Remove extraneous boostage</p>
+<p>- batteryservice: Use Alpha channel for segmented LED power level</p>
+<p>- ThemeTile: tighten up how we execute a theme change</p>
+<p>- CmRes: Attach themed cmsdk resources to assets</p>
+<p>- SystemUI: attach a queue to media player notifications</p>
+<p>- SystemUI: fix play queue crash</p>
+<p>- am: Don't protect apps that atttempt to grant uri perms</p>
+<p>- SystemUI: fix potential NPE with Queue</p>
+<p>- only use proximity checks on wakeup keys</p>
+<p>- SysUI: Use VectorDrawable's for rendering battery</p>
+<p>- Fix SystemUI FC on Media Notification Queue</p>
+<p>- bootanimation: fix check for system bootanimation</p>
+<p>- MediaScanner: Add support for default ringtones per sim</p>
+<p>- Fix incorrect behavior for statusbar and quicksettings panel</p>
+<p>- ActivityManager: fix perf boost NPE</p>
+<p>- QS: fix performance profile tile observer</p>
+<p>- SystemUI : Fix multi-user for keyguard</p>
+<p>- SystemUI: Set circle battery path as untranslatable</p>
+<p>- Update volume slider only if ringer mode changed</p>
+<p>- SystemUITests: fix compile error</p>
+<p>- Lockscreen : Disable left edge after showing keyguard</p>
+<p>- Keyguard: Allow swiping up when trust managed</p>
+<p>- SpamFilter : Hide option if notification cannot be filtered</p>
+<p>- FWB: Move Pulse Configs to Secure</p>
+<p>- LS:Fix Weather Panel Not hiding With Max Notif</p>
+<p>- Acquire wakelock until dream service acknowledges dream state
+change</p>
+<p>- Lockscreen : Only animate targets if launched via swipe</p>
+<p>- Ensure camera is launched if doing screen off gesture</p>
+<p>- Keyguard : Ensure we expand onIconClicked</p>
+<p>- WindowManagerService : Ensure we update both size/position</p>
+<p>- Fix Battery Icon Tint on Keyguard</p>
+<p>- SysUI:Update a Custom Logo</p>
+<p>- SysUI:Update some quick tile icons</p>
+<p>- Qs: Add Audio Fx Visualizer Tile</p>
+<p>- Speed up notification panel pulldown animation when called
+externally</p>
+<p>- Lls: Use LlsController for checking LLS focus</p>
+<p>- LLS: Don't change bar state when changing LLS focus</p>
+<p>- LLS: Ensure LLS loses focus when showing bouncer</p>
+<p>- ShutdownThread: Decrypt before stopping storage manager</p>
+<p>- VisualizerTile: Use proper Techniques to unlink with Pulse</p>
+<p>- Release alarm wakelock for blocked uid.</p>
+<p>- SyncManager: Adjust sync remaining time calculation.</p>
+<p>- Themes: Fix theming of cmsdk assets</p>
+<p>- Fix isComponentProtected calls in package manager tests</p>
+<p>- MSIM: Fix to resolve SIM PIN unlock in APM.</p>
+<p>- SystemUI: Check current data subscription when updating signal
+cluster</p>
+<p>- SysUI: Adjust battery dimensions for better look</p>
+<p>- am: Handle unchecked activity starts for protected components.</p>
+<p>- SysUI: Check swiping progress before collapsing KBA</p>
+<p>- SystemUI : Fix left swipe when dismissing bouncer</p>
+<p>- usb: ensure accessory detached sent on re-attach</p>
+<p>- SysUI:Cleaup Observers and fix certain mem leaks</p>
+<p>- SystemUI: fix NFC tile sometimes hiding</p>
+<p>- SystemUI : Ensure bouncer is not shown for SHADE</p>
+<p>- Port &quot;Settings: add a way to not localize zone selections&quot;
+to cm-13</p>
+<p>- Telephony: fix crash if SubInfo isn't ready</p>
+<p>- Settings:Close &quot;Protected apps&quot; activity during power
+cycle</p>
+<p>- Settings: Move vibrator value restore to onActivityStop</p>
+<p>- Settings: Use correct icon for sim card</p>
+<p>- Settings:Disable battery pulsing if segmented battery LED is
+enabled</p>
+<p>- Settings:Update MultiTasking Category Icon</p>
+<p>- Settings:Protected apps: fix rotation states</p>
+<p>- Settings:LockPatternView: persist state across rotates</p>
+<p>- Settings:LLS: Load title and summary from ext. package if avail.</p>
+<p>- Settings: Make sure to rebuild on app entries loaded.</p>
+<p>- Settings: fix backlight illumination wrong summary</p>
+<p>- Settings: More Dashboard Customizations</p>
+<p>- Fix Reboot on Call Waiting Scenario</p>
+<p>- Update Translations - All updates from CM</p>
+<p>- For more info Track Github Activities</p>
+<p>- Update Bootanimations</p>
+<p>- Update boot logo same as bootanimation</p>
+<p>- Custom Settings Dashboard Colors</p>
+<p>- Pulse Visualizer Sanity Level</p>
+<p>- Pulse Bar Customizations</p>
+<p>- Configurable Pulse Bar Spacing</p>
+<p>- ThemeChooser: update UI</p>
+<p>- Fix Selinux permessive mode reset after every reboot</p>
+<p>- Dyanamically Configurable Pulse Bar Dimensions</p>
+<p>- Floating Window</p>
+<p>- Add Back Pie</p>
+<p>- Add Pulse Tile</p>
+<p>- Statusbar weather: fix temp style after refresh</p>
+<p>- FWB :SmartBar Button Tint</p>
+<p>- Update some settings configurations icons</p>
+<p>- Disable expanded status bar weather by default</p>
+<p>- Add Option to Enable/Disable ScreenShot &amp; ScreenRecord
+Shorcut</p>
+<p>- Configurable Keyguard Quick Shortcut Colors</p>
+<p>- LLS: Show notification panel if LLS crashes</p>
+<p>- LLS: Fix screen off event firing when not interactive</p>
+<p>- Improve TM animation &amp; use stock detail background</p>
+<p>- Use CircularReveal animation to show/hide task manager panel</p>
+<p>- Add the ability to hide superuser status bar icon</p>
+<p>- Switch back to cm root as default</p>
+<p>- Keyguard Charging Current Switch</p>
+<p>- Keyguard: show charging current in mAh on lockscreen</p>
+<p>- Themes: Update icon mapping on boot</p>
+<p>- Update themes icon drawables</p>
+<p>- fwb: Add ability to permanently hide apps from recents</p>
+<p>- ThemesTile: Don't process clicks on current theme item</p>
+<p>- ThemeTile: Custom QS detail header title support for theming
+apps</p>
+<p>- About Hexagon : Add g+ account to profile cards instead of
+twitter</p>
+<p>- Update Some Settings Activities</p>
+<p>- Settings: Ensure user has to wait 30 before retrying pattern</p>
+<p>- SystemUI: add HeadsUp snooze disabled state</p>
+<p>- bootanimation: Switch to readahead</p>
+<p>- SystemUI: HeadsUp toast message</p>
+<p>- SysUI: Improve Show3g Logic</p>
+<p>- add ability to disable bar color in battery saver mode</p>
+<p>- Global actions: fix airplane mode switch for MSIM</p>
+<p>- SystemUI: Fix nav bar transparency when enabling software keys</p>
+<p>- SysUI: Fix reporting of swipe progess in notification panel</p>
+<p>- Lockscreen : Ensure we hide bottom area in bouncer</p>
+<p>- livedisplay: Moving LiveDisplay to CMSDK- Update Bootanimations</p>
+<p>- Update boot logo same as bootanimation</p>
+<p>- Custom Settings Dashboard Colors</p>
+<p>- Pulse Visualizer Sanity Level</p>
+<p>- Pulse Bar Customizations</p>
+<p>- Configurable Pulse Bar Spacing</p>
+<p>- ThemeChooser: update UI</p>
+<p>- Fix Selinux permessive mode reset after every reboot</p>
+<p>- Dyanamically Configurable Pulse Bar Dimensions</p>
+<p>- Floating Window</p>
+<p>- Add Back Pie</p>
+<p>- Add Pulse Tile</p>
+<p>- Statusbar weather: fix temp style after refresh</p>
+<p>- FWB :SmartBar Button Tint</p>
+<p>- Update some settings configurations icons</p>
+<p>- Disable expanded status bar weather by default</p>
+<p>- Add Option to Enable/Disable ScreenShot &amp; ScreenRecord
+Shorcut</p>
+<p>- Configurable Keyguard Quick Shortcut Colors</p>
+<p>- LLS: Show notification panel if LLS crashes</p>
+<p>- LLS: Fix screen off event firing when not interactive</p>
+<p>- Improve TM animation &amp; use stock detail background</p>
+<p>- Use CircularReveal animation to show/hide task manager panel</p>
+<p>- Add the ability to hide superuser status bar icon</p>
+<p>- Switch back to cm root as default</p>
+<p>- Keyguard Charging Current Switch</p>
+<p>- Keyguard: show charging current in mAh on lockscreen</p>
+<p>- Themes: Update icon mapping on boot</p>
+<p>- Update themes icon drawables</p>
+<p>- fwb: Add ability to permanently hide apps from recents</p>
+<p>- ThemesTile: Don't process clicks on current theme item</p>
+<p>- ThemeTile: Custom QS detail header title support for theming
+apps</p>
+<p>- About Hexagon : Add g+ account to profile cards instead of
+twitter</p>
+<p>- Update Some Settings Activities</p>
+<p>- Settings: Ensure user has to wait 30 before retrying pattern</p>
+<p>- SystemUI: add HeadsUp snooze disabled state</p>
+<p>- bootanimation: Switch to readahead</p>
+<p>- SystemUI: HeadsUp toast message</p>
+<p>- SysUI: Improve Show3g Logic</p>
+<p>- add ability to disable bar color in battery saver mode</p>
+<p>- Global actions: fix airplane mode switch for MSIM</p>
+<p>- SystemUI: Fix nav bar transparency when enabling software keys</p>
+<p>- SysUI: Fix reporting of swipe progess in notification panel</p>
+<p>- Lockscreen : Ensure we hide bottom area in bouncer</p>
+<p>- livedisplay: Moving LiveDisplay to CMSDK</p>
+<p>- Lockscreen : Update shortcuts in onAttachWindow</p>
+<p>- GlobalActions: Always use setZenMode</p>
+<p>- Lockscreen : Fix dead-zone in bottom area</p>
+<p>- Remove Hide Settings Icon from header</p>
+<p>- SystemUI: fix double tab launching custom lockscreen icon</p>
+<p>- Point Amibent display tile longpress action to it's own settings</p>
+<p>- Remove Invert Colors and Cast Tiles as Default -</p>
+<p> Update A Custom SB logo 
+</p>
+<p>- Check for deprecated third party keyguard perm</p>
+<p>- packagemanager: Fix bootloop if packages.xml is deleted</p>
+<p>- Fix Heads Up and TaskManager buttons in StatusBarHeaderView</p>
+<p>- QSTiles: set disconnect callback in bluetooth details list
+adapter</p>
+<p>- SystemUI: Fix Statusbar Clock font size/color on location
+changes</p>
+<p>- Support for new properties to identify country based ecc #s
+added by RIL</p>
+<p>- Remove the brightness mirror</p>
+<p>- Give LockClock the location permission by default</p>
+<p>- translation imports</p>
+<p>- For more info Track Github Activities</p>
+<p>- Lockscreen : Update shortcuts in onAttachWindow</p>
+<p>- GlobalActions: Always use setZenMode</p>
+<p>- Lockscreen : Fix dead-zone in bottom area</p>
+<p>- Remove Hide Settings Icon from header</p>
+<p>- SystemUI: fix double tab launching custom lockscreen icon</p>
+<p>- Point Amibent display tile longpress action to it's own settings</p>
+<p>- Remove Invert Colors and Cast Tiles as Default</p>
+<p>- Update A Custom SB logo</p>
+<p>- Check for deprecated third party keyguard perm</p>
+<p>- packagemanager: Fix bootloop if packages.xml is deleted</p>
+<p>- Fix Heads Up and TaskManager buttons in StatusBarHeaderView</p>
+<p>- QSTiles: set disconnect callback in bluetooth details list
+adapter</p>
+<p>- SystemUI: Fix Statusbar Clock font size/color on location
+changes</p>
+<p>- Support for new properties to identify country based ecc #s
+added by RIL</p>
+<p>- Remove the brightness mirror</p>
+<p>- Give LockClock the location permission by default</p>
+<p>- translation imports</p>
+<p>- For more info Track Github Activities</p>
+<p>- Important !!! We added some bugs to fix later :)</p>
+</body>
+</html>
