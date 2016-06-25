@@ -99,7 +99,7 @@
 
     <!-- Disabling FC notifications -->
     <string name="disable_fc_notifications_title">Tắt thông báo Force Close</string>
-    <string name="disable_fc_notifications_summary">Bạn sẽ không bị phiền toái bởi thong báo Force Close khi ứng dụng dừng đột ngột nữa</string>
+    <string name="disable_fc_notifications_summary">Bạn sẽ không bị phiền toái bởi thông báo Force Close khi ứng dụng dừng đột ngột nữa</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Chọn màu</string>
@@ -417,7 +417,7 @@
 
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">Truy cập ứng dụng nhanh</string>
-    <string name="app_circle_bar_title">Còng tròn ứng dụng</string>
+    <string name="app_circle_bar_title">Vòng tròn ứng dụng</string>
     <string name="app_circle_bar_summary">Hiển thị vòng tròn truy cập nhanh ứng dụng khi chạm cạnh phải màn hình</string>
     <string name="app_circle_bar_included_apps_title">Ứng dụng gồm có</string>
     <string name="app_circle_bar_included_apps_summary">Những ứng dụng được chọn sẽ hiển thị trong vòng truy cập nhanh</string>
@@ -761,7 +761,7 @@
 
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Đèn pin màn hình khóa</string>
-    <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
+    <string name="keyguard_torch_summary">Nhấn giữ nút nguồn trong khi màn hình tắt để bật đèn pin</string>
 
     <!-- Breathing Notifications -->
     <string name="breathing_notifications_category">Thông báo nhấp nháy</string>
