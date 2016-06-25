@@ -66,7 +66,7 @@ public class AboutFragment extends Fragment {
         root.findViewById(R.id.imgWeb).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uriUrl = Uri.parse("http://www.droidvn.com");
+                Uri uriUrl = Uri.parse("http://www.droidvn.com/forums/");
                 Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                 startActivity(launchBrowser);
             }
