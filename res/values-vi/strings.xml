@@ -90,11 +90,11 @@
     <string name="print_restart">Khởi động lại</string>
 
     <!-- Force expanded notifications -->
-    <string name="force_expanded_notifications_title">Bắt buột mở rộng thông báo</string>
+    <string name="force_expanded_notifications_title">Bắt buộc mở rộng thông báo</string>
     <string name="force_expanded_notifications_summary">Chỉ hoạt động cho các ứng dụng có thông báo mở rộng</string>
 
     <!-- Disabling immersive mode messages -->
-    <string name="disable_immersive_message_title">Tắt chế dộ thông báo ẩn</string>
+    <string name="disable_immersive_message_title">Tắt chế độ thông báo ẩn</string>
     <string name="disable_immersive_message_summary">Tắt mọi thông báo ẩn</string>
 
     <!-- Disabling FC notifications -->
@@ -433,8 +433,8 @@
    <string name="lockscreen_wallpaper_title">Hình nền màn hình khóa</string>
    <string name="lockscreen_wallpaper_set_title">Đặt hình nền mới</string>
    <string name="lockscreen_wallpaper_set_summary">Cần khởi động lại</string>
-   <string name="lockscreen_wallpaper_clear_title">Trả về mặt định</string>
-   <string name="reset_lockscreen_wallpaper">Đặt hình nền màn hình khóa về mặt định</string>
+   <string name="lockscreen_wallpaper_clear_title">Trả về mặc định</string>
+   <string name="reset_lockscreen_wallpaper">Đặt hình nền màn hình khóa về mặc định</string>
 
     <!-- OmniSwitch -->
     <string name="omniswitch_category_title">Trình đa nhiệm OmniSwitch</string>
