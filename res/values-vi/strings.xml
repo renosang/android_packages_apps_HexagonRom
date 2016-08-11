@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name" translatable="false">Hexagon Rom</string>
     <string name="droidvn">DroidVn Team</string>
     <string name="navigation_drawer_open">Mở điều hướng</string>
     <string name="navigation_drawer_close">Đóng điều hướng</string>
@@ -104,8 +103,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Chọn màu</string>
     <string name="press_color_to_apply">Nhấn vào màu bên dưới để áp dụng</string>
-    <string name="arrow_right" translatable="false">→</string>
-    <string name="arrow_down" translatable="false">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>

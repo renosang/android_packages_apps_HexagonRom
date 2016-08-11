@@ -8,6 +8,10 @@
     <color name="line_color">#B6B6B6</color>
     <color name="colorAccent">#FF607D8B</color>
     <color name="overlayBackground">#00ffffff</color>
+    <color name="seekbar_dot_color">@color/colorPrimary</color>
+    <color name="navDrawerBg">@color/background_material_dark</color>
+    <color name="navDrawerText">@android:color/white</color>
+    <color name="navDrawerTextChecked">@color/colorAccent</color>
 
     <color name="background_material_dark">#FF303030</color>
     <color name="foreground_material_dark">#FFFFFFFF</color>

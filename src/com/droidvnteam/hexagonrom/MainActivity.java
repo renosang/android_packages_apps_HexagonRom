@@ -3,6 +3,7 @@ package com.droidvnteam.hexagonrom;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -14,10 +15,10 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import java.lang.System;
 
@@ -26,14 +27,21 @@ import com.droidvnteam.R;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static final String INTENT_EXTRA_INIT_FRAGMENT = "init_fragment";
+    public static final String INIT_FRAGMENT_HALO = "halo";
+
     private static final String NAV_ITEM_ID = "navItemId";
     static final String TAG = MainActivity.class.getSimpleName();
 
 
     private DrawerLayout mDrawer;
+    private ActionBarDrawerToggle toggle;
+    private Toolbar toolbar;
     private int id;
     private long startTime;
     private boolean secondBack=false;
+
+    private View mView;
 
     @Override
     protected void onStart() {
@@ -53,8 +61,9 @@ public class MainActivity extends AppCompatActivity
                     return canGainSu;
                 } catch (Exception e) {
                     Log.e(TAG, "Error: " + e.getMessage(), e);
-                    Toast.makeText(MainActivity.this, R.string.cannot_get_su_start,
-                    Toast.LENGTH_LONG).show();
+                    Snackbar.make(mView, R.string.cannot_get_su_start,
+                            Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                     return true; // I want to start the app regardles of having root or not
                 }
             }
@@ -64,8 +73,9 @@ public class MainActivity extends AppCompatActivity
                 setProgressBarIndeterminateVisibility(false);
 
                 if (!result) {
-                    Toast.makeText(MainActivity.this, R.string.cannot_get_su,
-                    Toast.LENGTH_LONG).show();
+                    Snackbar.make(mView, R.string.cannot_get_su,
+                            Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                     finish();
                 }
             }
@@ -80,12 +90,30 @@ public class MainActivity extends AppCompatActivity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        mView = (View) findViewById(R.id.drawer_layout);
+
+        Fragment fragment;
+        String title = null;
+        String fragmentExtra = getIntent().getStringExtra(INTENT_EXTRA_INIT_FRAGMENT);
+        if (INIT_FRAGMENT_HALO.equals(fragmentExtra)) {
+            fragment = new HaloFragment();
+            title = getString(R.string.halo_settings_title);
+        } else {
+            if (title != null) {
+                Log.w(TAG, "Unknown init fragment: " + fragmentExtra);
+            }
+            fragment = new AboutFragment();
+        }
+
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-        tx.replace(R.id.content_main, new AboutFragment());
+        tx.replace(R.id.content_main, fragment);
         tx.commit();
+        if (title != null) {
+            setTitle(title);
+        }
 
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -107,13 +135,14 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             /*
-            **If back was pressed the first time,only show toast
+            **If back was pressed the first time,only show snackbar
             **else exit the app provided the user presses back
             **the second time within 2.5 seconds of the first
             */
             if(!secondBack) {
-            Toast.makeText(MainActivity.this, R.string.app_exit_toast,
-            Toast.LENGTH_SHORT).show();
+            Snackbar.make(mView, R.string.app_exit_toast,
+                    Snackbar.LENGTH_SHORT)
+                .setAction("Action", null).show();
             secondBack=!secondBack;
             startTime = System.currentTimeMillis();
             } else if( System.currentTimeMillis()-startTime < 2500)
@@ -154,6 +183,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_advanced:
                 fragmentClass = MultiShitFragment.class;
+                break;
+            case R.id.nav_halo:
+                fragmentClass = HaloFragment.class;
                 break;
             case R.id.nav_transparency_porn:
                 fragmentClass = TransparencyPornFragment.class;

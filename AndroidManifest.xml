@@ -54,6 +54,11 @@
             android:label="@string/changelog_title">
         </activity>
         <activity
+            android:name=".hexagonrom.SettingsActivity"
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/settings_activity_title">
+        </activity>
+        <activity
             android:name=".hexagonrom.Traffic"
             android:label="@string/traffic_category"
             android:theme="@style/FragmentTheme">

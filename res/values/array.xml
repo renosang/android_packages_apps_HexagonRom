@@ -700,4 +700,100 @@
         <item>6</item>
         <item>7</item>
     </string-array>
+
+    <!-- Volume dialog stroke -->
+    <string-array name="volume_dialog_stroke_entries" translatable="false">
+        <item>@string/volume_dialog_stroke_disabled</item>
+        <item>@string/volume_dialog_stroke_accent</item>
+        <item>@string/volume_dialog_stroke_custom</item>
+    </string-array>
+
+    <string-array name="volume_dialog_stroke_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Volume dialog stroke -->
+    <string-array name="qs_stroke_entries" translatable="false">
+        <item>@string/qs_stroke_disabled</item>
+        <item>@string/qs_stroke_accent</item>
+        <item>@string/qs_stroke_custom</item>
+    </string-array>
+
+    <string-array name="qs_stroke_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- MediaScanner behavior on boot -->
+    <string-array name="media_scanner_on_boot_entries">
+        <item>@string/media_scanner_on_boot_enabled</item>
+        <item>@string/media_scanner_on_boot_ask</item>
+        <item>@string/media_scanner_on_boot_disabled</item>
+    </string-array>
+
+    <string-array name="media_scanner_on_boot_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- QS panel logo -->
+    <string-array name="qs_panel_logo_entries" translatable="false">
+        <item>@string/qs_panel_logo_disabled</item>
+        <item>@string/qs_panel_logo_accent</item>
+        <item>@string/qs_panel_logo_custom</item>
+    </string-array>
+
+    <string-array name="qs_panel_logo_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Halo -->
+    <string-array name="entries_halo_size">
+        <item>@string/halo_size_miniscule</item>
+        <item>@string/halo_size_small</item>
+        <item>@string/halo_size_default</item>
+        <item>@string/halo_size_large</item>
+        <item>@string/halo_size_gigantic</item>
+        <item>@string/halo_size_monster</item>
+    </string-array>
+
+    <string-array name="values_halo_size" translatable="false">
+        <item>0.6</item>
+        <item>0.8</item>
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.4</item>
+        <item>1.6</item>
+    </string-array>
+
+    <string-array name="entries_halo_notification_count">
+        <item>@string/halo_notification_count_none</item>
+        <item>@string/halo_notification_count_total</item>
+        <item>@string/halo_notification_count_individual</item>
+        <item>@string/halo_notification_count_both</item>
+    </string-array>
+
+    <string-array name="values_halo_notification_count">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="entries_halo_msgbox_animation">
+        <item>@string/halo_msgbox_animation_none</item>
+        <item>@string/halo_msgbox_animation_flip</item>
+    </string-array>
+
+    <string-array name="values_halo_msgbox_animation">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
 </resources>
