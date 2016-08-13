@@ -44,17 +44,20 @@
                 android:icon="@drawable/ic_opacity"
                 android:title="@string/transparency_porn_title" />
             <item
+                android:id="@+id/nav_blur_ui"
+                android:checkable="true"
+                android:icon="@drawable/ic_blur_ui"
+                android:title="@string/nav_blur_ui_title" />
+            <item
                 android:id="@+id/nav_advanced"
                 android:checkable="true"
                 android:icon="@drawable/ic_advanded"
                 android:title="@string/advanced_title" />
-
             <item
                 android:id="@+id/nav_more"
                 android:checkable="true"
                 android:icon="@drawable/ic_more"
                 android:title="@string/more_title" />
-
             <item
                 android:id="@+id/nav_about"
                 android:checkable="true"

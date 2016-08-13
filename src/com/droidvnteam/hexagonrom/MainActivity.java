@@ -291,7 +291,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_transparency_porn:
                 fragmentClass = TransparencyPornFragment.class;
                 break;
-            case R.id.nav_more:
+            case R.id.nav_blur_ui:
+                fragmentClass = BlurUIFragment.class;
+                break;
+            case R.id.nav_various:
                 fragmentClass = VariousShitFragment.class;
                 break;
             case R.id.nav_about:
