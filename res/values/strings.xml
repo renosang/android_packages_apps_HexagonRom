@@ -152,15 +152,13 @@
     <string name="custom_carrier_label_title">Custom carrier label</string>
     <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
     <string name="custom_carrier_label_notset">Custom label currently not set</string>
-    <string name="status_bar_carrier_color">Carrier label color</string>
-    <string name="status_bar_carrier_size">Carrier label text size</string>
     <string name="show_carrier_title">Carrier label</string>
     <string name="show_carrier_disabled">Disabled</string>
-    <string name="show_carrier_keyguard">Keyguard</string>
-    <string name="show_carrier_statusbar">Status bar</string>
-    <string name="show_carrier_enabled">Both</string>
-    <string name="status_bar_carrier_position">Label location</string>
-    <string name="status_bar_carrier_font_style_title">Font style</string>
+    <string name="show_carrier_keyguard">Lockscreen only</string>
+    <string name="show_carrier_statusbar">Statusbar only</string>
+    <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
+    <string name="status_bar_carrier_color">Carrier label color</string>
+    <string name="status_bar_carrier_size">Carrier label text size</string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Battery bar</string>
@@ -314,7 +312,7 @@
     <string name="weather_hide_panel_never_title">Never</string>
     <string name="weather_hide_panel_auto_summary">The weather panel will be hidden, when the visible notifications will reach the maximum allowed notifications on the lock screen</string>
     <string name="weather_hide_panel_custom_summary">The weather panel will be hidden, when the visible notifications will reach the choosen number of notifications (%s)</string>
-    <string name="weather_hide_panel_never_summary">The weather panel whon/`t be hidden</string>
+    <string name="weather_hide_panel_never_summary">The weather panel won\'t be hidden</string>
     <string name="weather_number_of_notifications_title">Number of notifications</string>
     <string name="weather_number_of_notifications_dlg_title">Choose the number of notifications to hide the weather panel</string>
     <string name="weather_number_of_notifications_always_title">Always</string>
@@ -382,6 +380,7 @@
     <!-- ROm Stats -->
     <!-- Main -->
     <string name="stats_title">Stats</string>
+    <string name="stats_summary">Opt in/out for anonymous stats</string>
 
     <!-- Notification -->
     <string name="notification_ticker">Statistics opted-In</string>
@@ -795,13 +794,11 @@
     <!-- Status bar header font style -->
     <string name="status_bar_header_font_style_title">Header font style</string>
 
-    <!-- QS Tiles Columns -->
-    <string name="qs_num_columns_title">Number of QS tiles per row</string>
-    <string name="qs_num_columns_showing">%1$s tiles per row are shown</string>
-
-    <!-- QS Tiles Rows -->
-    <string name="qs_num_rows_title">Number of QS rows</string>
-    <string name="qs_num_rows_showing">%1$s rows are shown</string>
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_rows_portrait_title">Rows (portrait)</string>
+    <string name="qs_rows_landscape_title">Rows (landscape)</string>
+    <string name="qs_columns_title">Columns</string>
+    <string name="sysui_qqs_count_title">Small QS tiles</string>
 
     <!-- Lockscreen Colors -->
     <string name="lockscreen_colors_title">Lockscreen colors</string>
@@ -957,13 +954,15 @@
     <string name="ae_custom_colors_summaries">Use the settings below to modify the AE appearance</string>
     <string name="ae_drawer_opacity_title">Navigation drawer opacity</string>
     <string name="ae_drawer_bg_color_title">Navigation drawer bg color</string>
-    <string name="settings_info_title">AicpExtras Settings</string>
-    <string name="settings_info_summary">AE needs to be restarted for the changes to take effect.</string>
     <string name="ae_settings_restore_defaults_title">Restore defaults</string>
     <string name="values_restored_title">Values restored</string>
     <string name="ae_header_bg_image_opacity_title">Navigation drawer header bg image opacity</string>
     <string name="ae_nav_drawer_checked_text_title">Selected item text color</string>
     <string name="ae_nav_drawer_unchecked_text_title">Item text color</string>
+    <string name="ae_settings_summary_title">Custom AE summary text in Settings application</string>
+    <string name="custom_summary_title">Custom AE summary</string>
+    <string name="custom_summary_explain">Please enter a new summary. Leave blank to revert to stock text.</string>
+    <string name="custom_summary_notset">Custom rom personalizations</string>
 
     <!-- Halo -->
     <string name="halo_settings_title">Halo</string>
@@ -1003,5 +1002,96 @@
     <string name="halo_msgbox_animation_summary">Halo message box animation for incoming notifications</string>
     <string name="halo_msgbox_animation_none">None</string>
     <string name="halo_msgbox_animation_flip">Flip</string>
+
+    <!-- Blur UI -->
+    <string name="nav_blur_ui_title">Blur UI</string>
+    <string name="blur_ui_category_title">Blur personalizations</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">Blur StatusBar Background</string>
+    <string name="blurred_status_bar_expanded_enabled_pref_summary">Blur the background when you pull down the status bar</string>
+    <string name="translucent_notifications_pref">Translucent Notifications</string>
+    <string name="translucent_notifications_pref_summary">Allow translucency of notifications\' background</string>
+    <string name="translucent_header_pref">Blurred Status Bar Header </string>
+    <string name="translucent_header_pref_summary">Blur the background of status bar header</string>
+    <string name="translucent_quick_settings_pref">Blurred QS Panel</string>
+    <string name="translucent_quick_settings_pref_summary">Blur the background of QS panel </string>
+    <string name="transluency_level_universal">Translucency level</string>
+    <string name="blur_expstatus_cat">Expanded StatusBar </string>
+    <string name="blur_notifications_cat">Notifications</string>
+    <string name="blur_header_cat">StatusBar Header</string>
+    <string name="blur_qs_cat">Quick Settings</string>
+    <string name="blur_recents_cat">Recents</string>
+    <string name="blurred_recent_app_enabled_pref">Blurred Recents apps background </string>
+    <string name="blurred_recent_app_enabled_pref_summary">Blur the background of recents apps</string>
+    <string name="blurred_scale">Blur Scale</string>
+    <string name="blurred_scale_summary">Quality of blur image</string>
+    <string name="blurred_radius">Blur Radius</string>
+    <string name="blurred_radius_summary">Amount of blur</string>
+    <string name="blur_cat_notice">Notice</string>
+    <string name="blur_cat_notice_summary">Blur personalizations are disabled during Keyguard view! Only Translucent Notifications are enabled! QS header and panel transparency are automatically disabled!</string>
+
+    <!-- Statusbar 4G LTE switch -->
+    <string name="show_fourg_title">Show 4G instead of LTE</string>
+    <string name="show_fourg_summary">Replaces LTE statusbar indicator with 4G</string>
+
+    <!-- Zen icon in statusbar -->
+    <string name="show_zen_icon_title">Zen icon</string>
+    <string name="show_zen_icon_summary">Show/hide priority icon in statusbar.</string>
+
+    <!-- specific tile configurations -->
+    <string name="themes_tile_title">Themes tile components</string>
+    <string name="themes_tile_summary">Theme elements to change when a new theme is selected</string>
+
+    <!-- Themes tile entries and values -->
+    <string name="themes_tile_mods_style_entry">Style</string>
+    <string name="themes_tile_mods_statusbar_entry">Status bar</string>
+    <string name="themes_tile_mods_headers_entry">Headers</string>
+    <string name="themes_tile_mods_navbar_entry">Navigation bar</string>
+    <string name="themes_tile_mods_launcher_entry">Wallpaper</string>
+    <string name="themes_tile_mods_lockscreen_entry">Lockscreen wallpaper</string>
+    <string name="themes_tile_mods_font_entry">Font</string>
+    <string name="themes_tile_mods_icons_entry">Icons</string>
+    <string name="themes_tile_mods_bootanim_entry">Boot animation</string>
+    <string name="themes_tile_mods_notification_entry">Notifications</string>
+    <string name="themes_tile_mods_alarm_entry">Alarms</string>
+    <string name="themes_tile_mods_ringtone_entry">Ringtones</string>
+
+    <string name="themes_tile_mods_style_value" translatable="false">mods_overlays</string>
+    <string name="themes_tile_mods_statusbar_value" translatable="false">mods_status_bar</string>
+    <string name="themes_tile_mods_headers_value" translatable="false">mods_statusbar_headers</string>
+    <string name="themes_tile_mods_navbar_value" translatable="false">mods_navigation_bar</string>
+    <string name="themes_tile_mods_launcher_value" translatable="false">mods_homescreen</string>
+    <string name="themes_tile_mods_lockscreen_value" translatable="false">mods_lockscreen</string>
+    <string name="themes_tile_mods_font_value" translatable="false">mods_fonts</string>
+    <string name="themes_tile_mods_icons_value" translatable="false">mods_icons</string>
+    <string name="themes_tile_mods_bootanim_value" translatable="false">mods_bootanim</string>
+    <string name="themes_tile_mods_notification_value" translatable="false">mods_notifications</string>
+    <string name="themes_tile_mods_alarm_value" translatable="false">mods_alarms</string>
+    <string name="themes_tile_mods_ringtone_value" translatable="false">mods_ringtones</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+
+    <!-- Advanced data tile -->
+    <string name="qs_advanced_data_title">Advanced data tile</string>
+    <string name="qs_advanced_data_summary">Enable one tap action to enable or disable data</string>
+
+    <!-- SystemUI restart prompt -->
+    <string name="systemui_restart_title">WARNING</string>
+    <string name="systemui_restart_message">SystemUI will be restarted so that selected setting can be applied correctly.</string>
+
+    <!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">Ticker</string>
+    <string name="ticker_title">Status Bar Ticker</string>
+    <string name="ticker_screen_summary">Customize the ticker style</string>
+    <string name="ticker_summary">Enable the old status bar ticker</string>
+    <string name="ticker_restore_defaults_title">Restore defaults</string>
+    <string name="text_title">Text</string>
+    <string name="icon_title">Icon</string>
+    <string name="colors_title">Colors</string>
+
+    <!-- Heads up switch -->
+    <string name="heads_up_switch_title">Heads up</string>
+    <string name="heads_up_switch_summary">Toogle Heads up globally, not per app.</string>
 
 </resources>
