@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -23,10 +23,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.Helpers;
-import com.lordclockan.aicpextras.utils.Utils;
-import com.lordclockan.aicpextras.SuShell;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.Helpers;
+import com.droidvnteam.hexagonrom.utils.Utils;
+import com.droidvnteam.hexagonrom.SuShell;
 
 public class LogThatShitFragment extends Fragment {
 
