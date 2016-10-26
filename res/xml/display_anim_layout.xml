@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.droidvnteam">
 
     <PreferenceCategory
         android:title="@string/anim">

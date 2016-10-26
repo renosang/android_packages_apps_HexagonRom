@@ -15,7 +15,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.droidvnteam">
 
     <PreferenceCategory
         android:key="quicksettings_tiles_category"

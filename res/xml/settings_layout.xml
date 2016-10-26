@@ -16,7 +16,7 @@
 
 <PreferenceScreen
     android:title="@string/ae_settings_title"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.droidvnteam"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <SwitchPreference
