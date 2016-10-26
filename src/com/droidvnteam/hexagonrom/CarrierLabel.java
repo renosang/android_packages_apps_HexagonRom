@@ -28,7 +28,6 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.text.Spannable;
 import android.text.TextUtils;
@@ -43,7 +42,7 @@ import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class CarrierLabel extends AppCompatActivity {
+public class CarrierLabel extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -61,25 +60,20 @@ public class CarrierLabel extends AppCompatActivity {
         private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
         private static final String STATUS_BAR_CARRIER_FONT_SIZE = "status_bar_carrier_font_size";
         private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
-        private static final String STATUS_BAR_CARRIER_SPOT = "status_bar_carrier_spot";
-        private static final String STATUS_BAR_CARRIER_FONT_STYLE = "status_bar_carrier_font_style";
 
         static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
-        private PreferenceScreen mCustomCarrierLabel;
-
+        private Preference mCustomCarrierLabel;
         private ListPreference mShowCarrierLabel;
         private String mCustomCarrierLabelText;
         private SeekBarPreferenceCham mStatusBarCarrierSize;
         private ColorPickerPreference mCarrierColorPicker;
-        private ListPreference mStatusBarCarrierSpot;
-        private ListPreference mStatusBarCarrierFontStyle;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            addPreferencesFromResource(R.xml.carrierlabel);
+            addPreferencesFromResource(R.xml.carrier_label);
 
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
@@ -99,7 +93,7 @@ public class CarrierLabel extends AppCompatActivity {
             if (Utils.isWifiOnly(getActivity())) {
                 prefSet.removePreference(mShowCarrierLabel);
             }
-            mCustomCarrierLabel = (PreferenceScreen) prefSet.findPreference(CUSTOM_CARRIER_LABEL);
+            mCustomCarrierLabel = (Preference) prefSet.findPreference(CUSTOM_CARRIER_LABEL);
 
             mStatusBarCarrierSize = (SeekBarPreferenceCham) prefSet.findPreference(STATUS_BAR_CARRIER_FONT_SIZE);
             mStatusBarCarrierSize.setValue(Settings.System.getInt(resolver,
@@ -114,20 +108,7 @@ public class CarrierLabel extends AppCompatActivity {
             mCarrierColorPicker.setSummary(hexColor);
             mCarrierColorPicker.setNewPreviewColor(intColor);
 
-            mStatusBarCarrierSpot =
-                    (ListPreference) findPreference(STATUS_BAR_CARRIER_SPOT);
-            int statusBarCarrierSpot = Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_CARRIER_SPOT, 0, UserHandle.USER_CURRENT);
-            mStatusBarCarrierSpot.setValue(String.valueOf(statusBarCarrierSpot));
-            mStatusBarCarrierSpot.setSummary(mStatusBarCarrierSpot.getEntry());
-            mStatusBarCarrierSpot.setOnPreferenceChangeListener(this);
-
-            mStatusBarCarrierFontStyle = (ListPreference) findPreference(STATUS_BAR_CARRIER_FONT_STYLE);
-            mStatusBarCarrierFontStyle.setOnPreferenceChangeListener(this);
-            mStatusBarCarrierFontStyle.setValue(Integer.toString(Settings.System.getInt(resolver,
-                    Settings.System.STATUS_BAR_CARRIER_FONT_STYLE, 0)));
-            mStatusBarCarrierFontStyle.setSummary(mStatusBarCarrierFontStyle.getEntry());
-
+            updateCustomLabelTextSummary();
         }
 
         private void updateCustomLabelTextSummary() {
@@ -143,7 +124,14 @@ public class CarrierLabel extends AppCompatActivity {
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
-            if (preference == mCarrierColorPicker) {
+            if (preference == mShowCarrierLabel) {
+                int showCarrierLabel = Integer.valueOf((String) newValue);
+                int index = mShowCarrierLabel.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(resolver, Settings.System.
+                        STATUS_BAR_SHOW_CARRIER, showCarrierLabel, UserHandle.USER_CURRENT);
+                mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
+                return true;
+            } else if (preference == mCarrierColorPicker) {
                 String hex = ColorPickerPreference.convertToARGB(
                         Integer.valueOf(String.valueOf(newValue)));
                 preference.setSummary(hex);
@@ -151,31 +139,10 @@ public class CarrierLabel extends AppCompatActivity {
                 Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                         Settings.System.STATUS_BAR_CARRIER_COLOR, intHex);
                 return true;
-            } else if (preference == mShowCarrierLabel) {
-                int showCarrierLabel = Integer.valueOf((String) newValue);
-                int index = mShowCarrierLabel.findIndexOfValue((String) newValue);
-                Settings.System.putIntForUser(resolver, Settings.System.
-                        STATUS_BAR_SHOW_CARRIER, showCarrierLabel, UserHandle.USER_CURRENT);
-                mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
-                return true;
             } else if (preference == mStatusBarCarrierSize) {
                 int width = ((Integer) newValue).intValue();
                 Settings.System.putInt(resolver,
                         Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, width);
-                return true;
-            } else if (preference == mStatusBarCarrierSpot) {
-                int statusBarCarrierSpot = Integer.valueOf((String) newValue);
-                int index = mStatusBarCarrierSpot.findIndexOfValue((String) newValue);
-                Settings.System.putIntForUser(resolver, Settings.System.
-                        STATUS_BAR_CARRIER_SPOT, statusBarCarrierSpot, UserHandle.USER_CURRENT);
-                mStatusBarCarrierSpot.setSummary(mStatusBarCarrierSpot.getEntries()[index]);
-                return true;
-            } else if (preference == mStatusBarCarrierFontStyle) {
-                int val = Integer.parseInt((String) newValue);
-                int index = mStatusBarCarrierFontStyle.findIndexOfValue((String) newValue);
-                Settings.System.putInt(resolver,
-                        Settings.System.STATUS_BAR_CARRIER_FONT_STYLE, val);
-                mStatusBarCarrierFontStyle.setSummary(mStatusBarCarrierFontStyle.getEntries()[index]);
                 return true;
             }
             return false;

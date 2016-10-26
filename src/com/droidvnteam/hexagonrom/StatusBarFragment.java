@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import android.support.v4.app.Fragment;
 
 import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.Helpers;
 
 public class StatusBarFragment extends Fragment {
 
@@ -33,31 +35,27 @@ public class StatusBarFragment extends Fragment {
                 .commit();
     }
 
-    public static class SettingsPreferenceFragment extends PreferenceFragment 
+    public static class SettingsPreferenceFragment extends PreferenceFragment
             implements OnPreferenceChangeListener {
+
+        private static final String PREF_TRAFFIC = "traffic";
+        private static final String KEY_SHOW_FOURG = "show_fourg";
+        private static final String PREF_BATTERY_BAR = "batterybar";
+        private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
+        private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
+        private static final String PREF_CARRIE_LABEL = "carrierlabel";
+        private static final String PREF_TICKER = "ticker";
+
+        private Preference mTraffic;
+        private SwitchPreference mShowFourG;
+        private Preference mBatteryBar;
+        private ColorPickerPreference mAicpLogoColor;
+        private ListPreference mAicpLogoStyle;
+        private Preference mCarrierLabel;
+        private Preference mTicker;
 
         public SettingsPreferenceFragment() {
         }
-
-        private String PREF_TRAFFIC = "traffic";
-        private String PREF_CARRIE_LABEL = "carrierlabel";
-        private String PREF_BATTERY_BAR = "batterybar";
-        private String PREF_STATUSBAR_WEATHER = "statusbar_weather";
-        private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
-        private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
-        private static final String MISSED_CALL_BREATH = "missed_call_breath";
-        private static final String VOICEMAIL_BREATH = "voicemail_breath";
-        private static final String KEY_CAT_BREATHING_NOTIFICATIONS = "breathing_notifications_category";
-
-        private Preference mTraffic;
-        private Preference mCarrierLabel;
-        private Preference mBatteryBar;
-        private Preference mStatusbarWeather;
-        private PreferenceCategory categoryBreathingNotifications;
-        private ColorPickerPreference mAicpLogoColor;
-        private ListPreference mAicpLogoStyle;
-        private SwitchPreference mMissedCallBreath;
-        private SwitchPreference mVoicemailBreath;
 
 
         @Override
@@ -70,11 +68,20 @@ public class StatusBarFragment extends Fragment {
             PreferenceScreen prefSet = getPreferenceScreen();
             final ContentResolver resolver = getActivity().getContentResolver();
             Context context = getActivity();
+            ConnectivityManager cm = (ConnectivityManager)
+                    context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
-            mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
             mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
-            mStatusbarWeather = prefSet.findPreference(PREF_STATUSBAR_WEATHER);
+            mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
+            mTicker = prefSet.findPreference(PREF_TICKER);
+
+            // Show 4G
+            mShowFourG = (SwitchPreference) prefSet.findPreference(KEY_SHOW_FOURG);
+            PackageManager pm = getActivity().getPackageManager();
+            if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
+                prefSet.removePreference(mShowFourG);
+            }
 
             mAicpLogoStyle = (ListPreference) findPreference(KEY_AICP_LOGO_STYLE);
             int aicpLogoStyle = Settings.System.getIntForUser(resolver,
@@ -94,30 +101,8 @@ public class StatusBarFragment extends Fragment {
             mAicpLogoColor.setSummary(hexColor);
             mAicpLogoColor.setNewPreviewColor(intColor);
 
-            // Breathing Notifications
-            categoryBreathingNotifications =
-                (PreferenceCategory) prefSet.findPreference(KEY_CAT_BREATHING_NOTIFICATIONS);
-
-            mMissedCallBreath = (SwitchPreference) findPreference(MISSED_CALL_BREATH);
-            mVoicemailBreath = (SwitchPreference) findPreference(VOICEMAIL_BREATH);
-
-            ConnectivityManager cm = (ConnectivityManager)
-                    context.getSystemService(Context.CONNECTIVITY_SERVICE);
-
-            if (cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
-
-                mMissedCallBreath.setChecked(Settings.System.getInt(resolver,
-                        Settings.System.KEY_MISSED_CALL_BREATH, 0) == 1);
-                mMissedCallBreath.setOnPreferenceChangeListener(this);
-
-                mVoicemailBreath.setChecked(Settings.System.getInt(resolver,
-                        Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
-                mVoicemailBreath.setOnPreferenceChangeListener(this);
-            } else {
+            if (!cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
                 prefSet.removePreference(mCarrierLabel);
-                prefSet.removePreference(mMissedCallBreath);
-                prefSet.removePreference(mVoicemailBreath);
-                prefSet.removePreference(categoryBreathingNotifications);
             }
         }
 
@@ -126,19 +111,19 @@ public class StatusBarFragment extends Fragment {
             if (preference == mTraffic) {
                 Intent intent = new Intent(getActivity(), Traffic.class);
                 getActivity().startActivity(intent);
-            } else if (preference == mCarrierLabel) {
-                Intent intent = new Intent(getActivity(), CarrierLabel.class);
-                getActivity().startActivity(intent);
+                return true;
             } else if (preference == mBatteryBar) {
                 Intent intent = new Intent(getActivity(), BatteryBar.class);
                 getActivity().startActivity(intent);
-            } else if (preference == mStatusbarWeather) {
-                Intent intent = new Intent(getActivity(), StatusBarWeather.class);
+                return true;
+            } else if (preference == mCarrierLabel) {
+                Intent intent = new Intent(getActivity(), CarrierLabel.class);
                 getActivity().startActivity(intent);
-            } else {
-                return super.onPreferenceTreeClick(preferenceScreen, preference);
+            } else if (preference == mTicker) {
+                Intent intent = new Intent(getActivity(), Ticker.class);
+                getActivity().startActivity(intent);
             }
-            return false;
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
 
         @Override
@@ -160,14 +145,6 @@ public class StatusBarFragment extends Fragment {
                         UserHandle.USER_CURRENT);
                 mAicpLogoStyle.setSummary(
                         mAicpLogoStyle.getEntries()[index]);
-                return true;
-            } else if (preference == mMissedCallBreath) {
-                boolean value = (Boolean) newValue;
-                Settings.System.putInt(resolver, Settings.System.KEY_MISSED_CALL_BREATH, value ? 1 : 0);
-                return true;
-            } else if (preference == mVoicemailBreath) {
-                boolean value = (Boolean) newValue;
-                Settings.System.putInt(resolver, Settings.System.KEY_VOICEMAIL_BREATH, value ? 1 : 0);
                 return true;
             }
             return false;

@@ -2,12 +2,12 @@ package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
-import android.preference.ListPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -16,12 +16,20 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
+import android.util.Log;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import cyanogenmod.providers.CMSettings;
 
-import org.cyanogenmod.internal.util.CmLockPatternUtils;
+import com.droidvnteam.hexagonrom.utils.Utils;
 import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 import com.droidvnteam.R;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class NotificationsFragment extends Fragment {
 
@@ -40,23 +48,25 @@ public class NotificationsFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
-        private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
-        private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
-        private static final String PREF_STATUS_BAR_HEADER_FONT_STYLE = "status_bar_header_font_style";
-        private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
+        private static final String TAG = NotificationsFragment.class.getSimpleName();
+
         private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
         private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
         private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
+        private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
+        private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
+        private static final String PREF_COLUMNS = "qs_columns";
+        private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
+        private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
 
-        private SwitchPreference mBrightnessSlider;
-        private SwitchPreference mBlockOnSecureKeyguard;
-        private ListPreference mStatusBarHeaderFontStyle;
         private ListPreference mTileAnimationStyle;
         private ListPreference mTileAnimationDuration;
         private ListPreference mTileAnimationInterpolator;
-        private SeekBarPreferenceCham mHeaderShadow;
-
-        private static final int MY_USER_ID = UserHandle.myUserId();
+        private ListPreference mRowsPortrait;
+        private ListPreference mRowsLandscape;
+        private ListPreference mQsColumns;
+        private ListPreference mSysuiQqsCount;
+        private SwitchPreference mQsDataAdvanced;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -67,42 +77,11 @@ public class NotificationsFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             Activity activity = getActivity();
-
             final ContentResolver resolver = getActivity().getContentResolver();
-            final CmLockPatternUtils lockPatternUtils = new CmLockPatternUtils(getActivity());
 
-            // Block QS on secure LockScreen
-            mBlockOnSecureKeyguard = (SwitchPreference) findPreference(PREF_BLOCK_ON_SECURE_KEYGUARD);
-            if (lockPatternUtils.isSecure(MY_USER_ID)) {
-                mBlockOnSecureKeyguard.setChecked(Settings.Secure.getIntForUser(resolver,
-                        Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD, 1, UserHandle.USER_CURRENT) == 1);
-                mBlockOnSecureKeyguard.setOnPreferenceChangeListener(this);
-            } else if (mBlockOnSecureKeyguard != null) {
-                prefSet.removePreference(mBlockOnSecureKeyguard);
-            }
+            int defaultValue;
 
-            // Brightness slider
-            mBrightnessSlider = (SwitchPreference) prefSet.findPreference(PREF_QS_SHOW_BRIGHTNESS_SLIDER);
-            mBrightnessSlider.setChecked(CMSettings.System.getIntForUser(resolver,
-                    CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1, UserHandle.USER_CURRENT) == 1);
-            mBrightnessSlider.setOnPreferenceChangeListener(this);
-            int brightnessSlider = CMSettings.System.getIntForUser(resolver,
-                    CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1, UserHandle.USER_CURRENT);
-            updateBrightnessSliderSummary(brightnessSlider);
-
-            // Status bar header font style
-            mStatusBarHeaderFontStyle = (ListPreference) findPreference(PREF_STATUS_BAR_HEADER_FONT_STYLE);
-            mStatusBarHeaderFontStyle.setOnPreferenceChangeListener(this);
-            mStatusBarHeaderFontStyle.setValue(Integer.toString(Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_HEADER_FONT_STYLE, 0, UserHandle.USER_CURRENT)));
-            mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntry());
-
-            mHeaderShadow = (SeekBarPreferenceCham) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
-            final int headerShadow = Settings.System.getInt(resolver,
-                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
-            mHeaderShadow.setValue((int)((headerShadow / 255) * 100));
-            mHeaderShadow.setOnPreferenceChangeListener(this);
-
+            // QS tile animation
             mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
             int tileAnimationStyle = Settings.System.getIntForUser(resolver,
                     Settings.System.ANIM_TILE_STYLE, 0,
@@ -128,39 +107,57 @@ public class NotificationsFragment extends Fragment {
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
+            mRowsPortrait = (ListPreference) findPreference(PREF_ROWS_PORTRAIT);
+            int rowsPortrait = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QS_ROWS_PORTRAIT, 3);
+            mRowsPortrait.setValue(String.valueOf(rowsPortrait));
+            mRowsPortrait.setSummary(mRowsPortrait.getEntry());
+            mRowsPortrait.setOnPreferenceChangeListener(this);
+
+            defaultValue = getResources().getInteger(com.android.internal.R.integer.config_qs_num_rows_landscape_default);
+            mRowsLandscape = (ListPreference) findPreference(PREF_ROWS_LANDSCAPE);
+            int rowsLandscape = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QS_ROWS_LANDSCAPE, defaultValue);
+            mRowsLandscape.setValue(String.valueOf(rowsLandscape));
+            mRowsLandscape.setSummary(mRowsLandscape.getEntry());
+            mRowsLandscape.setOnPreferenceChangeListener(this);
+
+            mQsColumns = (ListPreference) findPreference(PREF_COLUMNS);
+            int columnsQs = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QS_COLUMNS, 3);
+            mQsColumns.setValue(String.valueOf(columnsQs));
+            mQsColumns.setSummary(mQsColumns.getEntry());
+            mQsColumns.setOnPreferenceChangeListener(this);
+
+            mSysuiQqsCount = (ListPreference) findPreference(PREF_SYSUI_QQS_COUNT);
+            int SysuiQqsCount = Settings.Secure.getInt(resolver,
+                   Settings.Secure.QQS_COUNT, 5);
+            mSysuiQqsCount.setValue(Integer.toString(SysuiQqsCount));
+            mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntry());
+            mSysuiQqsCount.setOnPreferenceChangeListener(this);
+
+            mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
+            mQsDataAdvanced.setOnPreferenceChangeListener(this);
+            if (Utils.isWifiOnly(getActivity())) {
+                prefSet.removePreference(mQsDataAdvanced);
+            } else {
+                mQsDataAdvanced.setChecked((Settings.Secure.getInt(resolver,
+                        Settings.Secure.QS_DATA_ADVANCED, 0) == 1));
+            }
+
+        }
+
+        @Override
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
 
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
-            if (preference == mBrightnessSlider) {
-                CMSettings.System.putIntForUser(resolver,
-                        CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER,
-                        (Boolean) newValue ? 1 : 0, UserHandle.USER_CURRENT);
-                int brightnessSlider = CMSettings.System.getIntForUser(resolver,
-                        CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1,
-                        UserHandle.USER_CURRENT);
-                updateBrightnessSliderSummary(brightnessSlider);
-                return true;
-            } else if (preference == mBlockOnSecureKeyguard) {
-                Settings.Secure.putInt(resolver,
-                        Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
-                        (Boolean) newValue ? 1 : 0);
-                return true;
-            } else if (preference == mStatusBarHeaderFontStyle) {
-                int val = Integer.parseInt((String) newValue);
-                int index = mStatusBarHeaderFontStyle.findIndexOfValue((String) newValue);
-                Settings.System.putIntForUser(resolver,
-                        Settings.System.STATUS_BAR_HEADER_FONT_STYLE, val, UserHandle.USER_CURRENT);
-                mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntries()[index]);
-                return true;
-            } else if (preference == mHeaderShadow) {
-               Integer headerShadow = (Integer) newValue;
-               int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
-               Settings.System.putInt(resolver,
-                       Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
-               return true;
-            } else if (preference == mTileAnimationStyle) {
+            int intValue;
+            int index;
+            if (preference == mTileAnimationStyle) {
                 int tileAnimationStyle = Integer.valueOf((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_STYLE,
                         tileAnimationStyle, UserHandle.USER_CURRENT);
@@ -179,15 +176,41 @@ public class NotificationsFragment extends Fragment {
                         tileAnimationInterpolator, UserHandle.USER_CURRENT);
                 updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
                 return true;
+            } else if (preference == mRowsPortrait) {
+                intValue = Integer.valueOf((String) newValue);
+                index = mRowsPortrait.findIndexOfValue((String) newValue);
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_ROWS_PORTRAIT, intValue);
+                preference.setSummary(mRowsPortrait.getEntries()[index]);
+                return true;
+            } else if (preference == mRowsLandscape) {
+                intValue = Integer.valueOf((String) newValue);
+                index = mRowsLandscape.findIndexOfValue((String) newValue);
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_ROWS_LANDSCAPE, intValue);
+                preference.setSummary(mRowsLandscape.getEntries()[index]);
+                return true;
+            } else if (preference == mQsColumns) {
+                intValue = Integer.valueOf((String) newValue);
+                index = mQsColumns.findIndexOfValue((String) newValue);
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_COLUMNS, intValue);
+                preference.setSummary(mQsColumns.getEntries()[index]);
+                return true;
+            } else if (preference == mSysuiQqsCount) {
+                String SysuiQqsCount = (String) newValue;
+                int SysuiQqsCountValue = Integer.parseInt(SysuiQqsCount);
+                Settings.Secure.putInt(resolver, Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
+                int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
+                mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
+                return true;
+            } else if  (preference == mQsDataAdvanced) {
+                boolean checked = ((SwitchPreference) preference).isChecked();
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_DATA_ADVANCED, checked ? 1:0);
+                return true;
             }
             return false;
-        }
-
-        private void updateBrightnessSliderSummary(int value) {
-            String summary = value != 0
-                    ? getResources().getString(R.string.qs_brightness_slider_enabled)
-                    : getResources().getString(R.string.qs_brightness_slider_disabled);
-            mBrightnessSlider.setSummary(summary);
         }
 
         private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
@@ -217,32 +240,6 @@ public class NotificationsFragment extends Fragment {
                     mTileAnimationDuration.setSelectable(true);
                     mTileAnimationInterpolator.setSelectable(true);
                 }
-            }
-        }
-
-        private int getDefaultNumColumns() {
-            try {
-                Resources res = getActivity().getPackageManager()
-                        .getResourcesForApplication("com.android.systemui");
-                int val = res.getInteger(res.getIdentifier("quick_settings_num_columns", "integer",
-                        "com.android.systemui")); // better not be larger than 5, that's as high as the
-                                                  // list goes atm
-                return Math.max(1, val);
-            } catch (Exception e) {
-                return 3;
-            }
-        }
-
-        private int getDefaultNumRows() {
-            try {
-                Resources res = getActivity().getPackageManager()
-                        .getResourcesForApplication("com.android.systemui");
-                int val = res.getInteger(res.getIdentifier("quick_settings_num_rows", "integer",
-                        "com.android.systemui")); // better not be larger than 4, that's as high as the
-                                                  // list goes atm
-                return Math.max(1, val);
-            } catch (Exception e) {
-                return 3;
             }
         }
     }

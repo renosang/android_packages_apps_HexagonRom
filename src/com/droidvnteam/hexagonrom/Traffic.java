@@ -28,12 +28,11 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 
 import com.droidvnteam.R;
 import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 
-public class Traffic extends AppCompatActivity {
+public class Traffic extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)

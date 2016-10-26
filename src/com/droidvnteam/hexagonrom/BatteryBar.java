@@ -30,7 +30,6 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 
 import com.droidvnteam.R;
@@ -38,7 +37,7 @@ import com.droidvnteam.hexagonrom.utils.Utils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class BatteryBar extends AppCompatActivity {
+public class BatteryBar extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
@@ -133,14 +132,14 @@ public class BatteryBar extends AppCompatActivity {
 
             boolean hasNavBarByDefault = getResources().getBoolean(
                     com.android.internal.R.bool.config_showNavigationBar);
-            boolean enableNavigationBar = Settings.Secure.getInt(resolver,
-                Settings.Secure.NAVIGATION_BAR_VISIBLE, hasNavBarByDefault ? 1 : 0) == 1;
+            //boolean enableNavigationBar = Settings.Secure.getInt(resolver,
+            //    Settings.Secure.NAVIGATION_BAR_VISIBLE, hasNavBarByDefault ? 1 : 0) == 1;
 
-            if (!hasNavBarByDefault || !enableNavigationBar) {
+            //if (!hasNavBarByDefault || !enableNavigationBar) {
                 prefSet.removePreference(mBatteryBar);
-            } else {
-                prefSet.removePreference(mBatteryBarNoNavbar);
-            }
+            //} else {
+            //    prefSet.removePreference(mBatteryBarNoNavbar);
+            //}
 
             updateBatteryBarOptions();
 
