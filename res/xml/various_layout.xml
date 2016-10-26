@@ -4,12 +4,6 @@
     xmlns:hexagonrom="http://schemas.android.com/apk/res/com.droidvnteam.hexagonrom">
 
     <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="disable_fc_notifications"
-        android:title="@string/disable_fc_notifications_title"
-        android:summary="@string/disable_fc_notifications_summary"
-        android:defaultValue="false" />
-
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="headset_connect_player"
         android:title="@string/headset_connect_player_title"
         android:summary="@string/headset_connect_player_summary"
@@ -22,31 +16,9 @@
         android:summary="@string/screenshot_sound_summary"
         android:defaultValue="true" />
 
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="three_finger_gesture"
-        android:title="@string/three_finger_gesture"
-        android:summary="@string/three_finger_gesture_summary"
-        android:defaultValue="true" />
-
-    <ListPreference
-        android:key="pref_scrollingcache"
-        android:dialogTitle="@string/pref_scrollingcache_title"
-        android:title="@string/pref_scrollingcache_title"
-        android:summary="@string/pref_scrollingcache_summary"
-        android:entries="@array/entries_scrollingcache"
-        android:entryValues="@array/values_scrollingcache" />
-
-    <Preference
-        android:key="system_app_remover"
-        android:title="@string/system_app_remover" />
-
-
-    <Preference
-        android:key="adaway_start"
-        android:title="@string/adaway_settings_title" />
-
-    <Preference
-        android:key="wakelock_blocker"
-        android:title="@string/wakelock_blocker_title" />
+  <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+        android:key="disable_immersive_message"
+        android:title="@string/disable_immersive_message_title"
+        android:summary="@string/disable_immersive_message_summary" />
 
 </PreferenceScreen>

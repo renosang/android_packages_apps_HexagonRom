@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:hexagonrom="http://schemas.android.com/apk/res/com.droidvnteam">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="double_tap_sleep_anywhere"
@@ -14,117 +12,20 @@
         android:summary="@string/powermenu_lockscreen_summary"
         android:defaultValue="true" />
 
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="lockscreen_see_through"
-        android:title="@string/lockscreen_see_through_title"
-        android:summary="@string/lockscreen_see_through_summary"
-        android:defaultValue="false" />
-
-    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
-        android:key="lockscreen_blur_radius"
-        android:title="@string/lockscreen_blur_radius"
-        hexagonrom:max="25"
-        hexagonrom:min="0"
-        hexagonrom:defaultValue="14"
-        android:dependency="lockscreen_see_through" />
-
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="keyguard_toggle_torch"
-        android:title="@string/keyguard_torch_title"
-        android:summary="@string/keyguard_torch_summary"
-        android:defaultValue="false" />
-
-    <ListPreference
-        android:key="lock_clock_fonts"
-        android:title="@string/lock_clock_font_title"
-        android:dialogTitle="@string/lock_clock_font_dialog_title"
-        android:entries="@array/lock_clock_fonts_entries"
-        android:entryValues="@array/lock_clock_fonts_values"
-        android:summary="@string/lock_clock_font_summary"
-        android:dependency="hide_lockscreen_clock"
-        android:persistent="false" />
-
-    <!-- Hide Lockscreen clock, date & alarm -->
     <PreferenceCategory
-        android:key="hide_lockscreen_items_category"
-        android:title="@string/hide_lockscreen_items_title" >
+        android:title="@string/Misc">
 
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="hide_lockscreen_clock"
-        android:title="@string/hide_lockscreen_clock_title"
-        android:summary="@string/hide_lockscreen_clock_summary"
-        android:defaultValue="true" />
+        <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+            android:key="keyguard_toggle_torch"
+            android:title="@string/keyguard_torch_title"
+            android:summary="@string/keyguard_torch_summary"
+            android:defaultValue="false" />
 
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="hide_lockscreen_date"
-        android:title="@string/hide_lockscreen_date_title"
-        android:summary="@string/hide_lockscreen_date_summary"
-        android:defaultValue="true" />
-
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="hide_lockscreen_alarm"
-        android:title="@string/hide_lockscreen_alarm_title"
-        android:summary="@string/hide_lockscreen_alarm_summary"
-        android:defaultValue="true" />
-
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="lock_screen_show_current"
-        android:title="@string/lock_screen_show_current"
-        android:summary="@string/lock_screen_show_current_summary"
-        android:defaultValue="false" />
-
-    </PreferenceCategory>
-
-    <!-- Lockscreen colors -->
-    <PreferenceCategory
-            android:key="lockscreen_colors_category"
-            android:title="@string/lockscreen_colors_title" >
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="lockscreen_owner_info_color"
-            android:title="@string/lockscreen_owner_info_color"
-            android:defaultValue="0xffffffff" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="lockscreen_alarm_color"
-            android:title="@string/lockscreen_alarm_color"
-            android:defaultValue="0xffffffff" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="lockscreen_clock_color"
-            android:title="@string/lockscreen_clock_color"
-            android:defaultValue="0xffffffff"
-            android:dependency="hide_lockscreen_clock" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="lockscreen_clock_date_color"
-            android:title="@string/lockscreen_clock_date_color"
-            android:defaultValue="0xffffffff" />
-
-        <Preference
-            android:key="lockscreen_colors_reset"
-            android:title="@string/lockscreen_colors_reset_title" />
-
-    </PreferenceCategory>
-
-    <Preference
-        android:key="lockscreen_weather"
-        android:title="@string/weather_lockscreen_category" />
-
-    <PreferenceCategory
-            android:key="lockscreen_wallpaper"
-            android:title="@string/lockscreen_category_title" >
-
-        <Preference
-            android:key="lockscreen_wallpaper_set"
-            android:title="@string/lockscreen_wallpaper_set_title"
-            android:summary="@string/lockscreen_wallpaper_set_summary"
-            android:persistent="false"/>
-
-        <Preference
-            android:key="lockscreen_wallpaper_clear"
-            android:title="@string/lockscreen_wallpaper_clear_title"
-            android:persistent="false"/>
+        <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+            android:key="fingerprint_success_vib"
+            android:title="@string/fprint_sucess_vib_title"
+            android:summary="@string/fprint_sucess_vib_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
