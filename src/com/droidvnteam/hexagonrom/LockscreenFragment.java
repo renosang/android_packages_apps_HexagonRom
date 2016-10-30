@@ -23,6 +23,7 @@ import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
+import com.android.internal.util.aicp.AicpUtils;
 import com.droidvnteam.R;
 import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
@@ -56,7 +57,6 @@ public class LockscreenFragment extends Fragment {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            // Load the preferences from an XML resource
             addPreferencesFromResource(R.xml.lockscreen_layout);
 
             PreferenceScreen prefSet = getPreferenceScreen();

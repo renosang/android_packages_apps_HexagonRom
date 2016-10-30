@@ -16,7 +16,7 @@
 
 <PreferenceScreen
     android:title="@string/ae_settings_title"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.droidvnteam"
+    xmlns:hexagonrom="http://schemas.android.com/apk/res/com.droidvnteam"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <SwitchPreference
@@ -28,11 +28,11 @@
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="ae_drawer_opacity"
         android:title="@string/ae_drawer_opacity_title"
-        aicpextras:defaultVal="178"
+        hexagonrom:defaultVal="178"
         android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="" />
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="ae_drawer_bg_color"
@@ -43,11 +43,11 @@
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="ae_header_bg_image_opacity"
         android:title="@string/ae_header_bg_image_opacity_title"
-        aicpextras:defaultVal="200"
+        hexagonrom:defaultVal="200"
         android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="" />
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="ae_nav_drawer_checked_text"

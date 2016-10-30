@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity
     private static final String NAV_ITEM_ID = "navItemId";
     static final String TAG = MainActivity.class.getSimpleName();
 
-
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
@@ -77,7 +76,6 @@ public class MainActivity extends AppCompatActivity
             @Override
             protected void onPostExecute(Boolean result) {
                 setProgressBarIndeterminateVisibility(false);
-
                 if (!result) {
                     Snackbar.make(mView, R.string.cannot_get_su,
                             Snackbar.LENGTH_LONG)
@@ -88,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         }.execute();
     }
 
-		
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,29 +143,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        int navBgColor = getResources().getColor(R.color.navDrawerBg, null);
-
-        if (Settings.System.getInt(getApplicationContext().getContentResolver(),
-                Settings.System.AE_CUSTOM_COLORS, 0) != 0) {
-            // Use colors from settings
-            navBgColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_DRAWER_BG_COLOR, navBgColor);
-        }
-
-        navigationView.setBackgroundColor(navBgColor);
-
-        navigationView.getBackground().setAlpha(Settings.System.getInt(this.
-                getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_DRAWER_OPACITY, 178));
-
-        navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
-                getBackground().setAlpha(Settings.System.getInt(this.
-                getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 255));
-
-        navigationView.setItemTextColor(navDrawerItemColor());
-        navigationView.setItemIconTintList(navDrawerItemColor());
 
    }
 
@@ -298,6 +273,8 @@ public class MainActivity extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_main, fragment).commit();
+
+        firstPage = id == R.id.nav_about;
 
         // Highlight the selected item, update the title, and close the drawer
         item.setChecked(true);

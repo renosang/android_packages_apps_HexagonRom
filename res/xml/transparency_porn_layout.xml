@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 Hexagon
+<!-- Copyright (C) 2015 AICP
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -24,20 +24,20 @@
         android:key="qs_transparent_header"
         android:title="@string/qs_transparent_header"
         android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        aicpextras:defaultVal="255"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight=""
+        hexagonrom:defaultVal="255"
         android:persistent="false" />-->
 
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="qs_transparent_shade"
         android:title="@string/qs_transparent_shade"
         android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        aicpextras:defaultVal="255"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight=""
+        hexagonrom:defaultVal="255"
         android:persistent="false" /> -->
 
     <ListPreference
@@ -56,40 +56,40 @@
         android:key="qs_stroke_thickness"
         android:title="@string/qs_stroke_thickness_title"
         android:max="25"
-        aicpextras:min="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
-        aicpextras:defaultVal="4"
+        hexagonrom:min="1"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="px"
+        hexagonrom:defaultVal="4"
         android:persistent="false" />
 
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="qs_corner_radius"
         android:title="@string/qs_corner_radius_title"
         android:max="50"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
-        aicpextras:defaultVal="5"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="px"
+        hexagonrom:defaultVal="5"
         android:persistent="false" />
 
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="qs_dash_width"
         android:title="@string/qs_dash_width_title"
         android:max="50"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
-        aicpextras:defaultVal="0"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="px"
+        hexagonrom:defaultVal="0"
         android:persistent="false" />
 
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="qs_dash_gap"
         android:title="@string/qs_dash_gap_title"
         android:max="50"
-        aicpextras:min="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
-        aicpextras:defaultVal="10"
+        hexagonrom:min="1"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="px"
+        hexagonrom:defaultVal="10"
         android:persistent="false" />
 
    </PreferenceCategory>
@@ -101,10 +101,10 @@
         android:key="transparent_volume_dialog"
         android:title="@string/volume_dialog_transparency"
         android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        aicpextras:defaultVal="255"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight=""
+        hexagonrom:defaultVal="255"
         android:persistent="false" />
 
     <ListPreference
@@ -124,40 +124,40 @@
         android:key="volume_dialog_stroke_thickness"
         android:title="@string/volume_dialog_stroke_thickness_title"
         android:max="25"
-        aicpextras:min="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
-        aicpextras:defaultVal="4"
+        hexagonrom:min="1"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="px"
+        hexagonrom:defaultVal="4"
         android:persistent="false" />
 
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="volume_dialog_corner_radius"
         android:title="@string/volume_dialog_corner_radius_title"
         android:max="50"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
-        aicpextras:defaultVal="10"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="px"
+        hexagonrom:defaultVal="10"
         android:persistent="false" />
 
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="volume_dialog_dash_width"
         android:title="@string/volume_dialog_dash_width_title"
         android:max="50"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
-        aicpextras:defaultVal="0"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="px"
+        hexagonrom:defaultVal="0"
         android:persistent="false" />
 
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="volume_dialog_dash_gap"
         android:title="@string/volume_dialog_dash_gap_title"
         android:max="50"
-        aicpextras:min="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
-        aicpextras:defaultVal="10"
+        hexagonrom:min="1"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="px"
+        hexagonrom:defaultVal="10"
         android:persistent="false" />
     </PreferenceCategory>
 
@@ -168,20 +168,20 @@
         android:key="transparent_power_menu"
         android:title="@string/power_menu_transparency"
         android:max="100"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="%"
-        aicpextras:defaultVal="100"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="%"
+        hexagonrom:defaultVal="100"
         android:persistent="false" />
 
     <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="transparent_power_dialog_dim"
         android:title="@string/power_menu_dialog_dim"
         android:max="100"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="%"
-        aicpextras:defaultVal="50"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight="%"
+        hexagonrom:defaultVal="50"
         android:persistent="false" />
     </PreferenceCategory>
 
@@ -189,11 +189,10 @@
         android:key="notification_alpha"
         android:title="@string/notifications_transparency"
         android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        aicpextras:defaultVal="255"
+        hexagonrom:min="0"
+        hexagonrom:unitsLeft=""
+        hexagonrom:unitsRight=""
+        hexagonrom:defaultVal="255"
         android:persistent="false" />-->
 
 </PreferenceScreen>
-

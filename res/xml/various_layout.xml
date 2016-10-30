@@ -16,7 +16,7 @@
         android:summary="@string/screenshot_sound_summary"
         android:defaultValue="true" />
 
-  <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="disable_immersive_message"
         android:title="@string/disable_immersive_message_title"
         android:summary="@string/disable_immersive_message_summary" />

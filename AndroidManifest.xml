@@ -43,6 +43,7 @@
         <activity
             android:name=".hexagonrom.MainActivity"
             android:label="@string/app_name"
+            android:configChanges="screenSize|orientation"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,6 +52,7 @@
 
         <activity
             android:name=".hexagonrom.ChangeLogActivity"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/changelog_title">
         </activity>
         <activity
@@ -60,97 +62,109 @@
         </activity>
         <activity
             android:name=".hexagonrom.Traffic"
-            android:label="@string/traffic_category"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/traffic_category">
         </activity>
-	<activity
-	    android:name=".hexagonrom.SystemappRemover"
-	    android:label="@string/system_app_remover"
-	    android:theme="@style/FragmentTheme"
-	    android:excludeFromRecents="true">
-	</activity>
+	    <activity
+	        android:name=".hexagonrom.SystemappRemover"
+	        android:label="@string/system_app_remover"
+            android:theme="@style/PreferenceTheme"
+	        android:excludeFromRecents="true">
+	    </activity>
         <activity
             android:name=".hexagonrom.CarrierLabel"
-            android:label="@string/carrier_options"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/carrier_options">
         </activity>
         <activity
             android:name=".hexagonrom.BatteryBar"
-            android:label="@string/battery_bar_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/battery_bar_title">
         </activity>
         <activity
             android:name=".hexagonrom.GestureAnywhereSettings"
-            android:label="@string/gesture_anywhere_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
             android:name=".hexagonrom.GestureAnywhereCreateGestureActivity"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
             android:name=".hexagonrom.GestureAnywhereBuilderActivity"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
             android:name=".hexagonrom.StatusBarWeather"
-            android:label="@string/status_bar_temperature_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/status_bar_temperature_title">
         </activity>
         <activity
             android:name=".hexagonrom.Weather"
-            android:label="@string/weather_lockscreen_category"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/weather_lockscreen_category">
         </activity>
         <activity
             android:name=".hexagonrom.AppCircleBar"
-            android:label="@string/category_app_circle_bar_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/category_app_circle_bar_title">
         </activity>
         <activity
             android:name=".hexagonrom.AppSidebar"
-            android:label="@string/app_sidebar_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/app_sidebar_title">
         </activity>
         <activity
             android:name=".hexagonrom.SlimRecentPanel"
-            android:label="@string/use_slim_recents_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/use_slim_recents_title">
         </activity>
         <activity
             android:name=".hexagonrom.PieControl"
-            android:label="@string/pa_pie_control_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/pa_pie_control_title">
         </activity>
         <activity
             android:name=".hexagonrom.PieColor"
-            android:label="@string/pa_pie_control_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/pa_pie_control_title">
         </activity>
         <activity
             android:name=".hexagonrom.PieTargets"
-            android:label="@string/pa_pie_control_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/pa_pie_control_title">
         </activity>
         <activity
             android:name=".hexagonrom.AnimationControls"
-            android:label="@string/aokp_animation_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/aokp_animation_title">
         </activity>
         <activity
             android:name=".hexagonrom.KeyboardAnimationInterfaceSettings"
-            android:label="@string/ime_animation_title"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/ime_animation_title">
         </activity>
         <activity
             android:name=".hexagonrom.FloatingWindows"
-            android:label="@string/floating_windows"
-            android:theme="@style/FragmentTheme">
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/floating_windows">
+        </activity>
+        <activity
+            android:name=".hexagonrom.BootDialog"
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/boot_dialog_title">
+        </activity>
+        <activity
+            android:name=".hexagonrom.Ticker"
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/ticker_screen_title">
         </activity>
         <activity
             android:name=".hexagonrom.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
-            android:theme="@style/FragmentTheme"
+            android:theme="@style/PreferenceTheme"
             android:excludeFromRecents="true">
         </activity>
 

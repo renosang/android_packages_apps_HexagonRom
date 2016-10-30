@@ -62,7 +62,6 @@ public class StatusBarFragment extends Fragment {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            // Load the preferences from an XML resource
             addPreferencesFromResource(R.xml.statusbar_layout);
 
             PreferenceScreen prefSet = getPreferenceScreen();

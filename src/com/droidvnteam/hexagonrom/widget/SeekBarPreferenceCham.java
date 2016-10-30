@@ -23,7 +23,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     private final String TAG = getClass().getName();
 
     private static final String ANDROIDNS = "http://schemas.android.com/apk/res/android";
-    private static final String hexagonrom = "http://schemas.android.com/apk/res/com.droidvnteam.hexagonrom";
+    private static final String hexagonrom = "http://schemas.android.com/apk/res/com.droidvnteam";
     private static final int DEFAULT_VALUE = 50;
 
     private int mMaxValue      = 100;

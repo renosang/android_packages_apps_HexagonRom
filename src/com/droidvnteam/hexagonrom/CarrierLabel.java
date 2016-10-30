@@ -78,7 +78,6 @@ public class CarrierLabel extends SubActivity {
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
 
-
             int intColor;
             String hexColor;
 
