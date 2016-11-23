@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.android.internal.util.hex.AicpUtils;
 import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.Helpers;
 import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -86,12 +87,18 @@ public class LockscreenFragment extends Fragment {
             mHideAmPm = (SwitchPreference) findPreference(PREF_LOCK_SCREEN_HIDE_AMPM);
             if (DateFormat.is24HourFormat(getActivity())) {
                 mMiscCategory.removePreference(mHideAmPm);
+            } else {
+                mHideAmPm.setOnPreferenceChangeListener(this);
             }
         }
 
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
+            if (preference == mHideAmPm) {
+                Helpers.showSystemUIrestartDialog(getActivity());
+                return true;
+            }
             return false;
         }
 
