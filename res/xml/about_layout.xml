@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- AICP logo -->
+    <PreferenceScreen
+        android:key="aicp_logo"
+        android:layout="@layout/about_logo" />
+
+    <Preference
+        android:key="gplus"
+        android:title="@string/g_community"
+        android:summary="@string/g_plus_summary"/>
+
+    <Preference
+        android:key="aicp_downloads"
+        android:title="@string/aicp_downloads_title"
+        android:summary="@string/dwnld_summary"/>
+
+    <Preference
+        android:key="aicp_gerrit"
+        android:title="@string/aicp_gerrit_title"
+        android:summary="@string/gerrit_summary"/>
+
+    <Preference
+        android:key="aicp_changelog"
+        android:title="@string/changelog_title"
+        android:summary="@string/changelog_title_summary"/>
+
+    <Preference
+        android:key="aicp_stats"
+        android:title="@string/stats_title"
+        android:summary="@string/stats_summary"/>
+
+    <Preference
+        android:key="ae_version"
+        android:enabled="false"
+        android:title="@string/ae_version_title"
+        android:summary="@string/ae_version_summary"/>
+
+</PreferenceScreen>
