@@ -41,8 +41,8 @@ public class StatusBarFragment extends Fragment {
         private static final String PREF_TRAFFIC = "traffic";
         private static final String KEY_SHOW_FOURG = "show_fourg";
         private static final String PREF_BATTERY_BAR = "batterybar";
-        private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
-        private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
+        private static final String KEY_HEXAGON_LOGO_COLOR = "status_bar_aicp_logo_color";
+        private static final String KEY_HEXAGON_LOGO_STYLE = "status_bar_aicp_logo_style";
         private static final String PREF_CARRIE_LABEL = "carrierlabel";
         private static final String PREF_TICKER = "ticker";
 
@@ -84,7 +84,7 @@ public class StatusBarFragment extends Fragment {
 
             mAicpLogoStyle = (ListPreference) findPreference(KEY_AICP_LOGO_STYLE);
             int aicpLogoStyle = Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_AICP_LOGO_STYLE, 0,
+                    Settings.System.STATUS_BAR_HEXAGON_LOGO_STYLE, 0,
                     UserHandle.USER_CURRENT);
             mAicpLogoStyle.setValue(String.valueOf(aicpLogoStyle));
             mAicpLogoStyle.setSummary(mAicpLogoStyle.getEntry());
@@ -95,7 +95,7 @@ public class StatusBarFragment extends Fragment {
                 (ColorPickerPreference) prefSet.findPreference(KEY_AICP_LOGO_COLOR);
             mAicpLogoColor.setOnPreferenceChangeListener(this);
             int intColor = Settings.System.getInt(resolver,
-                    Settings.System.STATUS_BAR_AICP_LOGO_COLOR, 0xffffffff);
+                    Settings.System.STATUS_BAR_HEXAGON_LOGO_COLOR, 0xffffffff);
             String hexColor = String.format("#%08x", (0xffffffff & intColor));
             mAicpLogoColor.setSummary(hexColor);
             mAicpLogoColor.setNewPreviewColor(intColor);

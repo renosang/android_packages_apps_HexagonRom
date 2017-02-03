@@ -23,7 +23,7 @@ import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-import com.android.internal.util.aicp.AicpUtils;
+import com.android.internal.util.hex.AicpUtils;
 import com.droidvnteam.R;
 import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
