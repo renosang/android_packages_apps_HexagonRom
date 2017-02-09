@@ -118,9 +118,13 @@
             android:label="@string/app_sidebar_title">
         </activity>
         <activity
-            android:name=".hexagonrom.SlimRecents"
+            android:name=".hexagon.SubActivity"
+            android:theme="@style/PreferenceTheme">
+        </activity>
+        <activity
+            android:name=".hexagonrom.SlimRecentAppSidebarActivity"
             android:theme="@style/PreferenceTheme"
-            android:label="@string/recent_panel_category">
+            android:label="@string/recent_app_sidebar_title">
         </activity>
         <activity
             android:name=".hexagonrom.PieControl"
