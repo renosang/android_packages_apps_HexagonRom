@@ -162,6 +162,11 @@
             android:label="@string/ticker_screen_title">
         </activity>
         <activity
+            android:name=".hexagonrom.HAFRAppListActivity"
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/hide_apps_from_recents_title">
+        </activity>
+        <activity
             android:name=".hexagonrom.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:theme="@style/PreferenceTheme"
