@@ -30,7 +30,7 @@
         android:title="@string/ae_drawer_opacity_title"
         hexagonrom:defaultVal="178"
         android:max="255"
-        hexagonrom:min="0"
+        hexagonrom:minimum="0"
         hexagonrom:unitsLeft=""
         hexagonrom:unitsRight="" />
 
@@ -45,7 +45,7 @@
         android:title="@string/ae_header_bg_image_opacity_title"
         hexagonrom:defaultVal="200"
         android:max="255"
-        hexagonrom:min="0"
+        hexagonrom:minimum="0"
         hexagonrom:unitsLeft=""
         hexagonrom:unitsRight="" />
 
