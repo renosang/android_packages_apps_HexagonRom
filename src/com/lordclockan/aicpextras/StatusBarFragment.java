@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -21,8 +21,8 @@ import android.provider.Settings;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import android.support.v4.app.Fragment;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.Helpers;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.Helpers;
 
 public class StatusBarFragment extends Fragment {
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras.preferences;
+package com.droidvnteam.hexagonrom.preferences;
 
 import android.content.Context;
 import android.os.SystemProperties;

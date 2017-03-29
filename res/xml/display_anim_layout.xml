@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.droidvnteam">
 
     <!-- Custom bootanim -->
 
@@ -64,7 +64,7 @@
             android:entryValues="@array/toast_animation_values"
             android:persistent="false" />
 
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
             android:key="toast_icon"
             android:title="@string/toast_icon_title"
             android:summary="@string/toast_icon_summary"

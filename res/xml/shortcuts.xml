@@ -9,12 +9,12 @@
         android:shortcutShortLabel="@string/changelog_title">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetClass="com.lordclockan.aicpextras.MainActivity"
-            android:targetPackage="com.lordclockan" />
+            android:targetClass="com.droidvnteam.hexagonrom.MainActivity"
+            android:targetPackage="com.droidvnteam" />
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.lordclockan.aicpextras.ChangelogActivity"
-            android:targetPackage="com.lordclockan" />
+            android:targetClass="com.droidvnteam.hexagonrom.ChangelogActivity"
+            android:targetPackage="com.droidvnteam" />
     </shortcut>
 
     <shortcut

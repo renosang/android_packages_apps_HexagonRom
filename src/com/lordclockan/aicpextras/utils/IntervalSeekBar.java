@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras.utils;
+package com.droidvnteam.hexagonrom.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.SeekBar;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 /**
  * Custom SeekBar that allows setting both a minimum and maximum value.

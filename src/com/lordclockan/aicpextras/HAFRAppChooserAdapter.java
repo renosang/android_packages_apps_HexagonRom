@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,7 +21,7 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public abstract class HAFRAppChooserAdapter extends BaseAdapter implements Filterable {
 

@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.droidvnteam">
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="show_settings_drawer"
         android:title="@string/show_settings_drawer_title"
         android:summaryOn="@string/show_settings_drawer_enabled"
         android:summaryOff="@string/show_settings_drawer_disabled"
         android:defaultValue="true" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="confirm_shutdown_switch"
         android:title="@string/confirm_shutdown_switch_title"
         android:summary="@string/confirm_shutdown_switch_desc"
         android:defaultValue="true" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="headset_connect_player"
         android:title="@string/headset_connect_player_title"
         android:summary="@string/headset_connect_player_summary"
         android:defaultValue="false" />
 
     <!-- Camera shutter -->
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="camera_sounds"
         android:title="@string/camera_sounds_title"
         android:summary="@string/camera_sounds_summary"
         android:defaultValue="true" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="disable_immersive_message"
         android:title="@string/disable_immersive_message_title"
         android:summary="@string/disable_immersive_message_summary" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="disable_fc_notifications"
         android:title="@string/disable_fc_notifications_title"
         android:summary="@string/disable_fc_notifications_summary"
         android:defaultValue="false" />
 
     <!-- Three finger screenshot -->
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
         android:title="@string/three_finger_gesture"
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
     <!-- Screenshot tone -->
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="screenshot_sound"
         android:title="@string/screenshot_sound_title"
         android:summary="@string/screenshot_sound_summary"
@@ -60,11 +60,11 @@
         android:key="screenshot_type"
         android:title="@string/screenshot_type_title" />
 
-    <com.lordclockan.aicpextras.widget.NumberPickerPreference
+    <com.droidvnteam.hexagonrom.widget.NumberPickerPreference
         android:key="screenshot_delay"
         android:title="@string/powermenu_screenshot_delay_title" />
 
-    <com.lordclockan.aicpextras.preferences.HostnamePreference
+    <com.droidvnteam.hexagonrom.preferences.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
         android:dialogTitle="@string/device_hostname"
@@ -82,7 +82,7 @@
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="volume_dialog_timeout"
         android:title="@string/volume_dialog_timeout_title"
         android:max="10000"

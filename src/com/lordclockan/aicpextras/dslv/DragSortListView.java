@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras.dslv;
+package com.droidvnteam.hexagonrom.dslv;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -40,7 +40,7 @@ import android.widget.Checkable;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 import java.io.File;
 import java.io.FileWriter;

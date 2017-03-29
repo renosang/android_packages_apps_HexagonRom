@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.ActivityManager;
 import android.app.AlertDialog;
@@ -64,9 +64,9 @@ import java.util.List;
 
 //import com.slim.settings.DialogCreatable;
 //import com.slim.settings.SettingsPreferenceFragment;
-import com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference;
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
-import com.lordclockan.R;
+import com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference;
+import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
+import com.droidvnteam.R;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 

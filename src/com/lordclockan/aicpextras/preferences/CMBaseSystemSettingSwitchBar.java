@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.lordclockan.aicpextras.preferences;
+package com.droidvnteam.hexagonrom.preferences;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -22,7 +22,7 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Handler;
 import android.widget.Switch;
-import com.lordclockan.aicpextras.widget.SwitchBar;
+import com.droidvnteam.hexagonrom.widget.SwitchBar;
 
 import cyanogenmod.providers.CMSettings;
 

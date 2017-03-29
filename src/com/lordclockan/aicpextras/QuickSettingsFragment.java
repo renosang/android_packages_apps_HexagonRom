@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -33,11 +33,11 @@ import java.util.Set;
 
 import cyanogenmod.providers.CMSettings;
 
-import com.lordclockan.aicpextras.utils.Helpers;
-import com.lordclockan.aicpextras.utils.Utils;
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+import com.droidvnteam.hexagonrom.utils.Helpers;
+import com.droidvnteam.hexagonrom.utils.Utils;
+import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 

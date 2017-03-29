@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -33,7 +33,7 @@ import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class PieControl extends SubActivity {
 

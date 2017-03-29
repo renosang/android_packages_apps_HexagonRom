@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 class ChangelogItem {
     private String commit_id;

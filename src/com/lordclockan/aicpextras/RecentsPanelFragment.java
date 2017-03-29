@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -24,7 +24,7 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class RecentsPanelFragment extends Fragment {
 

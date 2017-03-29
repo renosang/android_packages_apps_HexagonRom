@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras.utils;
+package com.droidvnteam.hexagonrom.utils;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -28,7 +28,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 import com.android.internal.util.aicp.AppHelper;
 

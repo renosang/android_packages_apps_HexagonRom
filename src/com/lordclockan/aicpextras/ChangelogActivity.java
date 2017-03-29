@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -20,7 +20,7 @@ import java.util.Objects;
 
 //import io.fabric.sdk.android.Fabric;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class ChangelogActivity extends AppCompatActivity {
 

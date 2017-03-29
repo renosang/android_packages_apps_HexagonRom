@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -31,9 +31,9 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Arrays;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.preferences.AppMultiSelectListPreference;
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.preferences.AppMultiSelectListPreference;
+import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 
 public class AppCircleBar extends Activity {
 

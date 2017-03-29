@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -27,9 +27,9 @@ import android.widget.Toast;
 
 import com.android.internal.util.aicp.AicpUtils;
 import com.android.internal.widget.LockPatternUtils;
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.Helpers;
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.Helpers;
+import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class LockscreenFragment extends Fragment {

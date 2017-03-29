@@ -16,10 +16,10 @@
 
 <PreferenceScreen
     android:title="@string/ae_settings_title"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.droidvnteam"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="ae_moderate_language"
         android:title="@string/ae_moderate_language_title"
         android:summary="@string/ae_moderate_language_summary" />
@@ -37,7 +37,7 @@
             android:summary="@string/ae_custom_colors_summaries"
             android:defaultValue="false" />
 
-        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
             android:key="ae_drawer_opacity"
             android:title="@string/ae_drawer_opacity_title"
             aicpextras:defaultVal="178"
@@ -52,7 +52,7 @@
             android:defaultValue="@color/navDrawerBg"
             android:dependency="ae_custom_colors" />
 
-        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
             android:key="ae_header_bg_image_opacity"
             android:title="@string/ae_header_bg_image_opacity_title"
             aicpextras:defaultVal="200"

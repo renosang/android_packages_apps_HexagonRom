@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -16,9 +16,9 @@ import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.Helpers;
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.Helpers;
+import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 
 public class HeadsUpSettingsFragment extends Fragment {
 

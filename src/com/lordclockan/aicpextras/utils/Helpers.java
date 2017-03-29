@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras.utils;
+package com.droidvnteam.hexagonrom.utils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -25,8 +25,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.SuShell;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.SuShell;
 
 public class Helpers {
     // avoids hardcoding the tag

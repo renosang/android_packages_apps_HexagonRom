@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.lordclockan.aicpextras.utils;
+package com.droidvnteam.hexagonrom.utils;
 
 import android.content.Context;
 import android.preference.Preference;
@@ -24,7 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class TestKeyboard extends Preference{
 

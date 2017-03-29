@@ -18,7 +18,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/pa_pie_control_title">
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="pa_pie_state"
         android:title="@string/pa_pie_control_enable_title"
         android:defaultValue="false" />
@@ -36,7 +36,7 @@
     <PreferenceCategory
         android:title="@string/pa_pie_style_title">
 
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
             android:key="pa_pie_always_right"
             android:title="@string/pa_pie_always_right_title"
             android:summary="@string/pa_pie_always_right_summary"

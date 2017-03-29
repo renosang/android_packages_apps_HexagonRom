@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Fragment;
 import android.os.Bundle;
 
-import com.lordclockan.aicpextras.dslv.ActionListViewSettings;
+import com.droidvnteam.hexagonrom.dslv.ActionListViewSettings;
 
 public class SlimRecentAppSidebarActivity extends SubActivity {
 
@@ -32,7 +32,7 @@ public class SlimRecentAppSidebarActivity extends SubActivity {
         args.putInt("actionMode", 7);
         args.putInt("maxAllowedActions", -1);
         args.putBoolean("useAppPickerOnly", true);
-        args.putString("fragment", "com.lordclockan.aicpextras.RecentAppSidebarFragment");
+        args.putString("fragment", "com.droidvnteam.hexagonrom.RecentAppSidebarFragment");
         getFragmentManager().beginTransaction().replace(android.R.id.content, fragment).commit();
     }
 }

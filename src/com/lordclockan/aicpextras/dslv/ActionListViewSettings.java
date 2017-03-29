@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras.dslv;
+package com.droidvnteam.hexagonrom.dslv;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -62,8 +62,8 @@ import com.android.internal.util.aicp.ImageHelper;
 import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.util.aicp.DeviceUtils.FilteredDeviceFeaturesArray;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.SlimShortcutPickerHelper;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.SlimShortcutPickerHelper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -196,9 +196,9 @@ public class ActionListViewSettings extends ListFragment implements
         FilteredDeviceFeaturesArray finalActionDialogArray = new FilteredDeviceFeaturesArray();
         finalActionDialogArray = DeviceUtils.filterUnsupportedDeviceFeatures(mActivity,
             res.getStringArray(res.getIdentifier(
-                    mActionValuesKey, "array", "com.lordclockan")),
+                    mActionValuesKey, "array", "com.droidvnteam")),
             res.getStringArray(res.getIdentifier(
-                    mActionEntriesKey, "array", "com.lordclockan")));
+                    mActionEntriesKey, "array", "com.droidvnteam")));
         mActionDialogValues = finalActionDialogArray.values;
         mActionDialogEntries = finalActionDialogArray.entries;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.romstats;
+package com.droidvnteam.romstats;
 
 import java.io.File;
 import java.math.BigInteger;
@@ -2018,8 +2018,8 @@ public class Utilities {
 		File cookieFile = new File(dir, "hide_icon");
 		
 		PackageManager p = context.getPackageManager();
-		ComponentName componentToDisable = new ComponentName("com.lordclockan",
-                        "com.lordclockan.romstats.AnonymousStats");
+		ComponentName componentToDisable = new ComponentName("com.droidvnteam",
+                        "com.droidvnteam.romstats.AnonymousStats");
 		if (cookieFile.exists()) {
 			// exist, hide icon
 			p.setComponentEnabledSetting(componentToDisable, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);

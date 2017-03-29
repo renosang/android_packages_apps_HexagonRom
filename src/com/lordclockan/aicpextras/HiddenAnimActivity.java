@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -15,8 +15,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.GifWebView;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.GifWebView;
 
 public class HiddenAnimActivity extends Activity {
 

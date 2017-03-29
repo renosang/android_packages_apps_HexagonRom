@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-import com.lordclockan.aicpextras.HAFRAppChooserAdapter.AppItem;
+import com.droidvnteam.hexagonrom.HAFRAppChooserAdapter.AppItem;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -21,7 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class HAFRAppListActivity extends Activity {
 

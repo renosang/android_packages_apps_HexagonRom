@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -36,9 +36,9 @@ import android.widget.TextView;
 import java.lang.System;
 import java.util.Arrays;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.Helpers;
-import com.lordclockan.aicpextras.utils.Utils;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.Helpers;
+import com.droidvnteam.hexagonrom.utils.Utils;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -6,15 +6,15 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.lordclockan.aicpextras.utils.Utils;
+import com.droidvnteam.hexagonrom.utils.Utils;
 
 public class SubActivity extends Activity {
 
     public static final String EXTRA_TITLE =
-            "com.lordclockan.aicpextras.SubActivity.title";
+            "com.droidvnteam.hexagonrom.SubActivity.title";
 
     public static final String EXTRA_FRAGMENT_CLASS =
-            "com.lordclockan.aicpextras.SubActivity.fragment_class";
+            "com.droidvnteam.hexagonrom.SubActivity.fragment_class";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

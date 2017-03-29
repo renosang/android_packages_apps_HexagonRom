@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras.widget;
+package com.droidvnteam.hexagonrom.widget;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.NumberPicker;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class NumberPickerPreference extends DialogPreference {
 

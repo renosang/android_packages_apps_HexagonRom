@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras.widget;
+package com.droidvnteam.hexagonrom.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -32,7 +32,7 @@ import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 import java.util.ArrayList;
 

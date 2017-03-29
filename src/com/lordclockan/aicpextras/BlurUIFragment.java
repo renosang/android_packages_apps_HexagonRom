@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
@@ -37,8 +37,8 @@ import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 

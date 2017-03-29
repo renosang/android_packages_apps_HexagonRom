@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 
 import java.util.LinkedList;
@@ -18,7 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public abstract class HAFRAppListAdapter extends BaseAdapter {
 

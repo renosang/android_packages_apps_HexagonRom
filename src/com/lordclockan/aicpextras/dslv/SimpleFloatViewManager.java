@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras.dslv;
+package com.droidvnteam.hexagonrom.dslv;
 
 import android.graphics.Bitmap;
 import android.graphics.Point;

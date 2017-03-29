@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.lordclockan.aicpextras.preferences;
+package com.droidvnteam.hexagonrom.preferences;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -32,7 +32,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 import java.text.Collator;
 import java.util.ArrayList;

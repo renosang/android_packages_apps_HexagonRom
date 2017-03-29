@@ -1,4 +1,4 @@
-package com.lordclockan.romstats;
+package com.droidvnteam.romstats;
 
 public class Const {
 

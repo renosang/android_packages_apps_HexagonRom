@@ -18,7 +18,7 @@
  * along with Paranoid OTA.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lordclockan.aicpextras.utils;
+package com.droidvnteam.hexagonrom.utils;
 
 import android.app.Activity;
 import android.app.Service;
@@ -42,7 +42,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class Utils {
 

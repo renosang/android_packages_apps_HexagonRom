@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,7 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class RecentAppSidebarFragment extends PreferenceFragment {
 

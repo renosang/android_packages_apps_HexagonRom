@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -59,8 +59,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class DisplayAnimationsActivity extends Fragment {

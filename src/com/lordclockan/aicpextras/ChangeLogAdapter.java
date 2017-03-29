@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.ViewHolder> {
 

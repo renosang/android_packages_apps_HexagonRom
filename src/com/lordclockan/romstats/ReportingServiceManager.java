@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.romstats;
+package com.droidvnteam.romstats;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

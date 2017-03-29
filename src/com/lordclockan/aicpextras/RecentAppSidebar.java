@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -24,8 +24,8 @@ import android.preference.PreferenceFragment;
 import android.provider.Settings;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
-import com.lordclockan.R;
+import com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham;
+import com.droidvnteam.R;
 
 public class RecentAppSidebar extends PreferenceFragment
             implements Preference.OnPreferenceChangeListener {

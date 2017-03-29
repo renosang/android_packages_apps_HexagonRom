@@ -18,7 +18,7 @@
  *
  *=========================================================================
  */
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import java.io.BufferedWriter;
 import java.io.DataOutputStream;
@@ -52,7 +52,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class SystemappRemover extends Activity {
 

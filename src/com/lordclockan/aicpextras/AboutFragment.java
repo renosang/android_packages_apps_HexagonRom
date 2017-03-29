@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -23,9 +23,9 @@ import android.view.animation.AccelerateInterpolator;
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.Utils;
-import com.lordclockan.aicpextras.utils.Helpers;
+import com.droidvnteam.R;
+import com.droidvnteam.hexagonrom.utils.Utils;
+import com.droidvnteam.hexagonrom.utils.Helpers;
 import com.plattysoft.leonids.ParticleSystem;
 
 public class AboutFragment extends Fragment {
@@ -68,12 +68,12 @@ public class AboutFragment extends Fragment {
 
         private static final String PREF_STATS_AICP = "aicp_stats";
 
-        public static final String STATS_PACKAGE_NAME = "com.lordclockan";
+        public static final String STATS_PACKAGE_NAME = "com.droidvnteam";
         public static Intent INTENT_STATS = new Intent(Intent.ACTION_MAIN)
                 .setClassName(STATS_PACKAGE_NAME, STATS_PACKAGE_NAME + ".romstats.AnonymousStats");
 
         // Package name of the yoga
-        public static final String YOGA_PACKAGE_NAME = "com.lordclockan";
+        public static final String YOGA_PACKAGE_NAME = "com.droidvnteam";
         // Intent for launching the yoga actvity
         public static Intent INTENT_YOGA = new Intent(Intent.ACTION_MAIN)
                 .setClassName(YOGA_PACKAGE_NAME, YOGA_PACKAGE_NAME + ".aicpextras.HiddenAnimActivity");

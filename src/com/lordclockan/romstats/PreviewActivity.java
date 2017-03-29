@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.romstats;
+package com.droidvnteam.romstats;
 
 import android.Manifest;
 import android.content.Context;
@@ -27,7 +27,7 @@ import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class PreviewActivity extends PreferenceActivity {
 

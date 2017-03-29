@@ -35,8 +35,8 @@
         <PreferenceScreen android:title="@string/preview_data_title" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.lordclockan.romstats.PreviewActivity"
-                android:targetPackage="com.lordclockan" />
+                android:targetClass="com.droidvnteam.romstats.PreviewActivity"
+                android:targetPackage="com.droidvnteam" />
         </PreferenceScreen>
 
         <Preference

@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras;
+package com.droidvnteam.hexagonrom;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -12,7 +12,7 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class ExtensionsFragment extends Fragment {
 

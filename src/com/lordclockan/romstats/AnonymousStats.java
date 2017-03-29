@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lordclockan.romstats;
+package com.droidvnteam.romstats;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -48,7 +48,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class AnonymousStats extends PreferenceActivity implements
 		DialogInterface.OnClickListener, DialogInterface.OnDismissListener,

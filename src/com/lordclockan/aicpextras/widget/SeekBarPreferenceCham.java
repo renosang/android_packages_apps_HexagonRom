@@ -1,4 +1,4 @@
-package com.lordclockan.aicpextras.widget;
+package com.droidvnteam.hexagonrom.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -22,14 +22,14 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.lordclockan.R;
+import com.droidvnteam.R;
 
 public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekBarChangeListener {
 
     private final String TAG = getClass().getName();
 
     private static final String ANDROIDNS = "http://schemas.android.com/apk/res/android";
-    private static final String AICPEXTRAS = "http://schemas.android.com/apk/res/com.lordclockan";
+    private static final String AICPEXTRAS = "http://schemas.android.com/apk/res/com.droidvnteam";
     private static final int DEFAULT_VALUE = 50;
 
     private int mMaxValue      = 100;

@@ -16,22 +16,22 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.droidvnteam"
     android:title="@string/category_app_circle_bar_title" >
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="enable_app_circle_bar"
         android:title="@string/app_circle_bar_title"
         android:summary="@string/app_circle_bar_summary" />
 
-    <com.lordclockan.aicpextras.preferences.AppMultiSelectListPreference
+    <com.droidvnteam.hexagonrom.preferences.AppMultiSelectListPreference
         android:key="app_circle_bar_included_apps"
         android:persistent="false"
         android:title="@string/app_circle_bar_included_apps_title"
         android:summary="@string/app_circle_bar_included_apps_summary"
         android:dependency="enable_app_circle_bar" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="trigger_width"
         android:title="@string/trigger_width_title"
         android:summary="@string/trigger_width_summary"
@@ -42,7 +42,7 @@
         aicpextras:unitsRight="px"
         android:dependency="enable_app_circle_bar" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="trigger_top"
         android:title="@string/trigger_top_title"
         android:summary="@string/trigger_top_summary"
@@ -53,7 +53,7 @@
         aicpextras:unitsRight="%"
         android:dependency="enable_app_circle_bar" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="trigger_bottom"
         android:title="@string/trigger_bottom_title"
         android:summary="@string/trigger_bottom_summary"
