@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#212121</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#ffab00</color>
+    <color name="colorPrimary">#ff222222</color>
+    <color name="colorPrimaryDark">#ff222222</color>
+    <color name="startColor">#ff222222</color>
+    <color name="centerColor">#ff222222</color>
+    <color name="endColor">#ff222222</color>
+    <color name="line_color">#B6B6B6</color>
+    <color name="colorAccent">#FF607D8B</color>
     <color name="overlayBackground">#00ffffff</color>
     <color name="seekbar_dot_color">@color/colorPrimary</color>
     <color name="navDrawerBg">@color/background_material_dark</color>

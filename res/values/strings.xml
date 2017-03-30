@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name" translatable="false">Aicp Extras</string>
-
+    <string name="app_name" translatable="false">Hexagon Rom</string>
+    <string name="droidvn">DroidVn Team</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -8,32 +8,29 @@
     <string name="first_layout_title">Placeholder for various shit\nand naked chicks!!!</string>
     <string name="second_layout_title">Second layout</string>
     <string name="third_layout_title">Third layout</string>
-    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="hexagon_rom_title">Hexagon Rom</string>
     <string name="pun_title">One rom to rule them all</string>
-    <string name="various_shit_title">Various shit</string>
+    <string name="more_title">More</string>
     <string name="about_title">About</string>
     <string name="other_title">Other</string>
     <string name="g_community">G+ community</string>
-    <string name="g_plus_summary">Visit Our Google+ Community</string>
-    <string name="ui_title">UI</string>
+    <string name="ui_title">HexagonRom Interface</string>
     <string name="builtin_title">BUILT-IN</string>
     <string name="addons_title">ADDONS</string>
     <string name="welcome_title">WELCOME\nto the real world!!!</string>
     <string name="logo">logo</string>
     <string name="display_animations_title">Display and animations</string>
-    <string name="multishit_title">MultiShit</string>
-    <string name="transparency_porn_title">Panel porn</string>
+    <string name="advanced_title">Advanced</string>
+    <string name="transparency_porn_title">Transparency porn</string>
     <string name="notificaitons_title">Notification drawer</string>
     <string name="statubar_title">Status bar</string>
     <string name="lockscreen_title">Lock screen</string>
     <string name="systemui_tuner_title">SystemUI Tuner</string>
     <string name="systemui_tuner_summary">Marshmallow take on SystemUI tuning</string>
     <string name="systemui_tuner_dilog_title">Attention</string>
-    <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to AicpExtras for easier access.\nHere you can also add new tiles.</string>
+    <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to hexagonrom for easier access.\nHere you can also add new tiles.</string>
     <string name="aicp_downloads_title">Downloads</string>
-    <string name="dwnld_summary">Visit the AICP download page for your device</string>
     <string name="aicp_gerrit_title">Gerrit</string>
-    <string name="gerrit_summary">Visit our Gerrit to know what we are working on</string>
     <string name="send_mail_intent">Send mail...</string>
     <string name="hidden_anim_activity_title">Yoga time!!!</string>
     <string name="hidden_anim_more_title">MORE?</string>
@@ -81,7 +78,13 @@
     <string name="qs_brightness_slider_enabled">Enabled</string>
     <string name="qs_brightness_slider_disabled">Disabled</string>
 
+    <!-- Display & Lights screen, setting options for LCD density -->
+    <string name="lcd_density">LCD density</string>
+    <string name="dialog_title_lcd_density">LCD density</string>
+    <string name="lcd_density_value_format">%d DPI</string>
+    <string name="lcd_density_default_value_format">%d DPI (default)</string>
     <string name="restarting_ui">Restarting UI\u2026</string>
+    <string name="lcd_density_prompt_message">Some apps may not function at non-standard dpi.\n\nThis will restart your phone.</string>
 
     <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
     <string name="print_restart">Restart</string>
@@ -380,16 +383,16 @@
 
     <!-- Notification -->
     <string name="notification_ticker">Statistics opted-In</string>
-    <string name="notification_title">AICP Statistics</string>
+    <string name="notification_title">Hexagon Statistics</string>
     <string name="notification_desc">Enable or Disable Anonymous Statistics</string>
 
     <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
 
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">AICP Stats</string>
-    <string name="anonymous_statistics_summary">Help AICP by opting into anonymous statistics reporting</string>
+    <string name="anonymous_statistics_title">Hexagon Stats</string>
+    <string name="anonymous_statistics_summary">Help Hexagon by opting into anonymous statistics reporting</string>
     <string name="anonymous_statistics_warning_title">About</string>
-    <string name="anonymous_statistics_warning">Opting into AICP Stats will allow non-personal data to be submitted to
+    <string name="anonymous_statistics_warning">Opting into Hexagon Stats will allow non-personal data to be submitted to
          our servers. The information submitted includes an unique identifier, which does not compromise your privacy or personal data.
          The data is submitted every 7 days.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
 
@@ -416,8 +419,8 @@
     <string name="preview_country_title">Country</string>
     <string name="preview_carrier_title">Carrier</string>
     <string name="preview_romname_title">ROM Name</string>
-    <string name="preview_romversion_title">AICP Version</string>
-    <string name="preview_buildtype_title">AICP Build Type</string>
+    <string name="preview_romversion_title">Hexagon Version</string>
+    <string name="preview_buildtype_title">Hexagon Build Type</string>
 
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">App launcher</string>
@@ -518,7 +521,7 @@
     <string name="pa_pie_button_color_title">Buttons Color</string>
     <string name="pa_pie_color_reset_title">Reset Colors</string>
     <string name="reset_message">Reset all entries to default?</string>
-    <string name="reset_paranoid">AICP</string>
+    <string name="reset_paranoid">Hexagon</string>
     <string name="reset_android">Android</string>
 
     <!-- Task Manager -->
@@ -551,18 +554,6 @@
     <!-- SU -->
     <string name="cannot_get_su">Cannot get superuser access, exiting.</string>
     <string name="cannot_get_su_start">Cannot get superuser access.</string>
-
-    <!-- Aicp logcat -->
-    <string name="logcat_title">Logcat</string>
-    <string name="kmesg_title">Kmesg</string>
-    <string name="dmesg_title">Dmesg</string>
-    <string name="log_it_title">Engage</string>
-    <string name="log_it_dialog_title">Engage</string>
-    <string name="log_that_shit_title">Log that shit</string>
-    <string name="logcat_warning">Share it or GTFO!</string>
-    <string name="share_title">Share...</string>
-    <string name="log_it_share_subject">Aicp logs</string>
-    <string name="log_it_summary">Be patient for the logs to be created</string>
 
     <!-- AOKP custom system animations -->
     <string name="aokp_animation_title">System animations</string>
@@ -620,11 +611,11 @@
     <string name="power_menu_animation_translucent_top">Translucent (top)</string>
     <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
 
-    <!-- Statusbar AICP logo -->
+    <!-- Statusbar Hexagon logo -->
     <string name="status_bar_logo_category_title">Statusbar logo</string>
-    <string name="status_bar_aicp_logo_title">AICP logo</string>
-    <string name="status_bar_aicp_logo_summary">Enable to show AICP logo on the left side of statusbar</string>
-    <string name="status_bar_aicp_logo_color">AICP logo color</string>
+    <string name="status_bar_aicp_logo_title">Hexagon logo</string>
+    <string name="status_bar_aicp_logo_summary">Enable to show Hexagon logo on the left side of statusbar</string>
+    <string name="status_bar_aicp_logo_color">Hexagon logo color</string>
     <string name="status_bar_aicp_logo_position">Logo location</string>
     <string name="status_bar_aicp_logo_position_summary">Choose which side to display the logo on, left or right</string>
     <string name="status_bar_logo_position_right">Right</string>

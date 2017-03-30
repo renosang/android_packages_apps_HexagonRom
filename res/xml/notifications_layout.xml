@@ -15,27 +15,27 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
+    xmlns:hexagonrom="http://schemas.android.com/apk/res/com.droidvnteam">
 
     <PreferenceCategory
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
 
-    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_brightness_slider_title"
         android:summaryOn="@string/qs_brightness_slider_enabled"
         android:summaryOff="@string/qs_brightness_slider_disabled"
         android:defaultValue="true" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="brightness_icon"
         android:title="@string/brightness_icon_title"
         android:summary="@string/brightness_icon_summary"
         android:dependency="qs_show_brightness"
         android:defaultValue="true"/>
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="quick_settings_vibrate"
         android:title="@string/quick_settings_vibrate_title"
         android:summary="@string/quick_settings_vibrate_summary"
@@ -102,7 +102,7 @@
     <PreferenceCategory
         android:title="@string/Misc">
 
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
             android:key="force_expanded_notifications"
             android:title="@string/force_expanded_notifications_title"
             android:summary="@string/force_expanded_notifications_summary" />

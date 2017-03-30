@@ -966,7 +966,7 @@
     <string name="boot_dialog_random_title">Paketnamen in zufälliger Farbe</string>
 
     <!-- AE settings -->
-    <string name="ae_settings_title">Einstellungen für AicpExtras</string>
+    <string name="ae_settings_title">Einstellungen für hexagonrom</string>
     <string name="ae_custom_colors_title">Farbanpassungen</string>
     <string name="ae_custom_colors_summaries">Benutze die unteren Einstellungen, um das Aussehen von AE zu verändern</string>
     <string name="ae_drawer_opacity_title">Deckkraft des Navigationsmenüs</string>

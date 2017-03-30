@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lordclockan"
+    package="com.droidvnteam"
     android:versionCode="21"
     android:versionName="0.2.4"
     android:sharedUserId="android.uid.system">
@@ -34,14 +34,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_aicp"
+        android:icon="@drawable/ic_hexagon"
         android:label="@string/app_name"
         android:configChanges="orientation|screenSize"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="true" >
         <activity
-            android:name=".aicpextras.MainActivity"
+            android:name=".hexagonrom.MainActivity"
             android:label="@string/app_name"
             android:configChanges="screenSize|orientation"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -51,118 +51,118 @@
         </activity>
 
         <activity
-            android:name=".aicpextras.ChangeLogActivity"
+            android:name=".hexagonrom.ChangeLogActivity"
             android:theme="@style/PreferenceTheme"
             android:label="@string/changelog_title">
         </activity>
         <activity
-            android:name=".aicpextras.SettingsActivity"
+            android:name=".hexagonrom.SettingsActivity"
             android:theme="@style/PreferenceTheme"
             android:label="@string/settings_activity_title">
         </activity>
         <activity
-            android:name=".aicpextras.Traffic"
+            android:name=".hexagonrom.Traffic"
             android:theme="@style/PreferenceTheme"
             android:label="@string/traffic_category">
         </activity>
 	    <activity
-	        android:name=".aicpextras.SystemappRemover"
+	        android:name=".hexagonrom.SystemappRemover"
 	        android:label="@string/system_app_remover"
             android:theme="@style/PreferenceTheme"
 	        android:excludeFromRecents="true">
 	    </activity>
         <activity
-            android:name=".aicpextras.CarrierLabel"
+            android:name=".hexagonrom.CarrierLabel"
             android:theme="@style/PreferenceTheme"
             android:label="@string/carrier_options">
         </activity>
         <activity
-            android:name=".aicpextras.BatteryBar"
+            android:name=".hexagonrom.BatteryBar"
             android:theme="@style/PreferenceTheme"
             android:label="@string/battery_bar_title">
         </activity>
         <activity
-            android:name=".aicpextras.GestureAnywhereSettings"
+            android:name=".hexagonrom.GestureAnywhereSettings"
             android:theme="@style/PreferenceTheme"
             android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
-            android:name=".aicpextras.GestureAnywhereCreateGestureActivity"
+            android:name=".hexagonrom.GestureAnywhereCreateGestureActivity"
             android:theme="@style/PreferenceTheme"
             android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
-            android:name=".aicpextras.GestureAnywhereBuilderActivity"
+            android:name=".hexagonrom.GestureAnywhereBuilderActivity"
             android:theme="@style/PreferenceTheme"
             android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
-            android:name=".aicpextras.StatusBarWeather"
+            android:name=".hexagonrom.StatusBarWeather"
             android:theme="@style/PreferenceTheme"
             android:label="@string/status_bar_temperature_title">
         </activity>
         <activity
-            android:name=".aicpextras.Weather"
+            android:name=".hexagonrom.Weather"
             android:theme="@style/PreferenceTheme"
-            android:label="@string/weahter_lockscreen_category">
+            android:label="@string/weather_lockscreen_category">
         </activity>
         <activity
-            android:name=".aicpextras.AppCircleBar"
+            android:name=".hexagonrom.AppCircleBar"
             android:theme="@style/PreferenceTheme"
             android:label="@string/category_app_circle_bar_title">
         </activity>
         <activity
-            android:name=".aicpextras.AppSidebar"
+            android:name=".hexagonrom.AppSidebar"
             android:theme="@style/PreferenceTheme"
             android:label="@string/app_sidebar_title">
         </activity>
         <activity
-            android:name=".aicpextras.SlimRecentPanel"
+            android:name=".hexagonrom.SlimRecentPanel"
             android:theme="@style/PreferenceTheme"
             android:label="@string/use_slim_recents_title">
         </activity>
         <activity
-            android:name=".aicpextras.PieControl"
+            android:name=".hexagonrom.PieControl"
             android:theme="@style/PreferenceTheme"
             android:label="@string/pa_pie_control_title">
         </activity>
         <activity
-            android:name=".aicpextras.PieColor"
+            android:name=".hexagonrom.PieColor"
             android:theme="@style/PreferenceTheme"
             android:label="@string/pa_pie_control_title">
         </activity>
         <activity
-            android:name=".aicpextras.PieTargets"
+            android:name=".hexagonrom.PieTargets"
             android:theme="@style/PreferenceTheme"
             android:label="@string/pa_pie_control_title">
         </activity>
         <activity
-            android:name=".aicpextras.AnimationControls"
+            android:name=".hexagonrom.AnimationControls"
             android:theme="@style/PreferenceTheme"
             android:label="@string/aokp_animation_title">
         </activity>
         <activity
-            android:name=".aicpextras.KeyboardAnimationInterfaceSettings"
+            android:name=".hexagonrom.KeyboardAnimationInterfaceSettings"
             android:theme="@style/PreferenceTheme"
             android:label="@string/ime_animation_title">
         </activity>
         <activity
-            android:name=".aicpextras.FloatingWindows"
+            android:name=".hexagonrom.FloatingWindows"
             android:theme="@style/PreferenceTheme"
             android:label="@string/floating_windows">
         </activity>
         <activity
-            android:name=".aicpextras.BootDialog"
+            android:name=".hexagonrom.BootDialog"
             android:theme="@style/PreferenceTheme"
             android:label="@string/boot_dialog_title">
         </activity>
         <activity
-            android:name=".aicpextras.Ticker"
+            android:name=".hexagonrom.Ticker"
             android:theme="@style/PreferenceTheme"
             android:label="@string/ticker_screen_title">
         </activity>
         <activity
-            android:name=".aicpextras.HiddenAnimActivity"
+            android:name=".hexagonrom.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:theme="@style/PreferenceTheme"
             android:excludeFromRecents="true">

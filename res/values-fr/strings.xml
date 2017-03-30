@@ -28,7 +28,7 @@
     <string name="systemui_tuner_title">SystemUI Tuner</string>
     <string name="systemui_tuner_summary">Marshmallow take on SystemUI tuning</string>
     <string name="systemui_tuner_dilog_title">Attention</string>
-    <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to AicpExtras for easier access.\nHere you can also add new tiles.</string>
+    <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to hexagonrom for easier access.\nHere you can also add new tiles.</string>
     <string name="aicp_downloads_title">Téléchargements</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="send_mail_intent">Envoyer un mail...</string>

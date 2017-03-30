@@ -27,7 +27,7 @@
     <string name="systemui_tuner_summary">Marshmallow\'a özel SystemUI ayarlayıcısı</string>
     <string name="systemui_tuner_dilog_title">Dikkat</string>
     <string name="systemui_tuner_dilog_warning">Sistem arayüzü modifikasyonları kısıtlamıştır.
-        Bu özelleştirme, kolay erişim için AicpExtras bölümüne eklenmiştir. Etkinleştirmek için tıklayın.</string>
+        Bu özelleştirme, kolay erişim için hexagonrom bölümüne eklenmiştir. Etkinleştirmek için tıklayın.</string>
     <string name="aicp_downloads_title">İndirmeler</string>
 	<string name="dwnld_summary">Cihazınız için AICP indirme sayfasını ziyaret edin</string>
     <string name="aicp_gerrit_title">Gerrit</string>

@@ -28,7 +28,7 @@
     <string name="systemui_tuner_title">RendszerUI Hangoló</string>
     <string name="systemui_tuner_summary">Marshmallow RendszerUI hangolót használ</string>
     <string name="systemui_tuner_dilog_title">Figyelmeztetés</string>
-    <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to AicpExtras for easier access.\nHere you can also add new tiles.</string>
+    <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to hexagonrom for easier access.\nHere you can also add new tiles.</string>
     <string name="aicp_downloads_title">Letöltések</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="send_mail_intent">Üzenet küldés...</string>
