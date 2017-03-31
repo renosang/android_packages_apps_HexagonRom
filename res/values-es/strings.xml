@@ -22,7 +22,7 @@
     <string name="navigation_drawer_close">Cerrar panel de aplicaciones</string>
 
     <string name="action_settings">Ajustes</string>
-    <string name="aicp_extras_title">Extras AICP</string>
+    <string name="hex_extras_title">Extras AICP</string>
     <string name="pun_title">Una ROM para gobernarlos a todos</string>
     <string name="various_shit_title">Varios</string>
     <string name="about_title">Acerca de</string>
@@ -36,11 +36,11 @@
     <string name="notificaitons_title">Panel de notificación</string>
     <string name="statubar_title">Barra de estado</string>
     <string name="lockscreen_title">Pantalla de bloqueo</string>
-    <string name="aicp_downloads_title">Descargas</string>
+    <string name="hex_downloads_title">Descargas</string>
     <string name="dwnld_summary">Visitar la página de descargas de AICP para tu dispositivo</string>
-    <string name="aicp_ota_title">Actualizaciones del sistema</string>
+    <string name="hex_ota_title">Actualizaciones del sistema</string>
     <string name="ota_summary">Comprobar actualizaciones de la ROM actual</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="gerrit_summary">Visitar nuestro Gerrit para saber en qué estamos trabajando</string>
     <string name="ae_version_title">Versión de Extras AICP</string>
     <string name="hidden_anim_activity_title">Hora de Yoga!!!</string>
@@ -280,11 +280,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Logo en barra de estado</string>
-    <string name="status_bar_aicp_logo_title">Logo de AICP</string>
-    <string name="status_bar_aicp_logo_summary">Activa el logo de AICP en el lado izquierdo de la barra de estado</string>
-    <string name="status_bar_aicp_logo_color">Color del logo AICP</string>
-    <string name="status_bar_aicp_logo_position">Ubicación del logo</string>
-    <string name="status_bar_aicp_logo_position_summary">Elegir en qué lado mostrar el logo, izquierda o derecha</string>
+    <string name="status_bar_hex_logo_title">Logo de AICP</string>
+    <string name="status_bar_hex_logo_summary">Activa el logo de AICP en el lado izquierdo de la barra de estado</string>
+    <string name="status_bar_hex_logo_color">Color del logo AICP</string>
+    <string name="status_bar_hex_logo_position">Ubicación del logo</string>
+    <string name="status_bar_hex_logo_position_summary">Elegir en qué lado mostrar el logo, izquierda o derecha</string>
     <string name="status_bar_logo_position_right">Derecha</string>
     <string name="status_bar_logo_position_left">Izquierda</string>
 
@@ -799,8 +799,8 @@
     <string name="recent_panel_lefty_mode_title">Mostrar en la lado izquierdo</string>
     <string name="recent_panel_lefty_mode_summary">Muestra el panel en el lado izquierdo de la pantalla</string>
 
-    <string name="slim_recents_aicp_empty_drawable_title">Panel vacío AICP</string>
-    <string name="slim_recents_aicp_empty_drawable_summary">Imágen a mostrar cuando no hay aps. recientes que mostrar</string>
+    <string name="slim_recents_hex_empty_drawable_title">Panel vacío AICP</string>
+    <string name="slim_recents_hex_empty_drawable_summary">Imágen a mostrar cuando no hay aps. recientes que mostrar</string>
 
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Aplicaciones ocultas</string>

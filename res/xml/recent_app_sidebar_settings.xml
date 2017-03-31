@@ -15,19 +15,19 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan"
+                  xmlns:hexextras="http://schemas.android.com/apk/res/com.droidvnteam"
                   android:title="@string/recent_app_sidebar_title">
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
             android:key="recent_app_sidebar_scale"
             android:title="@string/recent_app_sidebar_scale_title"
-            aicpextras:minimum="60"
+            hexextras:minimum="60"
             android:max="160"
-            aicpextras:interval="5"
-            aicpextras:unitsRight="%"
+            hexextras:interval="5"
+            hexextras:unitsRight="%"
             android:persistent="false" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
             android:key="recent_app_sidebar_disable_labels"
             android:title="@string/recent_app_sidebar_hide_labels_title"
             android:disableDependentsState="true"
@@ -48,7 +48,7 @@
             alphaSlider="true"
             android:persistent="false" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
             android:key="recent_app_sidebar_open_simultaneously"
             android:title="@string/recent_app_sidebar_open_simultaneously_title"
             android:summary="@string/recent_app_sidebar_open_simultaneously_summary"

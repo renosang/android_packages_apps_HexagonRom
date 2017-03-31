@@ -38,7 +38,7 @@ import java.util.Properties;
 public class Utils {
 
     private static Properties sDictionary;
-    public static final String PROPERTY_DEVICE = "ro.aicp.device";
+    public static final String PROPERTY_DEVICE = "ro.hex.device";
     public static final String PROPERTY_DEVICE_EXT = "ro.product.device";
 
     public static String getDevice(Context context) {

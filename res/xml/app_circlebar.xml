@@ -16,52 +16,52 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan"
+    xmlns:hexextras="http://schemas.android.com/apk/res/com.droidvnteam"
     android:title="@string/category_app_circle_bar_title" >
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="enable_app_circle_bar"
         android:title="@string/app_circle_bar_title"
         android:summary="@string/app_circle_bar_summary" />
 
-    <com.lordclockan.aicpextras.preferences.AppMultiSelectListPreference
+    <com.droidvnteam.hexagonrom.preferences.AppMultiSelectListPreference
         android:key="app_circle_bar_included_apps"
         android:persistent="false"
         android:title="@string/app_circle_bar_included_apps_title"
         android:summary="@string/app_circle_bar_included_apps_summary"
         android:dependency="enable_app_circle_bar" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="trigger_width"
         android:title="@string/trigger_width_title"
         android:summary="@string/trigger_width_summary"
         android:defaultValue="4"
-        aicpextras:max="64"
-        aicpextras:min="4"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="px"
+        hexextras:max="64"
+        hexextras:min="4"
+        hexextras:unitsLeft=""
+        hexextras:unitsRight="px"
         android:dependency="enable_app_circle_bar" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="trigger_top"
         android:title="@string/trigger_top_title"
         android:summary="@string/trigger_top_summary"
         android:defaultValue="0"
-        aicpextras:max="99"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="%"
+        hexextras:max="99"
+        hexextras:min="0"
+        hexextras:unitsLeft=""
+        hexextras:unitsRight="%"
         android:dependency="enable_app_circle_bar" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="trigger_bottom"
         android:title="@string/trigger_bottom_title"
         android:summary="@string/trigger_bottom_summary"
         android:defaultValue="100"
-        aicpextras:max="100"
-        aicpextras:min="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="%"
+        hexextras:max="100"
+        hexextras:min="1"
+        hexextras:unitsLeft=""
+        hexextras:unitsRight="%"
         android:dependency="enable_app_circle_bar" />
 
 </PreferenceScreen>

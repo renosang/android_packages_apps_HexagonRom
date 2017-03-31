@@ -9,12 +9,12 @@
         android:shortcutShortLabel="@string/changelog_title">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetClass="com.lordclockan.aicpextras.MainActivity"
-            android:targetPackage="com.lordclockan" />
+            android:targetClass="com.droidvnteam.hexagonrom.MainActivity"
+            android:targetPackage="com.droidvnteam" />
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.lordclockan.aicpextras.ChangelogActivity"
-            android:targetPackage="com.lordclockan" />
+            android:targetClass="com.droidvnteam.hexagonrom.ChangelogActivity"
+            android:targetPackage="com.droidvnteam" />
     </shortcut>
 
     <shortcut
@@ -22,11 +22,11 @@
         android:enabled="true"
         android:icon="@drawable/ic_gerrit"
         android:shortcutDisabledMessage="@string/static_shortcut_disabled_message"
-        android:shortcutLongLabel="@string/aicp_gerrit_title"
-        android:shortcutShortLabel="@string/aicp_gerrit_title">
+        android:shortcutLongLabel="@string/hex_gerrit_title"
+        android:shortcutShortLabel="@string/hex_gerrit_title">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="http://gerrit.aicp-rom.com/#/q/status:open"/>
+            android:data="http://gerrit.hex-rom.com/#/q/status:open"/>
     </shortcut>
 
     <shortcut

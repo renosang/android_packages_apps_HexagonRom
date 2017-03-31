@@ -1,16 +1,10 @@
 package com.droidvnteam.hexagonrom;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ShortcutInfo;
-import android.content.pm.ShortcutManager;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
-import android.graphics.drawable.Icon;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -34,20 +28,17 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.lang.System;
-import java.util.Arrays;
 
 import com.droidvnteam.R;
-import com.droidvnteam.hexagonrom.utils.Helpers;
-import com.droidvnteam.hexagonrom.utils.Utils;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    static final String TAG = MainActivity.class.getSimpleName();
-
     public static final String INTENT_EXTRA_INIT_FRAGMENT = "init_fragment";
     public static final String INIT_FRAGMENT_HALO = "halo";
+
     private static final String NAV_ITEM_ID = "navItemId";
+    static final String TAG = MainActivity.class.getSimpleName();
 
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle toggle;
@@ -99,7 +90,7 @@ public class MainActivity extends AppCompatActivity
                         new Intent(Intent.ACTION_SEND);
                 String[] recipients = new String[]{"davor@losinj.com", "",};
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, recipients);
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "AICP talk");
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "HEXAGON talk");
                 emailIntent.setType("text/plain");
                 startActivity(Intent.createChooser(emailIntent, getString(R.string.send_mail_intent)));
                 finish();
@@ -113,42 +104,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        int navBgColor = getResources().getColor(R.color.navDrawerBg, null);
-        int colorAccent = getResources().getColor(R.color.colorAccent, null);
-
-        if (Settings.System.getInt(getApplicationContext().getContentResolver(),
-                Settings.System.AE_CUSTOM_COLORS, 0) != 0) {
-            // Use colors from settings
-            navBgColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_DRAWER_BG_COLOR, navBgColor);
-
-            navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
-                    getBackground().setColorFilter(Settings.System.getInt(this.
-                    getApplicationContext().getContentResolver(),
-                    Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, colorAccent),
-                    PorterDuff.Mode.SRC_ATOP);
-        } else {
-            // Use colors from resources
-            navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
-                    getBackground().setColorFilter(colorAccent, PorterDuff.Mode.SRC_ATOP);
-        }
-
-        navigationView.setBackgroundColor(navBgColor);
-
-        navigationView.getBackground().setAlpha(Settings.System.getInt(this.
-                getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_DRAWER_OPACITY, 178));
-
-        navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
-                getBackground().setAlpha(Settings.System.getInt(this.
-                getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 255));
-
-        navigationView.setItemTextColor(navDrawerItemColor());
-        navigationView.setItemIconTintList(navDrawerItemColor());
-
-        initShortcutManager();
 
    }
 
@@ -206,30 +161,6 @@ public class MainActivity extends AppCompatActivity
                 this, mDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
     }
 
-     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, SettingsActivity.class);
-            this.startActivity(intent);
-            restartRequired = true;
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -305,81 +236,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    protected void onSaveInstanceState(final Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt(NAV_ITEM_ID, id);
-    }
-
-    private ColorStateList navDrawerItemColor() {
-        int checkedColor = getResources().getColor(R.color.navDrawerTextChecked, null);
-        int uncheckedColor = getResources().getColor(R.color.navDrawerText, null);
-        int defaultColor = uncheckedColor;
-        if (Settings.System.getInt(getApplicationContext().getContentResolver(),
-                Settings.System.AE_CUSTOM_COLORS, 0) != 0) {
-            // Use colors from settings
-            checkedColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
-                    Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, checkedColor);
-            uncheckedColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
-                    Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, uncheckedColor);
-        }
-
-        int[][] states = new int[][]{
-                new int[]{-android.R.attr.state_checked},  // unchecked
-                new int[]{android.R.attr.state_checked},   // checked
-                new int[]{}                                // default
-        };
-
-        int[] colors = new int[]{
-                uncheckedColor,
-                checkedColor,
-                defaultColor,
-        };
-
-        ColorStateList navigationViewColorStateList = new ColorStateList(states, colors);
-
-        return navigationViewColorStateList;
-    }
-
-    private void initShortcutManager() {
-        final ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
-
-        if (Helpers.isPackageInstalled("com.aicp.aicpota", this.getPackageManager())) {
-            //Intent for launching AICP OTA
-            final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
-                    "com.aicp.aicpota", "com.aicp.aicpota.MainActivity"));
-            INTENT_OTA.setAction(Intent.ACTION_VIEW);
-
-            ShortcutInfo aicpotaShortcut = new ShortcutInfo.Builder(this, "shortcut_aicpota")
-                    .setShortLabel(getString(R.string.aicp_ota_title))
-                    .setLongLabel(getString(R.string.aicp_ota_title))
-                    .setIcon(Icon.createWithResource(this, R.drawable.ic_aicpota))
-                    .setIntent(INTENT_OTA)
-                    .setRank(0)
-                    .build();
-            shortcutManager.setDynamicShortcuts(Arrays.asList(aicpotaShortcut));
-        } else {
-            ShortcutInfo downloadsShortcut = new ShortcutInfo.Builder(this, "shortcut_downloads")
-                    .setShortLabel(getString(R.string.aicp_downloads_title))
-                    .setLongLabel(getString(R.string.aicp_downloads_title))
-                    .setIcon(Icon.createWithResource(this, R.drawable.ic_download))
-                    .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("http://dwnld.aicp-rom.com/?device=" + Utils.getDevice(this))))
-                    .setRank(0)
-                    .build();
-            shortcutManager.setDynamicShortcuts(Arrays.asList(downloadsShortcut));
-        }
-
-
-        /*ShortcutInfo gCommunityShortcut = new ShortcutInfo.Builder(this, "shortcut_gcommunity")
-                .setShortLabel(R.string.g_community)
-                .setLongLabel(R.string.g_community)
-                .setIcon(Icon.createWithResource(this, R.drawable.ic_gcommunity))
-                .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/communities/101008638920580274588")))
-                .setRank(1)
-                .build();
-
-        shortcutManager.setDynamicShortcuts(Arrays.asList(downloadsShortcut, gCommunityShortcut));*/
     }
 }

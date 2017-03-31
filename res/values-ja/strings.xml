@@ -22,7 +22,7 @@
     <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
 
     <string name="action_settings">設定</string>
-    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="hex_extras_title">AICP Extras</string>
     <string name="various_shit_title">その他の設定</string>
     <string name="about_title">AICP Extrasについて</string>
     <string name="other_title">その他</string>
@@ -34,11 +34,11 @@
     <string name="notificaitons_title">通知ドロワー</string>
     <string name="statubar_title">ステータスバー</string>
     <string name="lockscreen_title">ロック画面</string>
-    <string name="aicp_downloads_title">ダウンロード</string>
+    <string name="hex_downloads_title">ダウンロード</string>
     <string name="dwnld_summary">最新のビルドをダウンロードします</string>
-    <string name="aicp_ota_title">OTA センター</string>
+    <string name="hex_ota_title">OTA センター</string>
     <string name="ota_summary">ROMの最新のアップデートを確認します</string>
-    <string name="aicp_gerrit_title">Gerrit Code Review</string>
+    <string name="hex_gerrit_title">Gerrit Code Review</string>
     <string name="ae_version_title">AICP Extras バージョン</string>
     <string name="gerrit_summary">GerritでAICPの開発の最前線をチェックします</string>
     <string name="hidden_anim_more_title">もっと？</string>
@@ -261,11 +261,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">ステータスバー上のロゴ</string>
-    <string name="status_bar_aicp_logo_title">AICP ロゴ</string>
-    <string name="status_bar_aicp_logo_summary">ステータスバー上にAICPのロゴを表示する</string>
-    <string name="status_bar_aicp_logo_color">ロゴの色</string>
-    <string name="status_bar_aicp_logo_position">ロゴの位置</string>
-    <string name="status_bar_aicp_logo_position_summary">どこにロゴを表示するか選択してください</string>
+    <string name="status_bar_hex_logo_title">AICP ロゴ</string>
+    <string name="status_bar_hex_logo_summary">ステータスバー上にAICPのロゴを表示する</string>
+    <string name="status_bar_hex_logo_color">ロゴの色</string>
+    <string name="status_bar_hex_logo_position">ロゴの位置</string>
+    <string name="status_bar_hex_logo_position_summary">どこにロゴを表示するか選択してください</string>
     <string name="status_bar_logo_position_right">右</string>
     <string name="status_bar_logo_position_left">左</string>
 
@@ -779,8 +779,8 @@
     <string name="recent_panel_lefty_mode_title">左端に表示</string>
     <string name="recent_panel_lefty_mode_summary">アプリ履歴を左端から呼び出します</string>
 
-    <string name="slim_recents_aicp_empty_drawable_title">アプリ履歴が無いときにAICP画像を表示</string>
-    <string name="slim_recents_aicp_empty_drawable_summary">アプリ履歴が無い時にAICP画像を表示します</string>
+    <string name="slim_recents_hex_empty_drawable_title">アプリ履歴が無いときにAICP画像を表示</string>
+    <string name="slim_recents_hex_empty_drawable_summary">アプリ履歴が無い時にAICP画像を表示します</string>
 
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">非表示のアプリ</string>

@@ -5,7 +5,7 @@
     <string name="first_layout_title">Burada sizleri hoş sürprizler beklemektedir!!</string>
     <string name="second_layout_title">İkinci katman</string>
     <string name="third_layout_title">Üçüncü Katman</string>
-    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="hex_extras_title">AICP Extras</string>
     <string name="pun_title">Herşeye hükmettiren tek rom</string>
     <string name="various_shit_title">Çeşitli Düzenlemeler</string>
     <string name="about_title">Hakkında</string>
@@ -28,9 +28,9 @@
     <string name="systemui_tuner_dilog_title">Dikkat</string>
     <string name="systemui_tuner_dilog_warning">Sistem arayüzü modifikasyonları kısıtlamıştır.
         Bu özelleştirme, kolay erişim için hexagonrom bölümüne eklenmiştir. Etkinleştirmek için tıklayın.</string>
-    <string name="aicp_downloads_title">İndirmeler</string>
+    <string name="hex_downloads_title">İndirmeler</string>
 	<string name="dwnld_summary">Cihazınız için AICP indirme sayfasını ziyaret edin</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_gerrit_title">Gerrit</string>
 
     <string name="gerrit_summary">Neler üzerinde çalıştığımızı görmek için Gerrit sayfamızı ziyaret edin</string>
     <string name="send_mail_intent">Posta gönder...</string>
@@ -630,11 +630,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Durum çubuğu logosu</string>
-    <string name="status_bar_aicp_logo_title">AICP logosu</string>
-    <string name="status_bar_aicp_logo_summary">Durum çubuğunun sol tarafında AICP logosunu etkinleştir</string>
-    <string name="status_bar_aicp_logo_color">AICP logo rengi</string>
-    <string name="status_bar_aicp_logo_position">Logo konumu</string>
-    <string name="status_bar_aicp_logo_position_summary">AICP Logo konumunu belirleyin</string>
+    <string name="status_bar_hex_logo_title">AICP logosu</string>
+    <string name="status_bar_hex_logo_summary">Durum çubuğunun sol tarafında AICP logosunu etkinleştir</string>
+    <string name="status_bar_hex_logo_color">AICP logo rengi</string>
+    <string name="status_bar_hex_logo_position">Logo konumu</string>
+    <string name="status_bar_hex_logo_position_summary">AICP Logo konumunu belirleyin</string>
     <string name="status_bar_logo_position_right">Sağ</string>
     <string name="status_bar_logo_position_left">Sol</string>
 

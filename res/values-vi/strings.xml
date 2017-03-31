@@ -29,8 +29,8 @@
     <string name="systemui_tuner_summary">SystemUI tuner trên android M</string>
     <string name="systemui_tuner_dilog_title">Chú ý</string>
     <string name="systemui_tuner_dilog_warning">Sử dụng SystemUI tuner sẽ hạn chế thông báo. Link đã được thêm vào hexagonrom để dễ dàng truy cập hơn.\nỞ đây bạn có thể thêm một nút mới.</string>
-    <string name="aicp_downloads_title">Download</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_downloads_title">Download</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="send_mail_intent">Gửi mail...</string>
     <string name="hidden_anim_activity_title">Quẩy thôi !!!</string>
     <string name="hidden_anim_more_title">Thêm nữa?</string>
@@ -603,11 +603,11 @@
 
     <!-- Statusbar Hexagon logo -->
     <string name="status_bar_logo_category_title">Logo trên thành trạng thái</string>
-    <string name="status_bar_aicp_logo_title">Logo Hexagon</string>
-    <string name="status_bar_aicp_logo_summary">Hiển thị logo Hexagon trên thanh trạng thái</string>
-    <string name="status_bar_aicp_logo_color">Màu</string>
-    <string name="status_bar_aicp_logo_position">Vị trí</string>
-    <string name="status_bar_aicp_logo_position_summary">Chọn vị trí trái hoặc phải để hiển thị logo</string>
+    <string name="status_bar_hex_logo_title">Logo Hexagon</string>
+    <string name="status_bar_hex_logo_summary">Hiển thị logo Hexagon trên thanh trạng thái</string>
+    <string name="status_bar_hex_logo_color">Màu</string>
+    <string name="status_bar_hex_logo_position">Vị trí</string>
+    <string name="status_bar_hex_logo_position_summary">Chọn vị trí trái hoặc phải để hiển thị logo</string>
     <string name="status_bar_logo_position_right">Phải</string>
     <string name="status_bar_logo_position_left">Trái</string>
 

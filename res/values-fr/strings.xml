@@ -8,7 +8,7 @@
     <string name="first_layout_title">Espace réservé pour les diverses merdes\et les nanas nues</string>
     <string name="second_layout_title">Deuxième disposition</string>
     <string name="third_layout_title">Troisième disposition</string>
-    <string name="aicp_extras_title">Aicp Extras</string>
+    <string name="hex_extras_title">Aicp Extras</string>
     <string name="pun_title">Une ROM pour les gouverner tous</string>
     <string name="various_shit_title">Diverses merdes</string>
     <string name="about_title">A propos</string>
@@ -29,8 +29,8 @@
     <string name="systemui_tuner_summary">Marshmallow take on SystemUI tuning</string>
     <string name="systemui_tuner_dilog_title">Attention</string>
     <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to hexagonrom for easier access.\nHere you can also add new tiles.</string>
-    <string name="aicp_downloads_title">Téléchargements</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_downloads_title">Téléchargements</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="send_mail_intent">Envoyer un mail...</string>
     <string name="hidden_anim_activity_title">L\'heure du yoga !!!</string>
     <string name="hidden_anim_more_title">PLUS?</string>
@@ -622,11 +622,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Logo de la barre d\'état</string>
-    <string name="status_bar_aicp_logo_title">Logo AICP</string>
-    <string name="status_bar_aicp_logo_summary">Afficher le logo de AICP sur la gauche de la barre d\'état</string>
-    <string name="status_bar_aicp_logo_color">Couleur du logo AICP</string>
-    <string name="status_bar_aicp_logo_position">Position du logo</string>
-    <string name="status_bar_aicp_logo_position_summary">Choisir quelle côté afficher le logo,gauche ou droit</string>
+    <string name="status_bar_hex_logo_title">Logo AICP</string>
+    <string name="status_bar_hex_logo_summary">Afficher le logo de AICP sur la gauche de la barre d\'état</string>
+    <string name="status_bar_hex_logo_color">Couleur du logo AICP</string>
+    <string name="status_bar_hex_logo_position">Position du logo</string>
+    <string name="status_bar_hex_logo_position_summary">Choisir quelle côté afficher le logo,gauche ou droit</string>
     <string name="status_bar_logo_position_right">Droit</string>
     <string name="status_bar_logo_position_left">Gauche</string>
 

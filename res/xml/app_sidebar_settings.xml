@@ -16,7 +16,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan"
+    xmlns:hexextras="http://schemas.android.com/apk/res/com.droidvnteam"
     android:title="@string/app_sidebar_title" >
 
     <SwitchPreference
@@ -48,62 +48,62 @@
         android:defaultValue="false"
         android:dependency="sidebar_enable" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="sidebar_transparency"
         android:title="@string/app_sidebar_transparency_title"
         android:summary="@string/app_sidebar_transparency_summary"
         android:max="50"
-        aicpextras:minimum="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="%"
+        hexextras:minimum="0"
+        hexextras:unitsLeft=""
+        hexextras:unitsRight="%"
         android:defaultValue="0"
         android:dependency="sidebar_enable" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
         android:key="app_sidebar_hide_timeout"
         android:title="@string/app_sidebar_hide_timeout_title"
         android:summary="@string/app_sidebar_hide_timeout_summary"
         android:max="10000"
-        aicpextras:minimum="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="ms"
+        hexextras:minimum="0"
+        hexextras:unitsLeft=""
+        hexextras:unitsRight="ms"
         android:defaultValue="3000"
         android:dependency="sidebar_enable" />
 
     <PreferenceCategory
         android:title="@string/trigger_category" />
 
-        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
             android:key="trigger_width"
             android:title="@string/trigger_width_title"
             android:summary="@string/trigger_width_summary"
             android:defaultValue="4"
             android:max="64"
-            aicpextras:minimum="4"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight="px"
+            hexextras:minimum="4"
+            hexextras:unitsLeft=""
+            hexextras:unitsRight="px"
             android:dependency="sidebar_enable" />
 
-        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
             android:key="trigger_top"
             android:title="@string/trigger_top_title"
             android:summary="@string/trigger_top_summary"
             android:defaultValue="0"
             android:max="99"
-            aicpextras:minimum="0"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight="%"
+            hexextras:minimum="0"
+            hexextras:unitsLeft=""
+            hexextras:unitsRight="%"
             android:dependency="sidebar_enable" />
 
-        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        <com.droidvnteam.hexagonrom.widget.SeekBarPreferenceCham
             android:key="trigger_bottom"
             android:title="@string/trigger_bottom_title"
             android:summary="@string/trigger_bottom_summary"
             android:defaultValue="100"
             android:max="100"
-            aicpextras:minimum="1"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight="%"
+            hexextras:minimum="1"
+            hexextras:unitsLeft=""
+            hexextras:unitsRight="%"
             android:dependency="sidebar_enable" />
 
 </PreferenceScreen>

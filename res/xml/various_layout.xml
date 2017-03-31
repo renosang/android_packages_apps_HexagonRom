@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:hexagonrom="http://schemas.android.com/apk/res/com.droidvnteam.hexagonrom">
+    xmlns:hexagonrom="http://schemas.android.com/apk/res/com.droidvnteam">
 
     <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="show_settings_drawer"
@@ -16,11 +16,17 @@
         android:summary="@string/confirm_shutdown_switch_desc"
         android:defaultValue="true" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="headset_connect_player"
         android:title="@string/headset_connect_player_title"
         android:summary="@string/headset_connect_player_summary"
         android:defaultValue="false" />
+
+    <!--ListPreference
+        android:key="wired_ringtone_focus_mode"
+        android:title="@string/wired_ringtone_focus_mode_title"
+        android:entries="@array/wired_ringtone_focus_mode_entries"
+        android:entryValues="@array/wired_ringtone_focus_mode_values" /-->
 
     <!-- Camera shutter -->
     <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
@@ -34,14 +40,14 @@
         android:title="@string/disable_immersive_message_title"
         android:summary="@string/disable_immersive_message_summary" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="disable_fc_notifications"
         android:title="@string/disable_fc_notifications_title"
         android:summary="@string/disable_fc_notifications_summary"
         android:defaultValue="false" />
 
     <!-- Three finger screenshot -->
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
         android:title="@string/three_finger_gesture"
         android:summary="@string/three_finger_gesture_summary"
@@ -59,11 +65,6 @@
         android:entryValues="@array/screenshot_type_values"
         android:key="screenshot_type"
         android:title="@string/screenshot_type_title" />
-
-    <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-        android:key="disable_immersive_message"
-        android:title="@string/disable_immersive_message_title"
-        android:summary="@string/disable_immersive_message_summary" />
 
     <com.droidvnteam.hexagonrom.widget.NumberPickerPreference
         android:key="screenshot_delay"
@@ -87,16 +88,6 @@
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="volume_dialog_timeout"
-        android:title="@string/volume_dialog_timeout_title"
-        android:max="10000"
-        aicpextras:minimum="100"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="ms"
-        aicpextras:defaultVal="3000"
-        android:persistent="false" />
-
     <ListPreference
         android:key="pref_scrollingcache"
         android:dialogTitle="@string/pref_scrollingcache_title"
@@ -110,5 +101,4 @@
         android:key="lockclock_settings"
         android:title="@string/locksclock_settings_title"
         android:summary="@string/locksclock_settings_summary" />
-
 </PreferenceScreen>

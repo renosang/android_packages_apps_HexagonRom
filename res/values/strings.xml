@@ -46,11 +46,11 @@
     <string name="systemui_tuner_summary">Marshmallow take on SystemUI tuning</string>
     <string name="systemui_tuner_dilog_title">Attention</string>
     <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to hexagonrom for easier access.\nHere you can also add new tiles.</string>
-    <string name="aicp_downloads_title">Downloads</string>
+    <string name="hex_downloads_title">Downloads</string>
     <string name="dwnld_summary">Visit the Hexagon download page for your device.</string>
-    <string name="aicp_ota_title">Update Center</string>
+    <string name="hex_ota_title">Update Center</string>
     <string name="ota_summary">Check for HexagonROM updates</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="ae_version_title">AICP Extras version</string>
     <string name="gerrit_summary">Visit our Gerrit to know what we are working on.</string>
     <string name="hidden_anim_activity_title">Yoga time!!!</string>
@@ -297,11 +297,11 @@
 
     <!-- Statusbar Hexagon logo -->
     <string name="status_bar_logo_category_title">Statusbar logo</string>
-    <string name="status_bar_aicp_logo_title">Hexagon logo</string>
-    <string name="status_bar_aicp_logo_summary">Enable to show Hexagon logo on the left side of statusbar</string>
-    <string name="status_bar_aicp_logo_color">Hexagon logo color</string>
-    <string name="status_bar_aicp_logo_position">Logo location</string>
-    <string name="status_bar_aicp_logo_position_summary">Choose which side to display the logo on, left or right</string>
+    <string name="status_bar_hex_logo_title">Hexagon logo</string>
+    <string name="status_bar_hex_logo_summary">Enable to show Hexagon logo on the left side of statusbar</string>
+    <string name="status_bar_hex_logo_color">Hexagon logo color</string>
+    <string name="status_bar_hex_logo_position">Logo location</string>
+    <string name="status_bar_hex_logo_position_summary">Choose which side to display the logo on, left or right</string>
     <string name="status_bar_logo_position_right">Right</string>
     <string name="status_bar_logo_position_left">Left</string>
 
@@ -848,8 +848,8 @@
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
 
-    <string name="slim_recents_aicp_empty_drawable_title">AICP empty recents</string>
-    <string name="slim_recents_aicp_empty_drawable_summary">Image to show when no recent apps</string>
+    <string name="slim_recents_hex_empty_drawable_title">AICP empty recents</string>
+    <string name="slim_recents_hex_empty_drawable_summary">Image to show when no recent apps</string>
 
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Hidden apps</string>

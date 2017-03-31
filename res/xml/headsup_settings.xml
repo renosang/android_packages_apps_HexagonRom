@@ -17,7 +17,7 @@
         android:key="headsup_settings_category"
         android:title="@string/headsup_settings_category">
 
-    <com.lordclockan.aicpextras.preferences.GlobalSettingSwitchPreference
+    <com.droidvnteam.hexagonrom.preferences.GlobalSettingSwitchPreference
         android:key="heads_up_notifications_enabled"
         android:title="@string/headsup_settings_title"
         android:summary="@string/headsup_settings_summary"

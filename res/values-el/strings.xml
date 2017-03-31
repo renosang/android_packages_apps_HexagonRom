@@ -6,7 +6,7 @@
     <string name="first_layout_title">Placeholder for various shit\nand naked chicks!!!</string>
     <string name="second_layout_title">Second layout</string>
     <string name="third_layout_title">Third layout</string>
-    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="hex_extras_title">AICP Extras</string>
     <string name="pun_title">Ένας για όλους, όλοι για έναν</string>
     <string name="various_shit_title">Διάφορες μαλακίες</string>
     <string name="about_title">Σχετικά</string>
@@ -25,9 +25,9 @@
     <string name="systemui_tuner_summary">Marshmallow take on SystemUI tuning</string>
     <string name="systemui_tuner_dilog_title">Προσοχή</string>
     <string name="systemui_tuner_dilog_warning">Προσφέρει λιγότερες δυνατότητες. Προστέθηκε μόνο για γρήγορη πρόσβαση.\nΕδώ μπορείς να αλλάξεις τα πλακίδια</string>
-    <string name="aicp_downloads_title">Λήψεις</string>
+    <string name="hex_downloads_title">Λήψεις</string>
     <string name="dwnld_summary">Επισκεφτείτε μας</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="gerrit_summary">Για να δείτε τι ετοιμάζουμε, επισκεφτείτε μας στο Gerrit</string>
     <string name="send_mail_intent">Στείλτε μήνυμα...</string>
     <string name="hidden_anim_activity_title">Ώρα για Γιόγκα!!!</string>
@@ -560,11 +560,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Statusbar logo</string>
-    <string name="status_bar_aicp_logo_title">AICP logo</string>
-    <string name="status_bar_aicp_logo_summary">Εμφάνιση AICP logo στα αριστερά στην Status Bar</string>
-    <string name="status_bar_aicp_logo_color">Επιλογή χρώματος για logo</string>
-    <string name="status_bar_aicp_logo_position">Τοποθεσία Logo</string>
-    <string name="status_bar_aicp_logo_position_summary">Επιλογή προβολής, Αριστερά ή Δεξιά;</string>
+    <string name="status_bar_hex_logo_title">AICP logo</string>
+    <string name="status_bar_hex_logo_summary">Εμφάνιση AICP logo στα αριστερά στην Status Bar</string>
+    <string name="status_bar_hex_logo_color">Επιλογή χρώματος για logo</string>
+    <string name="status_bar_hex_logo_position">Τοποθεσία Logo</string>
+    <string name="status_bar_hex_logo_position_summary">Επιλογή προβολής, Αριστερά ή Δεξιά;</string>
     <string name="status_bar_logo_position_right">Δεξιά</string>
     <string name="status_bar_logo_position_left">Αριστερά</string>
 

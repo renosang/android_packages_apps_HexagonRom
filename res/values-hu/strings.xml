@@ -8,7 +8,7 @@
     <string name="first_layout_title">Helykitöltés különféle beállításokhoz\nés meztelen csajok!!!</string>
     <string name="second_layout_title">Második réteg</string>
     <string name="third_layout_title">Harmadik réteg</string>
-    <string name="aicp_extras_title">AICP Extrák</string>
+    <string name="hex_extras_title">AICP Extrák</string>
     <string name="pun_title">Egy rom mind felett</string>
     <string name="various_shit_title">Különféle beállítások</string>
     <string name="about_title">Rólunk</string>
@@ -29,8 +29,8 @@
     <string name="systemui_tuner_summary">Marshmallow RendszerUI hangolót használ</string>
     <string name="systemui_tuner_dilog_title">Figyelmeztetés</string>
     <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to hexagonrom for easier access.\nHere you can also add new tiles.</string>
-    <string name="aicp_downloads_title">Letöltések</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_downloads_title">Letöltések</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="send_mail_intent">Üzenet küldés...</string>
     <string name="hidden_anim_activity_title">Yoga idő!!!</string>
     <string name="hidden_anim_more_title">TÖBBET?</string>
@@ -618,11 +618,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Állapot sáv logo</string>
-    <string name="status_bar_aicp_logo_title">AICP logo</string>
-    <string name="status_bar_aicp_logo_summary">Engedélyezi az AICP logót az állapot sáv baloldalán</string>
-    <string name="status_bar_aicp_logo_color">AICP logo színe</string>
-    <string name="status_bar_aicp_logo_position">Helyzet</string>
-    <string name="status_bar_aicp_logo_position_summary">Válaszd ki melyik oldalon legyen a logo, bal vagy jobb</string>
+    <string name="status_bar_hex_logo_title">AICP logo</string>
+    <string name="status_bar_hex_logo_summary">Engedélyezi az AICP logót az állapot sáv baloldalán</string>
+    <string name="status_bar_hex_logo_color">AICP logo színe</string>
+    <string name="status_bar_hex_logo_position">Helyzet</string>
+    <string name="status_bar_hex_logo_position_summary">Válaszd ki melyik oldalon legyen a logo, bal vagy jobb</string>
     <string name="status_bar_logo_position_right">Jobb</string>
     <string name="status_bar_logo_position_left">Bal</string>
 	

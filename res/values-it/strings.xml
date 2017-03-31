@@ -22,7 +22,7 @@
     <string name="navigation_drawer_close">Chiudi pannello di navigazione</string>
 
     <string name="action_settings">Impostazioni</string>
-    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="hex_extras_title">AICP Extras</string>
     <string name="pun_title">\"Una rom per domarla di tutto\"</string>
     <string name="various_shit_title">Bizzarrie varie</string>
     <string name="about_title">Informazioni</string>
@@ -36,11 +36,11 @@
     <string name="notificaitons_title">Pannello Notifiche</string>
     <string name="statubar_title">Barra di stato</string>
     <string name="lockscreen_title">Schermata di blocco</string>
-    <string name="aicp_downloads_title">Downloads</string>
+    <string name="hex_downloads_title">Downloads</string>
     <string name="dwnld_summary">Visita la pagina di download AICP per il dispositivo</string>
-    <string name="aicp_ota_title">Centro aggiornamenti</string>
+    <string name="hex_ota_title">Centro aggiornamenti</string>
     <string name="ota_summary">Verifica la presenza di aggiornamenti sulla ROM corrente</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="ae_version_title">Versione AICP Extras</string>
     <string name="gerrit_summary">Visita la nostra pagina su Gerrit per sapere su che cosa stiamo lavorando</string>
     <string name="hidden_anim_activity_title">Tempo per lo Yoga!!!</string>
@@ -274,11 +274,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Logo barra di stato</string>
-    <string name="status_bar_aicp_logo_title">Logo AICP</string>
-    <string name="status_bar_aicp_logo_summary">Abilita visualizzazione del logo AICP sulla parte sinistra della barra di stato</string>
-    <string name="status_bar_aicp_logo_color">Colore del logo AICP</string>
-    <string name="status_bar_aicp_logo_position">Posizione del logo</string>
-    <string name="status_bar_aicp_logo_position_summary">Scegliere su quale lato della barra di stato visualizzare il logo, sinistro o destro</string>
+    <string name="status_bar_hex_logo_title">Logo AICP</string>
+    <string name="status_bar_hex_logo_summary">Abilita visualizzazione del logo AICP sulla parte sinistra della barra di stato</string>
+    <string name="status_bar_hex_logo_color">Colore del logo AICP</string>
+    <string name="status_bar_hex_logo_position">Posizione del logo</string>
+    <string name="status_bar_hex_logo_position_summary">Scegliere su quale lato della barra di stato visualizzare il logo, sinistro o destro</string>
     <string name="status_bar_logo_position_right">Destro</string>
     <string name="status_bar_logo_position_left">Sinistro</string>
 

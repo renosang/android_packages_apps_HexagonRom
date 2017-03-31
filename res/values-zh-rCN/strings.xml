@@ -22,7 +22,7 @@
     <string name="navigation_drawer_close">关闭导航抽屉</string>
 
     <string name="action_settings">设置</string>
-    <string name="aicp_extras_title">AICP设置</string>
+    <string name="hex_extras_title">AICP设置</string>
     <string name="pun_title">管理自己的ROM</string>
     <string name="various_shit_title">其他设置</string>
     <string name="about_title">关于</string>
@@ -36,11 +36,11 @@
     <string name="notificaitons_title">通知抽屉</string>
     <string name="statubar_title">状态栏</string>
     <string name="lockscreen_title">锁屏</string>
-    <string name="aicp_downloads_title">下载地址</string>
+    <string name="hex_downloads_title">下载地址</string>
     <string name="dwnld_summary">访问您设备的AICP下载页面</string>
-    <string name="aicp_ota_title">OTA中心</string>
+    <string name="hex_ota_title">OTA中心</string>
     <string name="ota_summary">检查当前ROM的更新</string>
-    <string name="aicp_gerrit_title">Gerrit代码审查</string>
+    <string name="hex_gerrit_title">Gerrit代码审查</string>
     <string name="ae_version_title">AICP设置版本</string>
 
     <string name="gerrit_summary">访问我们的Gerrit来知道我们在为什么而工作</string>
@@ -278,11 +278,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">状态栏图标</string>
-    <string name="status_bar_aicp_logo_title">AICP图标</string>
-    <string name="status_bar_aicp_logo_summary">在状态栏上显示AICP图标</string>
-    <string name="status_bar_aicp_logo_color">AICP图标颜色</string>
-    <string name="status_bar_aicp_logo_position">图标位置</string>
-    <string name="status_bar_aicp_logo_position_summary">选择在状态栏左/右侧显示图标</string>
+    <string name="status_bar_hex_logo_title">AICP图标</string>
+    <string name="status_bar_hex_logo_summary">在状态栏上显示AICP图标</string>
+    <string name="status_bar_hex_logo_color">AICP图标颜色</string>
+    <string name="status_bar_hex_logo_position">图标位置</string>
+    <string name="status_bar_hex_logo_position_summary">选择在状态栏左/右侧显示图标</string>
     <string name="status_bar_logo_position_right">右侧</string>
     <string name="status_bar_logo_position_left">左侧</string>
 

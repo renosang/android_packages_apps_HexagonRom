@@ -10,7 +10,7 @@
     <string name="first_layout_title">Placeholder for various shit\nand naked chicks!!!</string>
     <string name="second_layout_title">Second layout</string>
     <string name="third_layout_title">Third layout</string>
-    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="hex_extras_title">AICP Extras</string>
     <string name="pun_title">One rom to rule the all</string>
     <string name="various_shit_title">Various shit</string>
     <string name="about_title">About</string>
@@ -32,9 +32,9 @@
     <string name="systemui_tuner_summary">Marshmallow opinião sobre ajuste da SystemUI</string>
     <string name="systemui_tuner_dilog_title">Atenção</string>
     <string name="systemui_tuner_dilog_warning">Tuner oferece modificações SystemUI limitados. O link foi adicionado a AICP Extras para facilitar o acesso.\nHere you can also add new tiles.</string>
-    <string name="aicp_downloads_title">Downloads</string>
+    <string name="hex_downloads_title">Downloads</string>
     <string name="dwnld_summary">Visite a página de download AICP para o seu dispositivo</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="gerrit_summary">Visite o nosso Gerrit para saber no que estamos trabalhando</string>
     <string name="send_mail_intent">Enviar correio...</string>
     <string name="hidden_anim_activity_title">tempo de Yoga !!!</string>
@@ -631,11 +631,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">logotipo da barra de status</string>
-    <string name="status_bar_aicp_logo_title">Logotipo AICP</string>
-    <string name="status_bar_aicp_logo_summary">Ativar para mostrar o logotipo AICP, no lado esquerdo da barra de status</string>
-    <string name="status_bar_aicp_logo_color">Cor do logotipo AICP</string>
-    <string name="status_bar_aicp_logo_position">Localização do logotipo</string>
-    <string name="status_bar_aicp_logo_position_summary">Escolha de que lado para exibir o logotipo, na esquerda ou direita</string>
+    <string name="status_bar_hex_logo_title">Logotipo AICP</string>
+    <string name="status_bar_hex_logo_summary">Ativar para mostrar o logotipo AICP, no lado esquerdo da barra de status</string>
+    <string name="status_bar_hex_logo_color">Cor do logotipo AICP</string>
+    <string name="status_bar_hex_logo_position">Localização do logotipo</string>
+    <string name="status_bar_hex_logo_position_summary">Escolha de que lado para exibir o logotipo, na esquerda ou direita</string>
     <string name="status_bar_logo_position_right">Centro</string>
     <string name="status_bar_logo_position_left">Esquerda</string>
 

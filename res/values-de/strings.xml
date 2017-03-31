@@ -24,7 +24,7 @@
     <string name="navigation_drawer_close">Schließe Navigationsbereich</string>
 
     <string name="action_settings">Einstellungen</string>
-    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="hex_extras_title">AICP Extras</string>
     <string name="pun_title">One ROM to rule them all</string>
     <string name="various_shit_title">Verschiedenes</string>
     <string name="about_title">Über</string>
@@ -38,11 +38,11 @@
     <string name="notificaitons_title">Benachrichtigungsleiste</string>
     <string name="statubar_title">Statusleiste</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
-    <string name="aicp_downloads_title">Downloads</string>
+    <string name="hex_downloads_title">Downloads</string>
     <string name="dwnld_summary">Besuche die AICP Webseite mit Downloads für dein Gerät</string>
-    <string name="aicp_ota_title">OTA Aktualisierung</string>
+    <string name="hex_ota_title">OTA Aktualisierung</string>
     <string name="ota_summary">Aktualisierungsprüfung für die installierte ROM Version</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="hex_gerrit_title">Gerrit</string>
     <string name="ae_version_title">AICP Extras Version</string>
     <string name="gerrit_summary">Besuche unsere Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
     <string name="hidden_anim_activity_title">Zeit für \'Yoga\'!!!</string>
@@ -288,11 +288,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Statusleisten-Logo</string>
-    <string name="status_bar_aicp_logo_title">AICP Logo</string>
-    <string name="status_bar_aicp_logo_summary">Aktivieren, um das AICP Logo in der Statusleiste anzuzeigen</string>
-    <string name="status_bar_aicp_logo_color">Farbe des AICP Logos</string>
-    <string name="status_bar_aicp_logo_position">Position des Logos</string>
-    <string name="status_bar_aicp_logo_position_summary">Wähle auf welcher Seite das Logo angezeigt wird, rechts oder links</string>
+    <string name="status_bar_hex_logo_title">AICP Logo</string>
+    <string name="status_bar_hex_logo_summary">Aktivieren, um das AICP Logo in der Statusleiste anzuzeigen</string>
+    <string name="status_bar_hex_logo_color">Farbe des AICP Logos</string>
+    <string name="status_bar_hex_logo_position">Position des Logos</string>
+    <string name="status_bar_hex_logo_position_summary">Wähle auf welcher Seite das Logo angezeigt wird, rechts oder links</string>
     <string name="status_bar_logo_position_right">Rechts</string>
     <string name="status_bar_logo_position_left">Links</string>
 
@@ -832,8 +832,8 @@
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
     <string name="recent_panel_lefty_mode_summary">Zeige das Paneel des App-Verlaufs auf der linken Seite</string>
 
-    <string name="slim_recents_aicp_empty_drawable_title">Bild bei leerem Verlauf</string>
-    <string name="slim_recents_aicp_empty_drawable_summary">Zeige das AICP-Bild, wenn keine Apps im Verlauf sind</string>
+    <string name="slim_recents_hex_empty_drawable_title">Bild bei leerem Verlauf</string>
+    <string name="slim_recents_hex_empty_drawable_summary">Zeige das AICP-Bild, wenn keine Apps im Verlauf sind</string>
 
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Apps verbergen</string>

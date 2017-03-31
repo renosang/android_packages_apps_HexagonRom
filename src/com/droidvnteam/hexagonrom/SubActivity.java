@@ -9,10 +9,10 @@ import android.view.MenuItem;
 public class SubActivity extends Activity {
 
     public static final String EXTRA_TITLE =
-            "com.lordclockan.aicpextras.SubActivity.title";
+            "com.droidvnteam.hexagonrom.SubActivity.title";
 
     public static final String EXTRA_FRAGMENT_CLASS =
-            "com.lordclockan.aicpextras.SubActivity.fragment_class";
+            "com.droidvnteam.hexagonrom.SubActivity.fragment_class";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

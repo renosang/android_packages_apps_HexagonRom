@@ -8,7 +8,7 @@
     <string name="first_layout_title">"Место для различных модификации!!!"</string>
     <string name="second_layout_title">Во-вторых компоновка</string>
     <string name="third_layout_title">В-третьих компоновка</string>
-    <string name="aicp_extras_title">Расширенные настройки</string>
+    <string name="hex_extras_title">Расширенные настройки</string>
     <string name="pun_title">AICP</string>
     <string name="various_shit_title">Разное</string>
     <string name="about_title">Об устройстве</string>
@@ -30,8 +30,8 @@
     <string name="systemui_tuner_dilog_title">Внимание</string>
     <string name="systemui_tuner_dilog_warning">Настройщик предлагает ограниченные модификации SystemUI.
        Ссылка была добавлена Расширенные настройки для более легкого доступа. Здесь вы можете добавить новые плитки.</string>
-    <string name="aicp_downloads_title">Скачать прошивку</string>
-    <string name="aicp_gerrit_title">Свободное ПО</string>
+    <string name="hex_downloads_title">Скачать прошивку</string>
+    <string name="hex_gerrit_title">Свободное ПО</string>
     <string name="send_mail_intent">Отправить сообщение...</string>
     <string name="hidden_anim_activity_title">Время отдыха!!!</string>
     <string name="hidden_anim_more_title">Больше?</string>
@@ -594,11 +594,11 @@
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Лого в статус баре</string>
-    <string name="status_bar_aicp_logo_title">Логотип AICP</string>
-    <string name="status_bar_aicp_logo_summary">Включить отображение логотипа AICP в строке состояния</string>
-    <string name="status_bar_aicp_logo_color">Цвет логотипа AICP</string>
-    <string name="status_bar_aicp_logo_position">Расположение логотипа AICP</string>
-    <string name="status_bar_aicp_logo_position_summary">Выберите, с какой стороны отображать логотип, справа или слева</string>
+    <string name="status_bar_hex_logo_title">Логотип AICP</string>
+    <string name="status_bar_hex_logo_summary">Включить отображение логотипа AICP в строке состояния</string>
+    <string name="status_bar_hex_logo_color">Цвет логотипа AICP</string>
+    <string name="status_bar_hex_logo_position">Расположение логотипа AICP</string>
+    <string name="status_bar_hex_logo_position_summary">Выберите, с какой стороны отображать логотип, справа или слева</string>
     <string name="status_bar_logo_position_right">Справа</string>
     <string name="status_bar_logo_position_left">Слева</string>
 

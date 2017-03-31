@@ -18,7 +18,7 @@
             android:summary="@string/show_fourg_summary"
             android:defaultValue="false" />
 
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
            android:key="bluetooth_show_battery"
            android:title="@string/bluetooth_battery_title"
            android:summary="@string/bluetooth_battery_summary"
@@ -53,23 +53,23 @@
    <PreferenceCategory
            android:title="@string/status_bar_logo_category_title">
         <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
-            android:key="status_bar_aicp_logo"
-            android:title="@string/status_bar_aicp_logo_title"
-            android:summary="@string/status_bar_aicp_logo_summary" />
+            android:key="status_bar_hex_logo"
+            android:title="@string/status_bar_hex_logo_title"
+            android:summary="@string/status_bar_hex_logo_summary" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="status_bar_aicp_logo_color"
-            android:title="@string/status_bar_aicp_logo_color"
+            android:key="status_bar_hex_logo_color"
+            android:title="@string/status_bar_hex_logo_color"
             android:defaultValue="0xffffffff"
-            android:dependency="status_bar_aicp_logo" />
+            android:dependency="status_bar_hex_logo" />
 
        <ListPreference
-            android:key="status_bar_aicp_logo_style"
-            android:title="@string/status_bar_aicp_logo_position"
-            android:dialogTitle="@string/status_bar_aicp_logo_position"
+            android:key="status_bar_hex_logo_style"
+            android:title="@string/status_bar_hex_logo_position"
+            android:dialogTitle="@string/status_bar_hex_logo_position"
             android:entries="@array/status_bar_logo_position_entries"
             android:entryValues="@array/status_bar_logo_position_values"
-            android:dependency="status_bar_aicp_logo" />
+            android:dependency="status_bar_hex_logo" />
 
     </PreferenceCategory>
 
