@@ -1,6 +1,7 @@
 
 package com.droidvnteam.hexagonrom;
 
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
@@ -25,36 +26,37 @@ public class SuShell {
     private SuShell() {
     }
 
-    public static ArrayList<String> runWithSuCheck(String... commands) throws SuDeniedException {
+    public static boolean canGainSu(Context context) {
         String suTestScript = "#!/system/bin/sh\necho ";
-        String suTestScriptValid = "AICPSuPermsOk";
+        String suTestScriptValid = "HEXAGONSuPermsOk";
 
-        String[] commandsWithCheck = new String[commands.length+1];
-        commandsWithCheck[0] = suTestScript + suTestScriptValid;
-        System.arraycopy(commands, 0, commandsWithCheck, 1, commands.length);
-
-        ArrayList<String> output = runWithSu(commandsWithCheck);
-        if (output.size() >= 1
+        ArrayList<String> output = run("su", suTestScript + suTestScriptValid);
+        if (output.size() == 1
                 && output.get(0).trim().equals(suTestScriptValid)) {
             if (DEBUG) {
                 Log.d(TAG, "Superuser command auth confirmed");
             }
-            output.remove(0);
-            return output;
+            return true;
         } else {
             if (DEBUG) {
                 Log.d(TAG, "Superuser command auth refused");
             }
-            throw new SuDeniedException();
+            return false;
         }
     }
 
-    public static ArrayList<String> runWithShell(String... command) {
+    public static ArrayList<String> runWithShell(String command) {
         return run("/system/bin/sh", command);
     }
 
-    public static ArrayList<String> runWithSu(String... command) {
+    public static ArrayList<String> runWithSu(String command) {
         return run("su", command);
+    }
+
+    public static ArrayList<String> run(String shell, String command) {
+        return run(shell, new String[] {
+                command
+        });
     }
 
     public static ArrayList<String> run(String shell, ArrayList<String> commands) {
@@ -63,7 +65,7 @@ public class SuShell {
         return run(shell, commandsArray);
     }
 
-    public static ArrayList<String> run(String shell, String... commands) {
+    public static ArrayList<String> run(String shell, String[] commands) {
         ArrayList<String> output = new ArrayList<String>();
 
         try {
@@ -161,5 +163,4 @@ public class SuShell {
         return false;
     }
 
-    public static class SuDeniedException extends Exception {};
 }

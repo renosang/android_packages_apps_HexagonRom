@@ -49,7 +49,7 @@
 
    </PreferenceCategory>
 
-   <!-- Status bar AICP logo -->
+   <!-- Status bar HEXAGON logo -->
    <PreferenceCategory
            android:title="@string/status_bar_logo_category_title">
         <com.droidvnteam.hexagonrom.preferences.SystemSettingSwitchPreference
@@ -73,10 +73,10 @@
 
     </PreferenceCategory>
 
-    <!--PreferenceCategory
+    <PreferenceCategory
         android:key="breathing_notifications_category"
         android:title="@string/breathing_notifications_category" >
 
-    </PreferenceCategory-->
+    </PreferenceCategory>
 
 </PreferenceScreen>

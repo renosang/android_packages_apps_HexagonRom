@@ -5,7 +5,7 @@
     <string name="first_layout_title">Burada sizleri hoş sürprizler beklemektedir!!</string>
     <string name="second_layout_title">İkinci katman</string>
     <string name="third_layout_title">Üçüncü Katman</string>
-    <string name="hex_extras_title">AICP Extras</string>
+    <string name="hex_extras_title">HEXAGON Extras</string>
     <string name="pun_title">Herşeye hükmettiren tek rom</string>
     <string name="various_shit_title">Çeşitli Düzenlemeler</string>
     <string name="about_title">Hakkında</string>
@@ -29,7 +29,7 @@
     <string name="systemui_tuner_dilog_warning">Sistem arayüzü modifikasyonları kısıtlamıştır.
         Bu özelleştirme, kolay erişim için hexagonrom bölümüne eklenmiştir. Etkinleştirmek için tıklayın.</string>
     <string name="hex_downloads_title">İndirmeler</string>
-	<string name="dwnld_summary">Cihazınız için AICP indirme sayfasını ziyaret edin</string>
+	<string name="dwnld_summary">Cihazınız için HEXAGON indirme sayfasını ziyaret edin</string>
     <string name="hex_gerrit_title">Gerrit</string>
 
     <string name="gerrit_summary">Neler üzerinde çalıştığımızı görmek için Gerrit sayfamızı ziyaret edin</string>
@@ -386,15 +386,15 @@
 
     <!-- Notification -->
     <string name="notification_ticker">Statistics opted-In</string>
-    <string name="notification_title">AICP İstatistikleri</string>
+    <string name="notification_title">HEXAGON İstatistikleri</string>
     <string name="notification_desc">Anonim istatistikleri etkinleştir veya devre dışı bırak</string>
     <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
 
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">AICP İstatistikleri</string>
-    <string name="anonymous_statistics_summary">Anonim istatistikleri etkinleştirererk AICP\'ye katkıda bulun.</string>
+    <string name="anonymous_statistics_title">HEXAGON İstatistikleri</string>
+    <string name="anonymous_statistics_summary">Anonim istatistikleri etkinleştirererk HEXAGON\'ye katkıda bulun.</string>
     <string name="anonymous_statistics_warning_title">Hakkında</string>
-    <string name="anonymous_statistics_warning">AICP durum raporlarına izin verirseniz, şahsi olmayan verileriniz sunucularımıza yüklenecek. 
+    <string name="anonymous_statistics_warning">HEXAGON durum raporlarına izin verirseniz, şahsi olmayan verileriniz sunucularımıza yüklenecek. 
         Hıfzedilen veriler, kişisel bilgilerinizin sızmasına izin vermeyecek eşsiz bir anahtar ile korunmaktadır. Bu işlem 7 günde bir tekrarlanır. 
         \n\nSaklanan verileriniz hakkında fikir sahibi olmak için Verileri Önizle\'ye tıklayınız. </string>
 
@@ -423,8 +423,8 @@
     <string name="preview_country_title">Ülke</string>
     <string name="preview_carrier_title">Hat</string>
     <string name="preview_romname_title">ROM İsmi</string>
-    <string name="preview_romversion_title">AICP Versiyonu</string>
-    <string name="preview_buildtype_title">AICP Sürüm Türü</string>
+    <string name="preview_romversion_title">HEXAGON Versiyonu</string>
+    <string name="preview_buildtype_title">HEXAGON Sürüm Türü</string>
 
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">Uygulama Başlatıcısı</string>
@@ -526,7 +526,7 @@
     <string name="pa_pie_button_color_title">Tuşların Rengi</string>
     <string name="pa_pie_color_reset_title">renkleri Sıfırla</string>
     <string name="reset_message">Tüm değişiklikler sıfırlansın mı?</string>
-    <string name="reset_paranoid">AICP</string>
+    <string name="reset_paranoid">HEXAGON</string>
     <string name="reset_android">Android</string>
 
     <!-- Task Manager -->
@@ -628,13 +628,13 @@
     <string name="power_menu_animation_translucent_top">Şeffaf (üst)</string>
     <string name="power_menu_animation_translucent_bottom">Şeffaf (alt)</string>
 
-    <!-- Statusbar AICP logo -->
+    <!-- Statusbar HEXAGON logo -->
     <string name="status_bar_logo_category_title">Durum çubuğu logosu</string>
-    <string name="status_bar_hex_logo_title">AICP logosu</string>
-    <string name="status_bar_hex_logo_summary">Durum çubuğunun sol tarafında AICP logosunu etkinleştir</string>
-    <string name="status_bar_hex_logo_color">AICP logo rengi</string>
+    <string name="status_bar_hex_logo_title">HEXAGON logosu</string>
+    <string name="status_bar_hex_logo_summary">Durum çubuğunun sol tarafında HEXAGON logosunu etkinleştir</string>
+    <string name="status_bar_hex_logo_color">HEXAGON logo rengi</string>
     <string name="status_bar_hex_logo_position">Logo konumu</string>
-    <string name="status_bar_hex_logo_position_summary">AICP Logo konumunu belirleyin</string>
+    <string name="status_bar_hex_logo_position_summary">HEXAGON Logo konumunu belirleyin</string>
     <string name="status_bar_logo_position_right">Sağ</string>
     <string name="status_bar_logo_position_left">Sol</string>
 
@@ -708,6 +708,7 @@
     <string name="recent_panel_show_topmost_summary">Son uygulamalar panelinde en üstteki görevi çıkarma</string>
     <string name="recent_panel_bg_color_title">Panel arkaplan rengi</string>
     <string name="recent_card_bg_color_title">Kart arkaplan rengi</string>
+    <string name="recent_card_text_color_title">Kart yazı rengi</string>
     <string name="recent_reset_value_title">Değerleri sıfırla</string>
     <string name="recent_app_sidebar_title">Uygulama kenar çubuğu</string>
 
@@ -918,7 +919,7 @@
 
     <!-- QS stroke settings -->
     <string name="qs_panel_logo_category">Hızlı Ayar paneli logosu</string>
-    <string name="qs_panel_logo_title">Hızlı Ayar panelinde AICP logosu</string>
+    <string name="qs_panel_logo_title">Hızlı Ayar panelinde HEXAGON logosu</string>
     <string name="qs_panel_logo_disabled">Devre dışı</string>
     <string name="qs_panel_logo_accent">Vurgu rengi</string>
     <string name="qs_panel_logo_custom">Özel renk</string>

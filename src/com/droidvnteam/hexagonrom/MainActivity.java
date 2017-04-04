@@ -50,6 +50,46 @@ public class MainActivity extends AppCompatActivity
     private View mView;
 
     @Override
+    protected void onStart() {
+	    super.onStart();
+
+	    new AsyncTask<Void, Void, Boolean>() {
+
+            @Override
+            protected void onPreExecute() {
+                setProgressBarIndeterminateVisibility(true);
+            }
+
+            @Override
+            protected Boolean doInBackground(Void... params) {
+	            try {
+                    boolean canGainSu = SuShell.canGainSu(getApplicationContext());
+                    return canGainSu;
+                } catch (Exception e) {
+                    Log.e(TAG, "Error: " + e.getMessage(), e);
+                    Snackbar.make(mView, R.string.cannot_get_su_start,
+                            Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                    return true; // I want to start the app regardles of having root or not
+                }
+            }
+
+            @Override
+            protected void onPostExecute(Boolean result) {
+                setProgressBarIndeterminateVisibility(false);
+                if (!result) {
+                    Snackbar.make(mView, R.string.cannot_get_su,
+                            Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                    finish();
+                }
+            }
+        }.execute();
+    }
+
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 	requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 
@@ -203,7 +243,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_blur_ui:
                 fragmentClass = BlurUIFragment.class;
                 break;
-            case R.id.nav_various:
+            case R.id.advanded:
                 fragmentClass = VariousShitFragment.class;
                 break;
             case R.id.nav_about:

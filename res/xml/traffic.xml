@@ -60,7 +60,7 @@
         android:key="network_traffic_autohide_threshold"
         android:title="@string/network_traffic_autohide_threshold"
         hexagonrom:max="100"
-        hexagonrom:minimum="0"
+        hexagonrom:min="0"
         hexagonrom:unitsLeft=""
         hexagonrom:unitsRight="kB/s"
         android:dependency="network_traffic_autohide"

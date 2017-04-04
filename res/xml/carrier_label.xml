@@ -34,7 +34,7 @@
         android:title="@string/status_bar_carrier_size"
         hexagonrom:defaultVal="14"
         android:max="23"
-        hexagonrom:minimum="4"
+        hexagonrom:min="4"
         hexagonrom:unitsLeft=""
         hexagonrom:unitsRight="dp" />
 

@@ -44,7 +44,7 @@ public class VariousShitFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
-        private static final String TAG = "VariousShit";
+        private static final String TAG = "Advanced";
 
         private static final int MIN_DELAY_VALUE = 1;
         private static final int MAX_DELAY_VALUE = 30;
@@ -113,12 +113,6 @@ public class VariousShitFragment extends Fragment {
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
 
-            // Volume dialog timeout seekbar
-            mVolumeDialogTimeout = (SeekBarPreferenceCham) findPreference(KEY_VOLUME_DIALOG_TIMEOUT);
-            int volumeDialogTimeout = Settings.System.getInt(resolver,
-                    Settings.System.VOLUME_DIALOG_TIMEOUT, 3000);
-            mVolumeDialogTimeout.setValue(volumeDialogTimeout / 1);
-            mVolumeDialogTimeout.setOnPreferenceChangeListener(this);
 
             mLockClockSettings = (Preference) prefSet.findPreference(LOCKCLOCK_START_SETTINGS);
             if (!Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, pm)) {

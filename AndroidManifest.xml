@@ -49,14 +49,8 @@
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <meta-data
-                android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts" />
         </activity>
 
         <activity
@@ -126,7 +120,7 @@
             android:label="@string/app_sidebar_title">
         </activity>
         <activity
-            android:name=".hexagon.SubActivity"
+            android:name=".hexagonrom.SubActivity"
             android:theme="@style/PreferenceTheme">
         </activity>
         <activity
@@ -185,47 +179,6 @@
             android:theme="@style/PreferenceTheme"
             android:excludeFromRecents="true">
         </activity>
-
-        <activity android:name=".hexagonrom.ChangelogActivity"
-            android:label="@string/stats_title"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-
-        <activity android:name=".romstats.AnonymousStats"
-            android:label="@string/stats_title" >
-            <intent-filter>
-                <action android:name=".romstats.AnonymousStats" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".romstats.PreviewActivity" />
-
-        <receiver
-            android:name=".romstats.ReportingServiceManager"
-            android:enabled="true"
-            android:exported="false"
-            android:label="ReportingServiceManager" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-        </receiver>
-
-        <service android:name="com.google.android.gms.analytics.AnalyticsService"
-            android:enabled="true"
-            android:exported="false"/>
-
-        <service
-            android:name=".romstats.ReportingService"
-            android:enabled="true"
-            android:exported="false"
-            android:label="ReportingService" >
-        </service>
-
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="d89ae088b2672fcdcfddbe98ad7e338886bf8997" />
 
     </application>
 </manifest>

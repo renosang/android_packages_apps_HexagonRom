@@ -1,6 +1,6 @@
 /*
  * Copyright 2014 ParanoidAndroid Project
- * Copyright 2015 AICP Project
+ * Copyright 2015 HEXAGON Project
  *
  * This file is part of Paranoid OTA.
  *

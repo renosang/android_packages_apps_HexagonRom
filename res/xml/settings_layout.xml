@@ -30,7 +30,7 @@
         android:title="@string/ae_drawer_opacity_title"
         hexagonrom:defaultVal="178"
         android:max="255"
-        hexagonrom:minimum="0"
+        hexagonrom:min="0"
         hexagonrom:unitsLeft=""
         hexagonrom:unitsRight="" />
 
@@ -45,15 +45,9 @@
         android:title="@string/ae_header_bg_image_opacity_title"
         hexagonrom:defaultVal="200"
         android:max="255"
-        hexagonrom:minimum="0"
+        hexagonrom:min="0"
         hexagonrom:unitsLeft=""
         hexagonrom:unitsRight="" />
-
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="ae_header_bg_image_color"
-        android:title="@string/ae_header_bg_image_color_title"
-        android:defaultValue="@color/colorAccent"
-        android:dependency="ae_custom_colors" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="ae_nav_drawer_checked_text"
